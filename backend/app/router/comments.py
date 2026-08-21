@@ -5,7 +5,6 @@ from app.crud.comment import get_all, get_comment, create_comment, delete_commen
 from app.schemas import Comments
 
 router = APIRouter(prefix="/comments", tags=["comments"])
-app = router
 
 @router.get("/", response_model=list[Comments])
 def getall(db: Session = Depends(get_db)):

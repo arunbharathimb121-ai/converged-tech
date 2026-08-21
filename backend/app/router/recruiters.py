@@ -27,7 +27,6 @@ from app.schemas import (
 from typing import Optional
 
 router = APIRouter(prefix="/recruiters", tags=["recruiters"])
-app = router
 
 @router.get("/", response_model=list[RecruiterOut])
 def getall(db: Session = Depends(get_db)):

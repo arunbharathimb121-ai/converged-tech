@@ -40,7 +40,3 @@ def delete_comment(db: Session, id: int):
         db.commit()
     return did
 
-get_post = get_comment
-create_post = create_comment
-delete_post = delete_comment
-

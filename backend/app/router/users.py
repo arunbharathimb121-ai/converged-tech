@@ -7,7 +7,6 @@ from app.schemas import Users
 from typing import Optional
 
 router = APIRouter(prefix="/users", tags=["users"])
-app = router
 
 @router.get("/", response_model=list[Users])
 def getall(db: Session = Depends(get_db)):

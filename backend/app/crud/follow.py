@@ -34,8 +34,3 @@ def delete_follow(db: Session, id: int):
         db.commit()
     return did
 
-# Backward compatibility aliases
-get_post = get_follow
-create_post = create_follow
-delete_post = delete_follow
-

@@ -5,7 +5,6 @@ from app.crud.follow import get_all, get_follow, create_follow, delete_follow
 from app.schemas import Follows
 
 router = APIRouter(prefix="/follows", tags=["follows"])
-app = router
 
 @router.get("/", response_model=list[Follows])
 def getall(db: Session = Depends(get_db)):

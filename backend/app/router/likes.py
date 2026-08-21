@@ -5,7 +5,6 @@ from app.crud.like import get_all, get_like, create_like, delete_like
 from app.schemas import Likes
 
 router = APIRouter(prefix="/likes", tags=["likes"])
-app = router
 
 @router.get("/", response_model=list[Likes])
 def getall(db: Session = Depends(get_db)):

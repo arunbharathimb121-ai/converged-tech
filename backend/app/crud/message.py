@@ -40,8 +40,3 @@ def delete_message(db: Session, id: int):
         db.commit()
     return did
 
-# Backward compatibility aliases
-get_post = get_message
-create_post = create_message
-delete_post = delete_message
-

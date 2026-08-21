@@ -25,7 +25,3 @@ def delete_like(db: Session, id: int):
         db.commit()
     return did
 
-get_post = get_like
-create_post = create_like
-delete_post = delete_like
-

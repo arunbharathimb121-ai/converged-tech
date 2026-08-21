@@ -5,7 +5,6 @@ from app.crud.message import get_all, get_message, create_message, delete_messag
 from app.schemas import Message
 
 router = APIRouter(prefix="/messages", tags=["messages"])
-app = router
 
 @router.get("/", response_model=list[Message])
 def getall(db: Session = Depends(get_db)):

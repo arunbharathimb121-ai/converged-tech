@@ -9,7 +9,6 @@ from app.crud.post import get_all, get_post, create_post, delete_post
 from app.schemas import Posts
 
 router = APIRouter(prefix="/posts", tags=["posts"])
-app = router
 
 UPLOAD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "uploads"))
 os.makedirs(UPLOAD_DIR, exist_ok=True)

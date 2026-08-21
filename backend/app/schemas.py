@@ -109,21 +109,4 @@ class StudentApplicationsReport(BaseModel):
     likes: list[Likes]
     comments: list[Comments]
 
-User = Users
-Post = Posts
-Like = Likes
-Comment = Comments
-Follow = Follows
-RecruiterCreate = RecruiterCreate
-RecruiterOut = RecruiterOut
-ApplicationCreate = ApplicationCreate
-ApplicationUpdate = ApplicationUpdate
-ApplicationOut = ApplicationOut
-StudentApplicationsReport = StudentApplicationsReport
-
-
-
-
-
-
 
