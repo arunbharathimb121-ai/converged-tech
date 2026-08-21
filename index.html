@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConvoTech - Platform & Activity Inspector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-pink: #ec4899;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.12) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      line-height: 1.5;
+      padding-bottom: 40px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header & Navbar */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      margin-bottom: 24px;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .brand-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .brand-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .api-status-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 14px;
+      border-radius: 30px;
+      border: 1px solid var(--card-border);
+    }
+    .api-status-bar input {
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      width: 200px;
+      outline: none;
+    }
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .status-online { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .status-offline { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
+    /* Nav Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-btn:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .tab-btn.active {
+      color: #fff;
+      background: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+    }
+
+    /* Content Views */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 850px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Form Inputs & Buttons */
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-control:focus {
+      border-color: var(--primary);
+    }
+    textarea.form-control { resize: vertical; min-height: 80px; }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .btn-sm { padding: 6px 12px; font-size: 12px; border-radius: 8px; }
+
+    /* Feed & Report Components */
+    .feed-list { display: flex; flex-direction: column; gap: 14px; }
+    .feed-item {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+    }
+    .post-author { font-weight: 600; font-size: 14px; }
+    .post-meta { font-size: 12px; color: var(--text-muted); }
+    .post-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+      border: 1px solid var(--card-border);
+    }
+    .post-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* JSON & Inspector Logs */
+    pre.json-view {
+      background: #05070d;
+      border: 1px solid var(--card-border);
+      padding: 14px;
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: #34d399;
+      overflow-x: auto;
+      max-height: 400px;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-pending { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); }
+    .badge-interview { background: rgba(99, 102, 241, 0.2); color: #818cf8; }
+    .badge-hired { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+    .summary-box {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.05));
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="brand-logo">C</div>
+        <div>
+          <div class="brand-title">ConvoTech Inspector</div>
+          <div class="brand-subtitle">Student & Recruiter Backend API Tester</div>
+        </div>
+      </div>
+
+      <div class="api-status-bar">
+        <input type="text" id="apiUrl" value="http://localhost:8000" placeholder="http://localhost:8000">
+        <button class="btn btn-sm btn-secondary" onclick="checkApiHealth()">Test</button>
+        <div id="statusBadge" class="status-badge status-offline">
+          <span class="dot"></span> <span id="statusText">Disconnected</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('report-tab')">📊 Applicant Report Inspector</button>
+      <button class="tab-btn" onclick="switchTab('student-tab')">🎓 Student Portal</button>
+      <button class="tab-btn" onclick="switchTab('recruiter-tab')">💼 Recruiter Portal</button>
+      <button class="tab-btn" onclick="switchTab('raw-api-tab')">⚡ Raw API Tester</button>
+    </div>
+
+    <!-- Overview Banner -->
+    <div class="summary-box">
+      <h3 style="font-size: 15px; margin-bottom: 6px;">💡 Backend Domain Overview</h3>
+      <p style="font-size: 13px; color: var(--text-muted);">
+        <strong>ConvoTech</strong> is a combined social and recruitment platform. 
+        <strong>Students</strong> post day-to-day career updates, images, likes, and comments. 
+        <strong>Recruiters</strong> view applicant details, manage job application statuses, and fetch aggregated <strong>Student Activity Reports</strong> showing applicant profile info alongside all social interactions!
+      </p>
+    </div>
+
+    <!-- TAB 1: APPLICANT REPORT INSPECTOR -->
+    <div id="report-tab" class="tab-content active">
+      <div class="glass-card">
+        <div class="card-header">
+          <div class="card-title">🔍 Applicant ID Details & Full Activity Report</div>
+          <button class="btn btn-sm btn-secondary" onclick="refreshStudentList()">Refresh Student List</button>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+          <input type="number" id="reportApplicantId" class="form-control" placeholder="Enter Applicant User ID (e.g. 1)" style="max-width: 260px;">
+          <button class="btn btn-primary" onclick="fetchApplicantReport()">Fetch Report</button>
+          <select id="quickStudentSelect" class="form-control" style="max-width: 260px;" onchange="selectStudentFromDropdown(this.value)">
+            <option value="">-- Select Existing Student --</option>
+          </select>
+        </div>
+
+        <div id="reportOutput">
+          <p style="color: var(--text-muted); font-size: 14px;">Select or enter an Applicant ID to inspect applicant details, resume, job applications, posts, likes, and comments.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: STUDENT PORTAL -->
+    <div id="student-tab" class="tab-content">
+      <div class="grid-2">
+        <!-- Student Form -->
+        <div>
+          <div class="glass-card">
+            <div class="card-title" style="margin-bottom: 16px;">👤 Create Student Profile</div>
+            <form id="createStudentForm" onsubmit="handleCreateStudent(event)">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="sName" class="form-control" placeholder="Jane Developer" required>
+              </div>
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="sUsername" class="form-control" placeholder="jane_dev" required>
+              </div>
+              <div class="form-group">
+                <label>Password & Phone</label>
+                <div style="display: flex; gap: 10px;">
+                  <input type="password" id="sPassword" class="form-control" placeholder="Password" required>
+                  <input type="text" id="sPhone" class="form-control" placeholder="+1234567890" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Career / Major</label>
+                <input type="text" id="sCareer" class="form-control" placeholder="Computer Science Student">
+              </div>
+              <div class="form-group">
+                <label>Email & Resume URL</label>
+                <input type="email" id="sEmail" class="form-control" placeholder="jane@university.edu" style="margin-bottom: 8px;">
+                <input type="text" id="sResume" class="form-control" placeholder="https://example.com/resume.pdf">
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Create Student Profile</button>
+            </form>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-title" style="margin-bottom: 16px;">📝 Post Career Activity</div>
+            <form id="createPostForm" onsubmit="handleCreatePost(event)">
+              <div class="form-group">
+                <label>Student User ID</label>
+                <input type="number" id="pUserId" class="form-control" placeholder="User ID" required>
+              </div>
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="pUsername" class="form-control" placeholder="Username" required>
+              </div>
+              <div class="form-group">
+                <label>Image Source (Upload File or Enter URL)</label>
+                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+                  <button type="button" id="btnUploadMode" class="btn btn-sm btn-primary" onclick="toggleImageMode('file')">📁 Upload Document File</button>
+                  <button type="button" id="btnUrlMode" class="btn btn-sm btn-secondary" onclick="toggleImageMode('url')">🔗 Image URL</button>
+                </div>
+                <div id="fileInputContainer">
+                  <input type="file" id="pImageFile" accept="image/*" class="form-control" onchange="previewSelectedFile(this)">
+                </div>
+                <div id="urlInputContainer" style="display: none;">
+                  <input type="text" id="pImage" class="form-control" placeholder="https://picsum.photos/600/400">
+                </div>
+                <img id="imagePreview" style="display: none; max-height: 160px; border-radius: 8px; margin-top: 10px; border: 1px solid var(--card-border); object-fit: cover;">
+              </div>
+
+              <div class="form-group">
+                <label>Career Activity Caption</label>
+                <textarea id="pCaption" class="form-control" placeholder="Built a new AI Model today! #python #ml" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Publish Post</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Student Feed -->
+        <div>
+          <div class="glass-card">
+            <div class="card-header">
+              <div class="card-title">📱 Student Career Feed</div>
+              <button class="btn btn-sm btn-secondary" onclick="loadFeed()">Refresh Feed</button>
+            </div>
+            <div id="feedContainer" class="feed-list">
+              <p style="color: var(--text-muted);">Loading posts...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: RECRUITER PORTAL -->
+    <div id="recruiter-tab" class="tab-content">
+      <div class="grid-2">
+        <!-- Recruiter Actions -->
+        <div>
+          <div class="glass-card">
+            <div class="card-title" style="margin-bottom: 16px;">🏢 Register Recruiter</div>
+            <form id="createRecruiterForm" onsubmit="handleCreateRecruiter(event)">
+              <div class="form-group">
+                <label>Recruiter Name</label>
+                <input type="text" id="rName" class="form-control" placeholder="Alex HR Manager" required>
+              </div>
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" id="rCompany" class="form-control" placeholder="TechCorp Global" required>
+              </div>
+              <div class="form-group">
+                <label>Email & Password</label>
+                <div style="display: flex; gap: 10px;">
+                  <input type="email" id="rEmail" class="form-control" placeholder="hr@techcorp.com" required>
+                  <input type="password" id="rPassword" class="form-control" placeholder="Password" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Create Recruiter Account</button>
+            </form>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-title" style="margin-bottom: 16px;">💼 Submit Job Application</div>
+            <form id="createAppForm" onsubmit="handleCreateApplication(event)">
+              <div class="form-group">
+                <label>Recruiter ID</label>
+                <input type="number" id="appRecruiterId" class="form-control" placeholder="Recruiter ID (e.g. 1)" required>
+              </div>
+              <div class="form-group">
+                <label>Applicant Student ID</label>
+                <input type="number" id="appStudentId" class="form-control" placeholder="Student User ID (e.g. 1)" required>
+              </div>
+              <div class="form-group">
+                <label>Job Title</label>
+                <input type="text" id="appJobTitle" class="form-control" placeholder="Junior Software Engineer" required>
+              </div>
+              <div class="form-group">
+                <label>Resume URL & Initial Status</label>
+                <div style="display: flex; gap: 10px;">
+                  <input type="text" id="appResume" class="form-control" placeholder="https://example.com/resume.pdf">
+                  <select id="appStatus" class="form-control">
+                    <option value="pending">Pending</option>
+                    <option value="interview_scheduled">Interview Scheduled</option>
+                    <option value="hired">Hired</option>
+                    <option value="rejected">Rejected</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Notes</label>
+                <textarea id="appNotes" class="form-control" placeholder="Strong candidate in Python & FastAPI"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Create Job Application</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Recruiter Applications View -->
+        <div>
+          <div class="glass-card">
+            <div class="card-header">
+              <div class="card-title">📋 Recruiter Applications</div>
+              <div style="display: flex; gap: 8px;">
+                <input type="number" id="viewRecruiterId" class="form-control" placeholder="Recruiter ID" style="width: 120px;" value="1">
+                <button class="btn btn-sm btn-secondary" onclick="loadRecruiterApps()">Fetch</button>
+              </div>
+            </div>
+            <div id="applicationsContainer" class="feed-list">
+              <p style="color: var(--text-muted);">Enter Recruiter ID and click Fetch to view applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: RAW API TESTER -->
+    <div id="raw-api-tab" class="tab-content">
+      <div class="glass-card">
+        <div class="card-title" style="margin-bottom: 16px;">⚡ Raw API Endpoint Inspector</div>
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+          <select id="rawMethod" class="form-control" style="width: 120px;">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+          <input type="text" id="rawEndpoint" class="form-control" placeholder="/recruiters/applicants/1/applications" value="/recruiters/applicants/1/applications">
+          <button class="btn btn-primary" onclick="executeRawApi()">Execute</button>
+        </div>
+
+        <div class="form-group">
+          <label>JSON Payload (For POST/PUT/PATCH)</label>
+          <textarea id="rawPayload" class="form-control" placeholder='{"job_title": "Frontend Engineer"}' style="height: 100px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Response</label>
+          <pre id="rawResponse" class="json-view">// Response output will appear here...</pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function getApiBase() {
+      return document.getElementById('apiUrl').value.replace(/\/$/, '');
+    }
+
+    async function checkApiHealth() {
+      const badge = document.getElementById('statusBadge');
+      const text = document.getElementById('statusText');
+      try {
+        const res = await fetch(getApiBase() + '/api-status');
+        if (res.ok) {
+          badge.className = 'status-badge status-online';
+          text.innerText = 'Connected';
+          refreshStudentList();
+          loadFeed();
+        } else {
+          throw new Error();
+        }
+      } catch (err) {
+        badge.className = 'status-badge status-offline';
+        text.innerText = 'Offline';
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+
+      if (tabId === 'report-tab') refreshStudentList();
+      if (tabId === 'student-tab') loadFeed();
+      if (tabId === 'recruiter-tab') loadRecruiterApps();
+    }
+
+    // Refresh list of students for quick select dropdown
+    async function refreshStudentList() {
+      try {
+        const res = await fetch(getApiBase() + '/users/');
+        if (!res.ok) return;
+        const users = await res.json();
+        const select = document.getElementById('quickStudentSelect');
+        select.innerHTML = '<option value="">-- Select Existing Student --</option>';
+        users.forEach(u => {
+          select.innerHTML += `<option value="${u.id}">${u.name || u.username} (ID: ${u.id})</option>`;
+        });
+      } catch(e) {}
+    }
+
+    function selectStudentFromDropdown(val) {
+      if (val) {
+        document.getElementById('reportApplicantId').value = val;
+        fetchApplicantReport();
+      }
+    }
+
+    // Fetch Student Activity & Application Report
+    async function fetchApplicantReport() {
+      const id = document.getElementById('reportApplicantId').value;
+      const container = document.getElementById('reportOutput');
+
+      if (!id) {
+        container.innerHTML = '<p style="color: var(--accent-amber);">Please enter a valid Applicant ID.</p>';
+        return;
+      }
+
+      container.innerHTML = '<p style="color: var(--text-muted);">Fetching report from backend...</p>';
+
+      try {
+        const res = await fetch(`${getApiBase()}/recruiters/applicants/${id}/applications`);
+        if (!res.ok) {
+          container.innerHTML = `<p style="color: #ef4444;">Error ${res.status}: Failed to fetch report. Make sure user exists.</p>`;
+          return;
+        }
+
+        const data = await res.json();
+        const u = data.user || {};
+        const apps = data.applications || [];
+        const posts = data.posts || [];
+        const likes = data.likes || [];
+        const comments = data.comments || [];
+
+        let html = `
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 280px; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 12px; border: 1px solid var(--card-border);">
+              <h4 style="color: var(--primary); margin-bottom: 8px;">🆔 Student ID & Profile</h4>
+              <p><strong>ID:</strong> ${data.applicant_id}</p>
+              <p><strong>Name:</strong> ${u.name || 'N/A'}</p>
+              <p><strong>Username:</strong> @${u.username || 'N/A'}</p>
+              <p><strong>Email:</strong> ${u.email || 'N/A'}</p>
+              <p><strong>Phone:</strong> ${u.phone || 'N/A'}</p>
+              <p><strong>Career:</strong> ${u.career || 'N/A'}</p>
+              <p><strong>Resume:</strong> ${u.resume_url ? `<a href="${u.resume_url}" target="_blank" style="color: var(--primary);">View Resume 📄</a>` : 'Not uploaded'}</p>
+            </div>
+
+            <div style="flex: 1; min-width: 280px; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 12px; border: 1px solid var(--card-border);">
+              <h4 style="color: var(--accent-pink); margin-bottom: 8px;">📈 Activity Summary Report</h4>
+              <p><strong>Submitted Applications:</strong> ${apps.length}</p>
+              <p><strong>Career Posts Shared:</strong> ${posts.length}</p>
+              <p><strong>Total Likes Received/Given:</strong> ${likes.length}</p>
+              <p><strong>Total Comments Posted:</strong> ${comments.length}</p>
+            </div>
+          </div>
+
+          <h4 style="margin: 16px 0 10px;">📋 Job Applications (${apps.length})</h4>
+        `;
+
+        if (apps.length === 0) {
+          html += '<p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">No applications found for this student.</p>';
+        } else {
+          html += '<div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">';
+          apps.forEach(a => {
+            html += `
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <strong>${a.job_title}</strong> (Recruiter ID: ${a.recruiter_id || 'N/A'})
+                  <div style="font-size: 12px; color: var(--text-muted);">${a.notes || 'No notes'}</div>
+                </div>
+                <span class="badge badge-${a.status}">${a.status}</span>
+              </div>
+            `;
+          });
+          html += '</div>';
+        }
+
+        html += `<h4 style="margin: 16px 0 10px;">📱 Career Activities & Posts (${posts.length})</h4>`;
+        if (posts.length === 0) {
+          html += '<p style="color: var(--text-muted); font-size: 13px;">No posts published by this student yet.</p>';
+        } else {
+          html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px;">';
+          posts.forEach(p => {
+            html += `
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+                <img src="${p.image}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px;">${p.caption}</p>
+                <div style="font-size: 11px; color: var(--text-muted); margin-top: 6px;">Post ID: ${p.id}</div>
+              </div>
+            `;
+          });
+          html += '</div>';
+        }
+
+        container.innerHTML = html;
+
+      } catch (err) {
+        container.innerHTML = `<p style="color: #ef4444;">Error loading report: ${err.message}</p>`;
+      }
+    }
+
+    // Student profile creation
+    async function handleCreateStudent(e) {
+      e.preventDefault();
+      const body = {
+        name: document.getElementById('sName').value,
+        username: document.getElementById('sUsername').value,
+        password: document.getElementById('sPassword').value,
+        phone: document.getElementById('sPhone').value,
+        career: document.getElementById('sCareer').value,
+        email: document.getElementById('sEmail').value,
+        resume_url: document.getElementById('sResume').value
+      };
+
+      try {
+        const res = await fetch(getApiBase() + '/users/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        if (res.ok) {
+          const user = await res.json();
+          alert(`Student Created Successfully! User ID: ${user.id}`);
+          document.getElementById('createStudentForm').reset();
+          refreshStudentList();
+        } else {
+          const err = await res.json();
+          alert(`Error: ${JSON.stringify(err.detail || err)}`);
+        }
+      } catch (err) { alert('Request failed'); }
+    }
+
+    let currentImageMode = 'file';
+
+    function toggleImageMode(mode) {
+      currentImageMode = mode;
+      const fileContainer = document.getElementById('fileInputContainer');
+      const urlContainer = document.getElementById('urlInputContainer');
+      const btnUpload = document.getElementById('btnUploadMode');
+      const btnUrl = document.getElementById('btnUrlMode');
+
+      if (mode === 'file') {
+        fileContainer.style.display = 'block';
+        urlContainer.style.display = 'none';
+        btnUpload.className = 'btn btn-sm btn-primary';
+        btnUrl.className = 'btn btn-sm btn-secondary';
+      } else {
+        fileContainer.style.display = 'none';
+        urlContainer.style.display = 'block';
+        btnUpload.className = 'btn btn-sm btn-secondary';
+        btnUrl.className = 'btn btn-sm btn-primary';
+      }
+    }
+
+    function previewSelectedFile(input) {
+      const preview = document.getElementById('imagePreview');
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        preview.style.display = 'none';
+      }
+    }
+
+    // Create Post (supports document file upload or image URL)
+    async function handleCreatePost(e) {
+      e.preventDefault();
+      const userId = parseInt(document.getElementById('pUserId').value);
+      const username = document.getElementById('pUsername').value;
+      const caption = document.getElementById('pCaption').value;
+      const fileInput = document.getElementById('pImageFile');
+      const urlInput = document.getElementById('pImage');
+
+      try {
+        let res;
+        if (currentImageMode === 'file' && fileInput.files && fileInput.files[0]) {
+          // Upload file directly via multipart FormData
+          const formData = new FormData();
+          formData.append('user_id', userId);
+          formData.append('username', username);
+          formData.append('caption', caption);
+          formData.append('file', fileInput.files[0]);
+
+          res = await fetch(getApiBase() + '/posts/with-image', {
+            method: 'POST',
+            body: formData
+          });
+        } else {
+          // Send JSON payload with URL
+          const imageUrl = urlInput.value || 'https://picsum.photos/600/400';
+          res = await fetch(getApiBase() + '/posts/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              user_id: userId,
+              username: username,
+              image: imageUrl,
+              caption: caption
+            })
+          });
+        }
+
+        if (res.ok) {
+          alert('Post Published Successfully!');
+          document.getElementById('createPostForm').reset();
+          document.getElementById('imagePreview').style.display = 'none';
+          loadFeed();
+        } else {
+          const err = await res.json();
+          alert(`Error: ${JSON.stringify(err.detail || err)}`);
+        }
+      } catch(err) { alert(`Request failed: ${err.message}`); }
+    }
+
+
+    // Load Student Feed
+    async function loadFeed() {
+      const container = document.getElementById('feedContainer');
+      try {
+        const res = await fetch(getApiBase() + '/posts/');
+        if (!res.ok) {
+          container.innerHTML = '<p style="color: var(--text-muted);">Failed to load posts.</p>';
+          return;
+        }
+        const posts = await res.json();
+        if (posts.length === 0) {
+          container.innerHTML = '<p style="color: var(--text-muted);">No posts available yet. Create one!</p>';
+          return;
+        }
+
+        container.innerHTML = posts.map(p => `
+          <div class="feed-item">
+            <div class="post-header">
+              <div class="avatar">${(p.username || 'U')[0].toUpperCase()}</div>
+              <div>
+                <div class="post-author">@${p.username || 'User ' + p.user_id}</div>
+                <div class="post-meta">Post ID: ${p.id}</div>
+              </div>
+            </div>
+            <div style="font-size: 14px;">${p.caption}</div>
+            ${p.image ? `<img src="${p.image}" class="post-image" onerror="this.style.display='none'">` : ''}
+            <div class="post-actions">
+              <button class="btn btn-sm btn-secondary" onclick="likePost(${p.user_id}, ${p.id})">❤️ Like</button>
+              <button class="btn btn-sm btn-secondary" onclick="promptComment(${p.user_id}, ${p.id})">💬 Comment</button>
+            </div>
+          </div>
+        `).join('');
+      } catch(e) { container.innerHTML = '<p style="color: var(--text-muted);">Offline or backend unavailable.</p>'; }
+    }
+
+    async function likePost(userId, postId) {
+      try {
+        const res = await fetch(getApiBase() + '/likes/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: userId, post_id: postId })
+        });
+        if (res.ok) alert('Liked post!');
+      } catch(e) {}
+    }
+
+    async function promptComment(userId, postId) {
+      const text = prompt('Enter your comment:');
+      if (!text) return;
+      try {
+        const res = await fetch(getApiBase() + '/comments/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: userId, post_id: postId, comment: text })
+        });
+        if (res.ok) alert('Comment added!');
+      } catch(e) {}
+    }
+
+    // Create Recruiter
+    async function handleCreateRecruiter(e) {
+      e.preventDefault();
+      const body = {
+        rname: document.getElementById('rName').value,
+        company: document.getElementById('rCompany').value,
+        email: document.getElementById('rEmail').value,
+        password: document.getElementById('rPassword').value
+      };
+
+      try {
+        const res = await fetch(getApiBase() + '/recruiters/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        if (res.ok) {
+          const rec = await res.json();
+          alert(`Recruiter Account Created! Recruiter ID: ${rec.id}`);
+          document.getElementById('createRecruiterForm').reset();
+          document.getElementById('viewRecruiterId').value = rec.id;
+          loadRecruiterApps();
+        } else {
+          const err = await res.json();
+          alert(`Error: ${JSON.stringify(err)}`);
+        }
+      } catch(e) { alert('Request failed'); }
+    }
+
+    // Create Application
+    async function handleCreateApplication(e) {
+      e.preventDefault();
+      const recruiterId = document.getElementById('appRecruiterId').value;
+      const body = {
+        applicant_id: parseInt(document.getElementById('appStudentId').value),
+        job_title: document.getElementById('appJobTitle').value,
+        resume_url: document.getElementById('appResume').value,
+        status: document.getElementById('appStatus').value,
+        notes: document.getElementById('appNotes').value
+      };
+
+      try {
+        const res = await fetch(`${getApiBase()}/recruiters/${recruiterId}/applications`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        if (res.ok) {
+          alert('Job Application Created Successfully!');
+          document.getElementById('createAppForm').reset();
+          document.getElementById('viewRecruiterId').value = recruiterId;
+          loadRecruiterApps();
+        } else {
+          const err = await res.json();
+          alert(`Error: ${JSON.stringify(err.detail || err)}`);
+        }
+      } catch(e) { alert('Request failed'); }
+    }
+
+    // Load Recruiter Applications
+    async function loadRecruiterApps() {
+      const rId = document.getElementById('viewRecruiterId').value;
+      const container = document.getElementById('applicationsContainer');
+
+      if (!rId) return;
+
+      try {
+        const res = await fetch(`${getApiBase()}/recruiters/${rId}/applications`);
+        if (!res.ok) {
+          container.innerHTML = '<p style="color: var(--text-muted);">No applications found for this Recruiter ID.</p>';
+          return;
+        }
+        const apps = await res.json();
+        if (apps.length === 0) {
+          container.innerHTML = '<p style="color: var(--text-muted);">No applications submitted to this recruiter yet.</p>';
+          return;
+        }
+
+        container.innerHTML = apps.map(a => `
+          <div class="feed-item">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+              <div>
+                <strong>${a.job_title}</strong>
+                <div style="font-size: 13px; color: var(--text-muted);">
+                  Applicant: <strong>${a.applicant_name || 'ID ' + a.applicant_id}</strong> (@${a.applicant_username || 'N/A'})
+                </div>
+                <div style="font-size: 12px; color: var(--text-muted);">Email: ${a.applicant_email || 'N/A'}</div>
+              </div>
+              <span class="badge badge-${a.status}">${a.status}</span>
+            </div>
+
+            <div style="font-size: 13px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px; margin: 8px 0;">
+              Notes: ${a.notes || 'None'}
+            </div>
+
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+              <button class="btn btn-sm btn-secondary" onclick="updateAppStatus(${rId}, ${a.id}, 'interview_scheduled')">Schedule Interview</button>
+              <button class="btn btn-sm btn-secondary" onclick="updateAppStatus(${rId}, ${a.id}, 'hired')">Mark Hired</button>
+              <button class="btn btn-sm btn-secondary" onclick="viewApplicantReportDirect(${a.applicant_id})">🔍 Inspect Full Report</button>
+            </div>
+          </div>
+        `).join('');
+      } catch(e) { container.innerHTML = '<p style="color: var(--text-muted);">Error fetching applications.</p>'; }
+    }
+
+    async function updateAppStatus(recruiterId, appId, newStatus) {
+      try {
+        const res = await fetch(`${getApiBase()}/recruiters/${recruiterId}/applications/${appId}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status: newStatus })
+        });
+        if (res.ok) {
+          loadRecruiterApps();
+        }
+      } catch(e) {}
+    }
+
+    function viewApplicantReportDirect(applicantId) {
+      document.querySelectorAll('.tab-btn')[0].click();
+      document.getElementById('reportApplicantId').value = applicantId;
+      fetchApplicantReport();
+    }
+
+    // Raw API Tester
+    async function executeRawApi() {
+      const method = document.getElementById('rawMethod').value;
+      const endpoint = document.getElementById('rawEndpoint').value;
+      const payloadText = document.getElementById('rawPayload').value;
+      const output = document.getElementById('rawResponse');
+
+      output.innerText = '// Executing request...';
+
+      const options = { method, headers: {} };
+      if (['POST', 'PUT', 'PATCH'].includes(method) && payloadText.trim()) {
+        options.headers['Content-Type'] = 'application/json';
+        options.body = payloadText;
+      }
+
+      try {
+        const res = await fetch(getApiBase() + endpoint, options);
+        const data = await res.json();
+        output.innerText = JSON.stringify(data, null, 2);
+      } catch (err) {
+        output.innerText = `// Error: ${err.message}`;
+      }
+    }
+
+    // Initial load check
+    checkApiHealth();
+  </script>
+</body>
+</html>
