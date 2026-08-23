@@ -5,18 +5,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-db_url = os.getenv("DATABASE_URL")
+db_url = os.getenv("DATABASE_URL", "sqlite:///./convotech.db")
 
-if not db_url:
-    raise ValueError("DATABASE_URL is not set. Add it to your .env file.")
-
-engine = create_engine(db_url)
-
+engine = create_engine(
+    db_url,
+    connect_args={"check_same_thread": False} if db_url.startswith("sqlite") else {}
+)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
-session = SessionLocal
-
 Base = declarative_base()
+
+# Backwards compatibility aliases
+session = SessionLocal
 base = Base
+
 
 def get_db():
     db = SessionLocal()

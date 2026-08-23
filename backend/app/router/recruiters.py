@@ -28,6 +28,14 @@ from typing import Optional
 
 router = APIRouter(prefix="/recruiters", tags=["recruiters"])
 
+
+@router.get("/applicants/{applicant_id}/applications", response_model=StudentApplicationsReport)
+def get_student_applications(applicant_id: int, db: Session = Depends(get_db)):
+    report = get_student_applications_report(db, applicant_id)
+    if not report:
+        raise HTTPException(status_code=404, detail="Applicant not found")
+    return report
+
 @router.get("/", response_model=list[RecruiterOut])
 def getall(db: Session = Depends(get_db)):
     return get_all(db)
@@ -157,7 +165,3 @@ def remove_application(recruiter_id: int, application_id: int, db: Session = Dep
 
     delete_job_application(db, application_id)
     return {"detail": "Application deleted successfully"}
-
-@router.get("/applicants/{applicant_id}/applications", response_model=StudentApplicationsReport)
-def get_student_applications(applicant_id: int, db: Session = Depends(get_db)):
-    return get_student_applications_report(db, applicant_id)

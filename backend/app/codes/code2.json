@@ -1,0 +1,29 @@
+{
+  "title": "Reverse String",
+  "problem_id": "2",
+  "frontend_id": "2",
+  "difficulty": "Easy",
+  "problem_slug": "reverse-string",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Write a function that reverses a list of characters. The input list must be modified in-place.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]"
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]"
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s[i] is a printable ASCII character."
+  ],
+  "code_snippets": {
+    "python3": "class Solution:\n    def reverseString(self, s: list[str]) -> None:\n        "
+  }
+}

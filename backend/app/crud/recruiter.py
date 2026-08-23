@@ -1,5 +1,8 @@
 from sqlalchemy.orm import Session
-from app.models import Recruiters, JobApplications, Users, Posts, Likes, Comments
+import json
+
+from app.crud.streak import streak_report
+from app.models import Recruiters, JobApplications, Users, Posts
 from datetime import datetime
 from typing import Optional
 
@@ -105,26 +108,17 @@ def delete_job_application(db: Session, application_id: int):
 def get_applicant_posts(db: Session, applicant_id: int):
     return db.query(Posts).filter(Posts.user_id == applicant_id).all()
 
-def get_applicant_likes(db: Session, applicant_id: int):
-    return db.query(Likes).filter(Likes.user_id == applicant_id).all()
-
-def get_applicant_comments(db: Session, applicant_id: int):
-    return db.query(Comments).filter(Comments.user_id == applicant_id).all()
 
 def get_applicant_details(db: Session, applicant_id: int):
     user = db.query(Users).filter(Users.id == applicant_id).first()
     if not user:
         return None
     posts = get_applicant_posts(db, applicant_id)
-    likes = get_applicant_likes(db, applicant_id)
-    comments = get_applicant_comments(db, applicant_id)
     applications = get_applications_by_applicant(db, applicant_id)
 
     return {
         "user": user,
         "posts": posts,
-        "likes": likes,
-        "comments": comments,
         "applications": applications
     }
 
@@ -133,24 +127,41 @@ def enrich_application(db: Session, application: JobApplications):
         return None
     if application.applicant_id is not None:
         user = db.query(Users).filter(Users.id == application.applicant_id).first()
-        application.applicant_username = user.username if user else None
-        application.applicant_name = user.name if user else None
-        application.applicant_email = user.email if user else None
+        if user:
+            application.applicant_username = user.username
+            application.applicant_name = user.name
+            application.applicant_email = user.email
+            application.is_technical = user.is_technical
+            application.average_marks = user.average_marks or 0.0
+            try:
+                application.interested_domains = json.loads(user.interested_domains) if user.interested_domains else []
+            except Exception:
+                application.interested_domains = []
+            
+            streak_info = streak_report(db, user.id)
+            if streak_info:
+                application.current_streak = streak_info['current_streak']
+                application.longest_streak = streak_info['longest_streak']
+            if not application.resume_url and user.resume_url:
+                application.resume_url = user.resume_url
     return application
 
 def get_student_applications_report(db: Session, applicant_id: int):
     user = db.query(Users).filter(Users.id == applicant_id).first()
+    if not user:
+        return None
+
     raw_applications = get_applications_by_applicant(db, applicant_id)
     applications = [enrich_application(db, app) for app in raw_applications]
     posts = get_applicant_posts(db, applicant_id)
-    likes = get_applicant_likes(db, applicant_id)
-    comments = get_applicant_comments(db, applicant_id)
 
     return {
         "applicant_id": applicant_id,
         "user": user,
         "applications": applications,
         "posts": posts,
-        "likes": likes,
-        "comments": comments
+        "streak": streak_report(db, applicant_id),
+        "average_marks": user.average_marks,
+        "interested_domains": json.loads(user.interested_domains),
+        "is_technical": user.is_technical,
     }

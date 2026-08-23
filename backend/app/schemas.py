@@ -10,12 +10,18 @@ class Users(BaseModel):
     dob: Optional[date] = None
     username: str
     password: str
-    phone: str
+    phone: Optional[str] = None
     career: Optional[str] = None
     org: Optional[str] = None
     bio: Optional[str] = None
     profile_pic: Optional[str] = None
     email: Optional[str] = None
+    role: Optional[str] = None
+    tech_stack: Optional[str] = None
+    is_technical: Optional[bool] = None
+    onboarding_completed: bool = False
+    interested_domains: str = "[]"
+    average_marks: float = 0
 
 class Posts(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -71,6 +77,71 @@ class RecruiterOut(BaseModel):
     company: Optional[str] = None
     rname: Optional[str] = None
 
+
+class Onboarding(BaseModel):
+    name: str
+    phone: str
+    role: str
+    is_technical: Optional[bool] = None
+    interested_domains: list[str] = []
+    company: Optional[str] = None
+    recruiter_name: Optional[str] = None
+
+
+class GoogleSignIn(BaseModel):
+    credential: str
+
+
+class AuthSession(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    user_id: int
+    onboarding_required: bool
+
+
+class AuthUser(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    name: Optional[str] = None
+    username: str
+    email: Optional[str] = None
+    profile_pic: Optional[str] = None
+    role: Optional[str] = None
+    is_technical: Optional[bool] = None
+    onboarding_completed: bool
+    interested_domains: str
+    average_marks: float
+
+
+class McqQuestionCreate(BaseModel):
+    domain: str
+    level: str
+    is_technical: bool
+    question: str
+    options: list[str]
+    correct_answer: str
+
+
+class McqQuestionOut(BaseModel):
+    id: int
+    domain: str
+    level: str
+    is_technical: bool
+    question: str
+    options: list[str]
+
+
+class McqSubmission(BaseModel):
+    user_id: Optional[int] = None
+    question_id: int
+    selected_answer: str
+
+
+class McqResult(BaseModel):
+    correct: bool
+    score: float
+    average_marks: float
+
 class ApplicationCreate(BaseModel):
     id: Optional[int] = None
     applicant_id: Optional[int] = None
@@ -99,6 +170,22 @@ class ApplicationOut(BaseModel):
     applicant_username: Optional[str] = None
     applicant_name: Optional[str] = None
     applicant_email: Optional[str] = None
+    is_technical: Optional[bool] = None
+    interested_domains: list[str] = []
+    average_marks: float = 0
+    current_streak: int = 0
+    longest_streak: int = 0
+
+class StreakMaintenance(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    user_id: int
+    user: Optional[str] = None
+    current_streak: int
+    longest_streak: int
+    at_risk: bool
+    solved: int = 0
+    last_login_date: Optional[date] = None
+
 
 class StudentApplicationsReport(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -106,7 +193,19 @@ class StudentApplicationsReport(BaseModel):
     user: Optional[Users] = None
     applications: list[ApplicationOut]
     posts: list[Posts]
-    likes: list[Likes]
-    comments: list[Comments]
+    streak: Optional[StreakMaintenance] = None
+    average_marks: float = 0
+    interested_domains: list[str] = []
+    is_technical: Optional[bool] = None
 
+class AnswerSubmission(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    user_id: Optional[int] = None
+    code: str
+    lang: str
+    submission_date: Optional[datetime] = None
 
+class SubmitResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    passed: bool
+    streak_maintained: StreakMaintenance

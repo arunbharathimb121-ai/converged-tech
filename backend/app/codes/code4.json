@@ -1,0 +1,30 @@
+{
+  "title": "Contains Duplicate",
+  "problem_id": "4",
+  "frontend_id": "4",
+  "difficulty": "Easy",
+  "problem_slug": "contains-duplicate",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ],
+  "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,1]\nOutput: true"
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: false"
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-109 <= nums[i] <= 109"
+  ],
+  "code_snippets": {
+    "python3": "class Solution:\n    def containsDuplicate(self, nums: list[int]) -> bool:\n        "
+  }
+}

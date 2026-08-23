@@ -1,0 +1,30 @@
+{
+  "title": "Valid Anagram",
+  "problem_id": "5",
+  "frontend_id": "5",
+  "difficulty": "Easy",
+  "problem_slug": "valid-anagram",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"anagram\", t = \"nagaram\"\nOutput: true"
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"rat\", t = \"car\"\nOutput: false"
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 5 * 104",
+    "s and t consist of lowercase English letters."
+  ],
+  "code_snippets": {
+    "python3": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        "
+  }
+}
