@@ -551,6 +551,7 @@
     </header>
 
     <section class="auth-banner" id="authBanner">
+<<<<<<< HEAD
       <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
         <div>
           <div style="font-size:1rem; font-weight:700; color:var(--text);">Welcome to ConvoTech</div>
@@ -558,6 +559,20 @@
         </div>
         <div id="googleBtnContainer" style="display:inline-block;"></div>
         <button type="button" id="googleSignInBtn" class="btn btn-secondary btn-sm">Sign in with Google</button>
+=======
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <div>
+          <div style="font-size:1rem; font-weight:700; color:var(--text);">Welcome to ConvoTech</div>
+          <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">Sign in to access your student or recruiter dashboard.</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <button type="button" id="demoStudentBtn" class="btn btn-sm" style="background:#10b981; font-weight:600;">⚡ Demo Student</button>
+          <button type="button" id="demoRecruiterBtn" class="btn btn-sm" style="background:#8b5cf6; font-weight:600;">💼 Demo Recruiter</button>
+          <button type="button" id="openAuthModalBtn" class="btn btn-secondary btn-sm">🔑 Sign In / Register</button>
+          <div id="googleBtnContainer" style="display:inline-block;"></div>
+          <button type="button" id="googleSignInBtn" class="btn btn-secondary btn-sm">Sign in with Google</button>
+        </div>
+>>>>>>> 6d8865c (updation)
       </div>
       <div id="googleStatus" style="font-size: 0.83rem; color: var(--muted); margin-top:6px;">Status: Ready</div>
     </section>
@@ -658,7 +673,11 @@
               <button type="button" class="btn" id="reportUserBtn">Fetch Report</button>
             </div>
           </div>
+<<<<<<< HEAD
           <div id="reportBox" style="margin-top:16px;"><div style="color:var(--muted); font-size:0.88rem; padding:12px;">Enter a student ID above to view their detailed career stats, quiz accuracy, streak data, and applications.</div></div>
+=======
+          <div id="reportBox" style="margin-top:16px;"><div style="color:var(--muted); font-size:0.88rem; padding:12px;">Enter a student ID above to view their detailed career stats, quiz accuracy, solved problems count, and applications.</div></div>
+>>>>>>> 6d8865c (updation)
         </section>
       </div>
     </div>
@@ -667,6 +686,7 @@
     <div id="tab-practice" class="tab-content">
       <div class="grid-2">
         <section class="panel">
+<<<<<<< HEAD
           <div class="panel-header">
             <h2>MCQ Assessment Quiz</h2>
           </div>
@@ -684,6 +704,24 @@
           
           <div id="mcqContainer" style="display:flex; flex-direction:column; gap:14px;">
             <div style="color:var(--muted); font-size:0.88rem;">Select a difficulty level and click Load Questions to start your quiz. Questions will be tailored to your profile.</div>
+=======
+          <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <h2>MCQ Assessment Quiz</h2>
+            <button type="button" id="seedMcqBtn" class="btn btn-secondary btn-sm" style="font-size:0.75rem; padding:4px 10px;" title="Reload questions from JSON">Sync Quizzes 🔄</button>
+          </div>
+          <!-- Profile banner — filled automatically from student's JWT profile -->
+          <div id="mcqProfileBanner" style="margin-bottom:14px; padding:12px 16px; border-radius:12px; background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(16,185,129,0.08)); border:1px solid rgba(99,102,241,0.25); font-size:0.85rem; color:var(--muted);">
+            📊 Loading your profile quiz settings…
+          </div>
+
+          <div id="mcqDomainFilter" style="display:none; margin-bottom:14px;">
+            <label for="mcqDomain" style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Choose an interested domain</label>
+            <select class="input-field" id="mcqDomain" style="width:100%;"></select>
+          </div>
+
+          <div id="mcqContainer" style="display:flex; flex-direction:column; gap:14px;">
+            <div style="color:var(--muted); font-size:0.88rem;">Loading your personalised quiz questions…</div>
+>>>>>>> 6d8865c (updation)
           </div>
         </section>
 
@@ -736,6 +774,7 @@
             <h2>Publish Community Post</h2>
           </div>
           <form id="postForm">
+<<<<<<< HEAD
             <div class="form-grid">
               <div class="form-group">
                 <label>User ID</label>
@@ -745,6 +784,12 @@
                 <label>Username</label>
                 <input class="input-field" type="text" id="postUsername" required placeholder="Username" />
               </div>
+=======
+            <div id="postAuthBanner" style="margin-bottom:14px; padding:10px 14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:10px; font-size:0.88rem; color:var(--muted);">
+              Posting as: <strong style="color:var(--primary);" id="postAuthUsername">Signed-in User</strong>
+            </div>
+            <div class="form-grid">
+>>>>>>> 6d8865c (updation)
               <div class="form-group full">
                 <label>Caption</label>
                 <textarea class="input-field" id="postCaption" rows="3" required placeholder="Share an update, project, or idea..."></textarea>
@@ -759,7 +804,11 @@
               </div>
             </div>
             <div class="btn-row">
+<<<<<<< HEAD
               <button type="submit" class="btn">Publish Post</button>
+=======
+              <button type="submit" class="btn">Publish Post 🚀</button>
+>>>>>>> 6d8865c (updation)
             </div>
           </form>
         </section>
@@ -839,6 +888,70 @@
       </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- ── AUTH MODAL (LOGIN & REGISTER) ── -->
+    <div class="modal-overlay" id="authModal">
+      <div class="modal-box" style="position:relative; max-width:440px;">
+        <button type="button" onclick="closeModal('authModal')" style="position:absolute; top:18px; right:18px; background:none; border:none; color:var(--muted); font-size:1.2rem; cursor:pointer;">✕</button>
+        <div class="modal-title" id="authModalTitle">Account Access</div>
+        <div class="modal-subtitle" id="authModalSubtitle">Sign in to your account or create a new profile.</div>
+
+        <div style="display:flex; gap:8px; margin-bottom:18px; border-bottom:1px solid var(--border); padding-bottom:8px;">
+          <button type="button" id="authTabLogin" class="btn btn-sm" style="flex:1;" onclick="switchAuthTab('login')">Sign In</button>
+          <button type="button" id="authTabRegister" class="btn btn-secondary btn-sm" style="flex:1;" onclick="switchAuthTab('register')">Register</button>
+        </div>
+
+        <div id="authModalError" style="display:none; color:var(--danger); background:var(--danger-light); padding:8px 12px; border-radius:8px; font-size:0.83rem; margin-bottom:14px;"></div>
+
+        <!-- Login Form -->
+        <form id="loginForm" onsubmit="event.preventDefault(); submitLoginForm();">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Username or Email</label>
+              <input class="input-field" id="loginIdentifier" type="text" placeholder="e.g. alice or alice@example.com" required style="width:100%;" />
+            </div>
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Password</label>
+              <input class="input-field" id="loginPassword" type="password" placeholder="••••••••" required style="width:100%;" />
+            </div>
+          </div>
+          <button type="submit" class="btn" style="width:100%; margin-top:18px;">Sign In →</button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" style="display:none;" onsubmit="event.preventDefault(); submitRegisterForm();">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Username *</label>
+              <input class="input-field" id="regUsername" type="text" placeholder="unique username" required style="width:100%;" />
+            </div>
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Full Name</label>
+              <input class="input-field" id="regName" type="text" placeholder="Your name" style="width:100%;" />
+            </div>
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Email</label>
+              <input class="input-field" id="regEmail" type="email" placeholder="you@example.com" style="width:100%;" />
+            </div>
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Password *</label>
+              <input class="input-field" id="regPassword" type="password" placeholder="••••••••" required style="width:100%;" />
+            </div>
+            <div>
+              <label style="font-size:0.8rem; color:var(--muted); display:block; margin-bottom:4px;">Role</label>
+              <select class="input-field" id="regRole" style="width:100%;">
+                <option value="student">Student</option>
+                <option value="recruiter">Recruiter</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn" style="width:100%; margin-top:18px;">Create Account →</button>
+        </form>
+      </div>
+    </div>
+
+>>>>>>> 6d8865c (updation)
     <!-- ── ROLE PICKER MODAL ── -->
     <div class="modal-overlay" id="roleModal">
       <div class="modal-box">
@@ -1074,6 +1187,40 @@
       }
     }
 
+<<<<<<< HEAD
+=======
+    async function setupSession(res) {
+      currentUserToken = res.access_token;
+      currentUserId = res.user_id;
+      localStorage.setItem('access_token', res.access_token);
+      localStorage.setItem('user_id', res.user_id);
+
+      if (res.onboarding_required) {
+        googleStatus.innerHTML = `✅ Authenticated — <strong style="color:var(--warning)">Please complete your profile.</strong>`;
+        _pendingRole = null;
+        const confirmBtn = document.getElementById('roleConfirmBtn');
+        if (confirmBtn) {
+          confirmBtn.style.opacity = '0.4';
+          confirmBtn.style.pointerEvents = 'none';
+        }
+        document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
+        openModal('roleModal');
+      } else {
+        try {
+          const me = await apiFetch('/auth/me');
+          _sessionUserMeta = me;
+          googleStatus.innerHTML = `✅ Signed in as ${me.name || me.username || 'User'}`;
+          applyRoleUI(me.role || 'student');
+        } catch (_) {
+          googleStatus.innerHTML = `✅ Signed in (User ID: ${res.user_id})`;
+          applyRoleUI('student');
+        }
+        await loadProfileQuiz();
+        await loadAll();
+      }
+    }
+
+>>>>>>> 6d8865c (updation)
     async function handleGoogleSignInResponse(response) {
       if (!response || !response.credential) {
         return alert('Google sign in failed.');
@@ -1085,6 +1232,7 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ credential: response.credential })
         });
+<<<<<<< HEAD
         
         currentUserToken = res.access_token;
         currentUserId = res.user_id;
@@ -1115,6 +1263,101 @@
       } catch (err) {
         googleStatus.textContent = `Auth Error: ${err.message}`;
         alert(`Google Auth Failed: ${err.message}`);
+=======
+        await setupSession(res);
+      } catch (err) {
+        googleStatus.textContent = `Auth Error: ${err.message}`;
+        alert(`Google Auth Failed: ${err.message}\n\nYou can also use Quick Demo Login or Sign In / Register.`);
+      }
+    }
+
+    async function handleDemoLogin(role) {
+      googleStatus.textContent = `Signing in as demo ${role}...`;
+      try {
+        const res = await apiFetch('/auth/demo', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ role })
+        });
+        await setupSession(res);
+      } catch (err) {
+        googleStatus.textContent = `Demo sign in failed: ${err.message}`;
+        alert(`Demo sign in failed: ${err.message}`);
+      }
+    }
+
+    function switchAuthTab(tab) {
+      const loginTab = document.getElementById('authTabLogin');
+      const regTab = document.getElementById('authTabRegister');
+      const loginForm = document.getElementById('loginForm');
+      const regForm = document.getElementById('registerForm');
+      const errBox = document.getElementById('authModalError');
+      if (errBox) errBox.style.display = 'none';
+
+      if (tab === 'login') {
+        loginTab.className = 'btn btn-sm';
+        regTab.className = 'btn btn-secondary btn-sm';
+        loginForm.style.display = 'block';
+        regForm.style.display = 'none';
+        document.getElementById('authModalTitle').textContent = 'Sign In';
+      } else {
+        loginTab.className = 'btn btn-secondary btn-sm';
+        regTab.className = 'btn btn-sm';
+        loginForm.style.display = 'none';
+        regForm.style.display = 'block';
+        document.getElementById('authModalTitle').textContent = 'Create Account';
+      }
+    }
+
+    async function submitLoginForm() {
+      const identifier = document.getElementById('loginIdentifier').value.trim();
+      const password = document.getElementById('loginPassword').value;
+      const errBox = document.getElementById('authModalError');
+      if (errBox) errBox.style.display = 'none';
+
+      try {
+        const res = await apiFetch('/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identifier, password })
+        });
+        closeModal('authModal');
+        await setupSession(res);
+      } catch (err) {
+        if (errBox) {
+          errBox.textContent = err.message;
+          errBox.style.display = 'block';
+        } else {
+          alert(`Login failed: ${err.message}`);
+        }
+      }
+    }
+
+    async function submitRegisterForm() {
+      const username = document.getElementById('regUsername').value.trim();
+      const name = document.getElementById('regName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value;
+      const role = document.getElementById('regRole').value;
+      const errBox = document.getElementById('authModalError');
+      if (errBox) errBox.style.display = 'none';
+
+      try {
+        const res = await apiFetch('/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, name, email, password, role })
+        });
+        closeModal('authModal');
+        await setupSession(res);
+      } catch (err) {
+        if (errBox) {
+          errBox.textContent = err.message;
+          errBox.style.display = 'block';
+        } else {
+          alert(`Registration failed: ${err.message}`);
+        }
+>>>>>>> 6d8865c (updation)
       }
     }
 
@@ -1193,6 +1436,10 @@
         googleStatus.innerHTML = `🎉 Welcome, ${result.name}! Your ${result.role} profile is all set.`;
         _sessionUserMeta = result;
         applyRoleUI(result.role);
+<<<<<<< HEAD
+=======
+        await loadProfileQuiz();
+>>>>>>> 6d8865c (updation)
         await loadAll();
       } catch (err) {
         errDiv.textContent = `Setup failed: ${err.message}`; errDiv.style.display = 'block';
@@ -1219,6 +1466,7 @@
       const badge = document.getElementById('userBadge');
       badge.classList.add('visible');
       const meta = _sessionUserMeta || {};
+<<<<<<< HEAD
       document.getElementById('userBadgeName').textContent = meta.name || 'User';
       document.getElementById('userRolePill').textContent = role === 'student' ? '🎓 Student' : role === 'recruiter' ? '💼 Recruiter' : '🛠 Admin';
       if (meta.profile_pic) {
@@ -1227,6 +1475,36 @@
       }
       // Hide sign-in banner
       document.getElementById('authBanner').style.display = 'none';
+=======
+      document.getElementById('userBadgeName').textContent = meta.name || meta.username || 'User';
+      document.getElementById('userRolePill').textContent = role === 'student' ? '🎓 Student' : role === 'recruiter' ? '💼 Recruiter' : '🛠 Admin';
+      const img = document.getElementById('userAvatarImg');
+      if (img) {
+        if (meta.profile_pic) {
+          img.src = meta.profile_pic; img.style.display = '';
+        } else {
+          img.style.display = 'none';
+        }
+      }
+      // Update post auth banner username
+      const postAuthEl = document.getElementById('postAuthUsername');
+      if (postAuthEl) {
+        postAuthEl.textContent = `@${meta.username || meta.name || 'user'}`;
+      }
+
+      // Hide sign-in banner
+      document.getElementById('authBanner').style.display = 'none';
+
+      // Auto-populate student dashboard report if student
+      if (role === 'student' && meta.id) {
+        const reportInput = document.getElementById('reportUserId');
+        if (reportInput) {
+          reportInput.value = meta.id;
+          const reportBtn = document.getElementById('reportUserBtn');
+          if (reportBtn) reportBtn.click();
+        }
+      }
+>>>>>>> 6d8865c (updation)
     }
 
     function signOut() {
@@ -1254,7 +1532,11 @@
     async function loadUsers() {
       const list = document.getElementById('userList');
       try {
+<<<<<<< HEAD
         const users = await apiFetch('/users/');
+=======
+        const users = await apiFetch('/users/?role=student');
+>>>>>>> 6d8865c (updation)
         document.getElementById('userCount').textContent = users.length;
         if (!users.length) {
           list.innerHTML = '<div class="item-card muted">No students registered yet.</div>';
@@ -1288,6 +1570,7 @@
           return;
         }
 
+<<<<<<< HEAD
         const likeCounts = {}, commentCounts = {};
         likes.forEach(l => { likeCounts[l.post_id] = (likeCounts[l.post_id] || 0) + 1; });
         comments.forEach(c => { commentCounts[c.post_id] = (commentCounts[c.post_id] || 0) + 1; });
@@ -1306,6 +1589,63 @@
             </div>
           </div>
         `).join('');
+=======
+        const activeUserId = _sessionUserMeta ? _sessionUserMeta.id : null;
+        const activeRole = _sessionUserMeta ? _sessionUserMeta.role : null;
+
+        const likeCounts = {}, commentCounts = {}, userLikes = {};
+        likes.forEach(l => {
+          likeCounts[l.post_id] = (likeCounts[l.post_id] || 0) + 1;
+          if (activeUserId && l.user_id === activeUserId) {
+            userLikes[l.post_id] = true;
+          }
+        });
+
+        const postComments = {};
+        comments.forEach(c => {
+          commentCounts[c.post_id] = (commentCounts[c.post_id] || 0) + 1;
+          if (!postComments[c.post_id]) postComments[c.post_id] = [];
+          postComments[c.post_id].push(c);
+        });
+
+        list.innerHTML = posts.slice().reverse().map(p => {
+          const isOwner = activeUserId && (p.user_id === activeUserId || activeRole === 'admin');
+          const isLiked = userLikes[p.id];
+          const cList = postComments[p.id] || [];
+
+          return `
+            <div class="post-card" style="background:var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:14px;">
+              <div class="post-author" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="width:32px; height:32px; border-radius:50%; background:var(--primary-light); color:var(--primary); display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">${(p.username || 'U')[0].toUpperCase()}</span>
+                  <span style="font-weight:700; color:var(--text); font-size:0.92rem;">@${p.username || 'user'}</span>
+                </div>
+                ${isOwner ? `<button type="button" class="btn btn-danger btn-sm" style="font-size:0.75rem; padding:3px 8px;" onclick="deletePost(${p.id})">🗑️ Delete</button>` : ''}
+              </div>
+              <div class="post-caption" style="font-size:0.92rem; color:var(--text); line-height:1.5; margin-bottom:12px;">${p.caption}</div>
+              ${p.image ? `<img src="${p.image}" class="post-img" alt="Post media" style="width:100%; max-height:380px; object-fit:cover; border-radius:8px; margin-bottom:12px;" onerror="this.style.display='none'">` : ''}
+
+              <div class="post-actions" style="display:flex; gap:10px; align-items:center; border-top:1px solid var(--border); padding-top:10px;">
+                <button type="button" class="btn btn-sm ${isLiked ? '' : 'btn-secondary'}" style="${isLiked ? 'background:var(--primary); color:#fff;' : ''}" onclick="likePost(${p.id})">
+                  ${isLiked ? '❤️ Liked' : '👍 Like'} (${likeCounts[p.id] || 0})
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="commentPost(${p.id})">💬 Comment (${commentCounts[p.id] || 0})</button>
+              </div>
+
+              ${cList.length ? `
+                <div style="margin-top:12px; background:var(--bg-alt); padding:10px 12px; border-radius:8px; border:1px solid var(--border); display:flex; flex-direction:column; gap:6px;">
+                  <div style="font-size:0.75rem; color:var(--muted); font-weight:700; text-transform:uppercase;">Comments (${cList.length})</div>
+                  ${cList.map(c => `
+                    <div style="font-size:0.84rem; color:var(--text);">
+                      <strong style="color:var(--primary);">User #${c.user_id}:</strong> ${c.comment}
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('');
+>>>>>>> 6d8865c (updation)
       } catch (e) {
         list.innerHTML = `<div class="item-card muted">Failed to load feed: ${e.message}</div>`;
       }
@@ -1364,12 +1704,29 @@
             <div class="item-subtitle" style="font-weight:600; color:var(--text); margin-top:4px;">
               Applicant: ${app.applicant_name || 'Student'} (@${app.applicant_username || 'user'}) · ${app.applicant_email || ''}
             </div>
+<<<<<<< HEAD
             <div class="item-subtitle" style="margin-top:6px; background:var(--bg-alt); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
               <div><strong>Track:</strong> ${app.is_technical === true ? '⚡ Technical' : app.is_technical === false ? '📊 Non-Technical' : 'General'}</div>
               <div><strong>Interested Domains:</strong> ${Array.isArray(app.interested_domains) && app.interested_domains.length ? app.interested_domains.join(', ') : 'None'}</div>
               <div><strong>MCQ Accuracy:</strong> ${app.average_marks ? app.average_marks.toFixed(1) : 0}%</div>
               ${app.is_technical ? `<div><strong>Code Streak:</strong> 🔥 ${app.current_streak || 0} Days (Longest: ${app.longest_streak || 0})</div>` : ''}
               ${app.resume_url ? `<div><strong>Resume:</strong> <a href="${app.resume_url}" target="_blank" style="color:var(--primary);">View Resume</a></div>` : ''}
+=======
+            <div class="item-subtitle" style="margin-top:6px; background:var(--bg-alt); padding:10px 14px; border-radius:8px; border:1px solid var(--border); display:flex; flex-direction:column; gap:6px;">
+              <div><strong>Track:</strong> ${app.is_technical === true ? '⚡ Technical' : app.is_technical === false ? '📊 Non-Technical' : 'General'}</div>
+              <div><strong>problems solved:</strong> <span style="color:var(--success); font-weight:700;">${app.solved_problems || 0}/${app.total_problems || 0}</span> (Peak Month: ${app.highest_month_engaged || 'None'})</div>
+              <div style="margin-top:4px;">
+                <strong>interested domains:</strong>
+                <div style="display:flex; flex-direction:column; gap:4px; margin-top:6px; padding-left:6px;">
+                  ${(app.domain_quiz_details && app.domain_quiz_details.length) ? app.domain_quiz_details.map(d => `
+                    <div style="font-size:0.86rem; color:var(--text);">${d.domain} - <strong style="color:var(--primary);">${(d.percentage || 0).toFixed(1)}%</strong></div>
+                  `).join('') : ((app.interested_domains || []).map(d => `
+                    <div style="font-size:0.86rem; color:var(--text);">${d} - <span style="color:var(--muted);">0.0%</span></div>
+                  `).join('') || '<div style="color:var(--muted); font-size:0.85rem;">None</div>')}
+                </div>
+              </div>
+              ${app.resume_url ? `<div style="margin-top:6px;"><a href="${app.resume_url}" target="_blank" style="color:var(--primary); font-weight:600;">📄 View Resume</a></div>` : ''}
+>>>>>>> 6d8865c (updation)
             </div>
             <div style="display:flex; gap:6px; margin-top:10px;">
               <button class="btn btn-secondary btn-sm" onclick="updateAppStatus(${recruiterId}, ${app.id}, 'interview_scheduled')">Schedule Interview</button>
@@ -1412,7 +1769,10 @@
       try {
         const data = await apiFetch(`/recruiters/applicants/${userId}/applications`);
         const u = data.user || {};
+<<<<<<< HEAD
         const streak = data.streak || {};
+=======
+>>>>>>> 6d8865c (updation)
         const domains = Array.isArray(data.interested_domains) && data.interested_domains.length ? data.interested_domains.join(', ') : 'None';
         const apps = data.applications || [];
         const posts = data.posts || [];
@@ -1433,6 +1793,7 @@
               </div>
             </div>
 
+<<<<<<< HEAD
             <!-- Stats Grid -->
             <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border-top:1px solid var(--border);">
               <div style="background:var(--bg-alt); padding:14px; text-align:center;">
@@ -1461,6 +1822,31 @@
               </div>
               ${u.resume_url ? `<div style="margin-top:10px;"><a href="${u.resume_url}" target="_blank" style="color:var(--primary); font-size:0.85rem; font-weight:600;">📄 View Resume →</a></div>` : ''}
               ${streak.at_risk ? `<div style="margin-top:10px; background:var(--warning)22; color:var(--warning); padding:8px 12px; border-radius:8px; font-size:0.82rem; font-weight:600;">⚠️ Streak at risk — hasn't submitted today</div>` : ''}
+=======
+            <!-- Vertical Stats & Domain Breakdown -->
+            <div style="background:var(--bg-alt); padding:16px; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:12px;">
+              <div style="font-size:0.95rem; font-weight:700; color:var(--text);">
+                problems solved: <span style="color:var(--success); font-weight:800;">${data.solved_problems || 0}/${data.total_problems || 0}</span>
+                <span style="font-weight:400; font-size:0.82rem; color:var(--muted); margin-left:8px;">(Peak Month: ${data.highest_month_engaged || 'None'})</span>
+              </div>
+
+              <div>
+                <div style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:6px;">interested domains:</div>
+                <div style="display:flex; flex-direction:column; gap:6px; padding-left:6px;">
+                  ${(data.domain_quiz_details && data.domain_quiz_details.length) ? data.domain_quiz_details.map(d => `
+                    <div style="font-size:0.9rem; color:var(--text); font-weight:500;">
+                      ${d.domain} - <span style="color:var(--primary); font-weight:700;">${(d.percentage || 0).toFixed(1)}%</span>
+                    </div>
+                  `).join('') : ((data.interested_domains || []).map(d => `
+                    <div style="font-size:0.9rem; color:var(--text); font-weight:500;">
+                      ${d} - <span style="color:var(--muted);">0.0%</span>
+                    </div>
+                  `).join('') || '<div style="color:var(--muted); font-size:0.85rem;">None specified</div>')}
+                </div>
+              </div>
+
+              ${u.resume_url ? `<div style="margin-top:4px;"><a href="${u.resume_url}" target="_blank" style="color:var(--primary); font-size:0.85rem; font-weight:600;">📄 View Resume →</a></div>` : ''}
+>>>>>>> 6d8865c (updation)
             </div>
 
             <!-- Applications -->
@@ -1493,8 +1879,14 @@
 
     document.getElementById('postForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+<<<<<<< HEAD
       const userId = document.getElementById('postUserId').value;
       const username = document.getElementById('postUsername').value;
+=======
+      const meta = _sessionUserMeta || {};
+      const userId = meta.id || Number(currentUserId) || 1;
+      const username = meta.username || meta.name || 'user';
+>>>>>>> 6d8865c (updation)
       const caption = document.getElementById('postCaption').value;
       const imageUrl = document.getElementById('postImageUrl').value;
       const fileInput = document.getElementById('postFile');
@@ -1570,6 +1962,7 @@
       } catch (err) { alert(err.message); }
     }
 
+<<<<<<< HEAD
     document.getElementById('loadMcqBtn').addEventListener('click', async () => {
       const level = document.getElementById('mcqLevel').value;
       const container = document.getElementById('mcqContainer');
@@ -1578,10 +1971,93 @@
         const questions = await apiFetch(`/mcqs/questions?level=${level}`);
         if (!questions.length) {
           container.innerHTML = '<div style="color:var(--muted);">No MCQ questions found for this criteria. Complete onboarding first so questions can be matched to your profile.</div>';
+=======
+    function getProfileDomains() {
+      const rawDomains = _sessionUserMeta && _sessionUserMeta.interested_domains;
+      if (Array.isArray(rawDomains)) return rawDomains;
+      if (typeof rawDomains === 'string') {
+        try {
+          const domains = JSON.parse(rawDomains);
+          return Array.isArray(domains) ? domains : [];
+        } catch (_) {
+          return [];
+        }
+      }
+      return [];
+    }
+
+    async function loadProfileQuiz() {
+      const banner = document.getElementById('mcqProfileBanner');
+      const filter = document.getElementById('mcqDomainFilter');
+      const domainSelect = document.getElementById('mcqDomain');
+      const profile = _sessionUserMeta;
+      if (!banner || !filter || !domainSelect || !profile || profile.role !== 'student') return;
+
+      const domains = getProfileDomains();
+      const trackName = profile.is_technical ? 'Technical' : 'Non-Technical';
+
+      let domainScoresHtml = '';
+      try {
+        const domainData = await apiFetch('/mcqs/domain-percentages');
+        const details = domainData.domain_details || [];
+        if (details.length) {
+          domainScoresHtml = `
+            <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+              ${details.map(d => `
+                <span style="background:var(--card-bg); border:1px solid var(--border); padding:4px 12px; border-radius:20px; font-size:0.8rem; color:var(--text);">
+                  🎯 <strong>${d.domain}</strong>: <span style="color:var(--primary); font-weight:700;">${d.percentage.toFixed(1)}%</span> (${d.attended_questions}/${d.total_questions} attended)
+                </span>
+              `).join('')}
+            </div>
+          `;
+        }
+      } catch (_) {}
+
+      banner.innerHTML = `<div>📊 Your quiz track: <strong style="color:var(--text)">${trackName}</strong>` +
+        (domains.length ? ` · ${domains.length} interested domain${domains.length > 1 ? 's' : ''}` : '') + `</div>` + domainScoresHtml;
+
+      if (domains.length > 1) {
+        filter.style.display = 'block';
+        domainSelect.innerHTML = domains.map(d => `<option value="${d.replace(/"/g, '&quot;')}">${d}</option>`).join('');
+        domainSelect.onchange = loadProfileQuizQuestions;
+      } else {
+        filter.style.display = 'none';
+      }
+      await loadProfileQuizQuestions();
+    }
+
+    document.getElementById('seedMcqBtn').addEventListener('click', async () => {
+      try {
+        const res = await apiFetch('/mcqs/seed', { method: 'POST' });
+        alert(`Quiz synchronization complete!\nTotal questions in DB: ${res.total_in_db}\nNewly added: ${res.newly_added}`);
+        await loadProfileQuiz();
+      } catch (err) { alert(`Sync failed: ${err.message}`); }
+    });
+
+    async function loadProfileQuizQuestions() {
+      const container = document.getElementById('mcqContainer');
+      const domainSelect = document.getElementById('mcqDomain');
+      container.innerHTML = '<div style="color:var(--muted);">Loading quiz questions...</div>';
+
+      try {
+        const domains = getProfileDomains();
+        const selectedDomain = domains.length > 1 && domainSelect ? domainSelect.value : '';
+        const qs = selectedDomain ? `?domain=${encodeURIComponent(selectedDomain)}` : '';
+        const questions = await apiFetch(`/mcqs/questions${qs}`);
+        if (!questions.length) {
+          container.innerHTML = `
+            <div style="color:var(--success); padding:18px 16px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.25); border-radius:12px; text-align:center;">
+              <div style="font-size:1.6rem; margin-bottom:6px;">🎉</div>
+              <div style="font-weight:700; color:var(--text); font-size:1rem;">All Questions Completed!</div>
+              <div style="font-size:0.84rem; color:var(--muted); margin-top:4px;">You have attended all available questions in this domain. Check back later or choose another domain.</div>
+            </div>
+          `;
+>>>>>>> 6d8865c (updation)
           return;
         }
 
         container.innerHTML = questions.map((q, idx) => `
+<<<<<<< HEAD
           <div class="item-card">
             <div class="item-title" style="margin-bottom:8px;">Q${idx + 1}. ${q.question}</div>
             <div style="display:flex; flex-direction:column; gap:6px;">
@@ -1604,12 +2080,77 @@
       try {
         const payload = { question_id: questionId, selected_answer: selected.value };
 
+=======
+          <div class="item-card" id="mcq_card_${q.id}" style="padding:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:12px;">
+              <span class="item-title" style="font-size:0.95rem; font-weight:600;">Q${idx + 1}. ${q.question}</span>
+              <div style="display:flex; gap:6px; flex-shrink:0;">
+                <span style="font-size:0.7rem; background:${q.is_technical ? 'rgba(99,102,241,0.2)' : 'rgba(16,185,129,0.2)'}; color:${q.is_technical ? 'var(--primary)' : 'var(--success)'}; padding:2px 8px; border-radius:999px; font-weight:700;">
+                  ${q.is_technical ? '💻 Tech' : '📊 Non-Tech'}
+                </span>
+                <span style="font-size:0.7rem; background:var(--card-alt); border:1px solid var(--border); padding:2px 8px; border-radius:999px; color:var(--muted);">
+                  ${q.domain}
+                </span>
+                <span style="font-size:0.7rem; background:var(--card-alt); border:1px solid var(--border); padding:2px 8px; border-radius:999px; text-transform:capitalize; color:var(--warning);">
+                  ${q.level}
+                </span>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              ${q.options.map(opt => `
+                <label style="font-size:0.88rem; cursor:pointer; display:flex; align-items:center; gap:10px; background:var(--bg-alt); padding:10px 14px; border-radius:10px; border:1px solid var(--border); transition:all 0.15s ease;">
+                  <input type="radio" name="mcq_${q.id}" value="${opt.replace(/"/g, '&quot;')}">
+                  <span>${opt}</span>
+                </label>
+              `).join('')}
+            </div>
+            <div id="mcq_feedback_${q.id}" style="margin-top:12px; font-size:0.86rem; font-weight:600; display:none;"></div>
+            <button type="button" class="btn btn-sm" id="btn_submit_mcq_${q.id}" style="margin-top:12px;" onclick="submitMcq(${q.id})">Submit Answer</button>
+          </div>
+        `).join('');
+      } catch (err) { container.innerHTML = `<div style="color:var(--danger);">${err.message}</div>`; }
+    }
+
+    async function submitMcq(questionId) {
+      const selected = document.querySelector(`input[name="mcq_${questionId}"]:checked`);
+      if (!selected) return alert('Please select an option before submitting.');
+
+      const feedback = document.getElementById(`mcq_feedback_${questionId}`);
+      const card = document.getElementById(`mcq_card_${questionId}`);
+      const btn = document.getElementById(`btn_submit_mcq_${questionId}`);
+
+      try {
+        const payload = { question_id: questionId, selected_answer: selected.value };
+>>>>>>> 6d8865c (updation)
         const res = await apiFetch('/mcqs/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
+<<<<<<< HEAD
         alert(res.correct ? `✅ Correct! Average Score: ${res.average_marks.toFixed(1)}%` : `❌ Incorrect! Average Score: ${res.average_marks.toFixed(1)}%`);
+=======
+
+        // Disable options so user cannot re-select
+        document.querySelectorAll(`input[name="mcq_${questionId}"]`).forEach(inp => inp.disabled = true);
+        if (btn) btn.style.display = 'none';
+
+        if (feedback) {
+          feedback.style.display = 'block';
+          const isCorrect = res.correct;
+          feedback.style.color = isCorrect ? 'var(--success)' : 'var(--danger)';
+          feedback.innerHTML = `
+            <div>${isCorrect ? '🎉 Correct! (+100 pts)' : '❌ Incorrect (0 pts)'} — Overall MCQ Accuracy: <strong>${res.average_marks.toFixed(1)}%</strong></div>
+            <div style="font-size:0.8rem; color:var(--muted); margin-top:4px;">✓ Marked as attended and excluded from future quiz views.</div>
+            <button type="button" class="btn btn-secondary btn-sm" style="margin-top:8px; font-size:0.78rem;" onclick="loadProfileQuizQuestions()">Refresh Unattended Questions ➔</button>
+          `;
+          if (card) card.style.borderColor = isCorrect ? 'var(--success)' : 'var(--danger)';
+        }
+
+        if (_sessionUserMeta) {
+          _sessionUserMeta.average_marks = res.average_marks;
+        }
+>>>>>>> 6d8865c (updation)
       } catch (err) { alert(err.message); }
     }
 
@@ -1642,8 +2183,14 @@
     });
 
     async function likePost(postId) {
+<<<<<<< HEAD
       const userId = Number(prompt('Enter your Student/User ID:'));
       if (!userId) return;
+=======
+      const meta = _sessionUserMeta || {};
+      const userId = meta.id || Number(currentUserId);
+      if (!userId) return alert('Please sign in to like community posts.');
+>>>>>>> 6d8865c (updation)
       try {
         await apiFetch('/likes/', {
           method: 'POST',
@@ -1655,19 +2202,42 @@
     }
 
     async function commentPost(postId) {
+<<<<<<< HEAD
       const userId = Number(prompt('Enter your Student/User ID:'));
       const comment = prompt('Write comment:');
       if (!userId || !comment) return;
+=======
+      const meta = _sessionUserMeta || {};
+      const userId = meta.id || Number(currentUserId);
+      if (!userId) return alert('Please sign in to comment on community posts.');
+      const comment = prompt('Write a comment:');
+      if (!comment || !comment.trim()) return;
+>>>>>>> 6d8865c (updation)
       try {
         await apiFetch('/comments/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
           body: JSON.stringify({ user_id: userId, post_id: postId, comment })
+=======
+          body: JSON.stringify({ user_id: userId, post_id: postId, comment: comment.trim() })
+>>>>>>> 6d8865c (updation)
         });
         await loadPosts();
       } catch (e) { alert(e.message); }
     }
 
+<<<<<<< HEAD
+=======
+    async function deletePost(postId) {
+      if (!confirm('Are you sure you want to delete your post?')) return;
+      try {
+        await apiFetch(`/posts/${postId}`, { method: 'DELETE' });
+        await loadPosts();
+      } catch (e) { alert(e.message); }
+    }
+
+>>>>>>> 6d8865c (updation)
     document.getElementById('runApiBtn').addEventListener('click', async () => {
       const method = document.getElementById('apiMethod').value;
       const endpoint = document.getElementById('apiEndpoint').value;
@@ -1687,6 +2257,21 @@
       } catch (e) { output.textContent = `Error: ${e.message}`; }
     });
 
+<<<<<<< HEAD
+=======
+    document.getElementById('demoStudentBtn').addEventListener('click', () => {
+      handleDemoLogin('student');
+    });
+
+    document.getElementById('demoRecruiterBtn').addEventListener('click', () => {
+      handleDemoLogin('recruiter');
+    });
+
+    document.getElementById('openAuthModalBtn').addEventListener('click', () => {
+      openModal('authModal');
+    });
+
+>>>>>>> 6d8865c (updation)
     document.getElementById('googleSignInBtn').addEventListener('click', () => {
       redirectToGoogleAccountChooser();
     });
@@ -1706,6 +2291,10 @@
           const me = await apiFetch('/auth/me');
           _sessionUserMeta = me;
           applyRoleUI(me.role || 'student');
+<<<<<<< HEAD
+=======
+          await loadProfileQuiz();
+>>>>>>> 6d8865c (updation)
         } catch (_) {
           // Token expired or invalid — clear it
           localStorage.removeItem('access_token');
@@ -1721,4 +2310,7 @@
   </script>
 </body>
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6d8865c (updation)

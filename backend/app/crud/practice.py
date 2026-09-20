@@ -4,7 +4,12 @@ from pathlib import Path
 from typing import Optional
 from sqlalchemy.orm import Session
 
+<<<<<<< HEAD
 from app.crud.streak import update_streak_maintenance
+=======
+from collections import defaultdict
+from sqlalchemy import func
+>>>>>>> 6d8865c (updation)
 from app.models import Submission, Users
 from app.sandbox import execute
 
@@ -14,6 +19,50 @@ TESTS_DIR = BASE_DIR / "tests"
 selected_question_id: Optional[int] = None
 
 
+<<<<<<< HEAD
+=======
+def get_user_problem_stats(db: Session, user_id: int) -> dict:
+    """
+    Calculates:
+    - solved_problems: count of distinct questions passed
+    - total_problems: total count of coding problems available
+    - highest_month_engaged: month name and year with highest activity (e.g. 'September 2026')
+    - highest_month_count: number of submissions/activities in that peak month
+    """
+    solved_count = db.query(func.count(func.distinct(Submission.question_id))).filter(
+        Submission.user_id == user_id,
+        Submission.passed == 1,
+    ).scalar() or 0
+
+    total_problems = len(list(QUESTIONS_DIR.glob("code*.json"))) if QUESTIONS_DIR.exists() else 0
+
+    submissions = db.query(Submission.created_at).filter(
+        Submission.user_id == user_id
+    ).all()
+
+    month_counts = defaultdict(int)
+    for (sub_date,) in submissions:
+        if sub_date:
+            month_key = sub_date.strftime("%B %Y")
+            month_counts[month_key] += 1
+
+    if month_counts:
+        best_month, best_count = max(month_counts.items(), key=lambda x: x[1])
+        highest_month_str = best_month
+        highest_month_count = best_count
+    else:
+        highest_month_str = "None"
+        highest_month_count = 0
+
+    return {
+        "solved_problems": solved_count,
+        "total_problems": total_problems,
+        "highest_month_engaged": highest_month_str,
+        "highest_month_count": highest_month_count,
+    }
+
+
+>>>>>>> 6d8865c (updation)
 def get_question(question_id: int):
     global selected_question_id
 
@@ -74,13 +123,22 @@ def run_code(
             else f"{v}\n"
             for v in case["input"].values()
         )
+<<<<<<< HEAD
 
+=======
+        print(input_data)
+>>>>>>> 6d8865c (updation)
         last_result = execute(
             data=code,
             input_str=input_data,
             lang=lang
         )
+<<<<<<< HEAD
 
+=======
+        print(last_result)
+        print(case["expected"])
+>>>>>>> 6d8865c (updation)
         if (
             last_result["output"].strip().lower()
             != str(case["expected"]).strip().lower()
@@ -106,11 +164,14 @@ def run_code(
 
         passed_count += 1
 
+<<<<<<< HEAD
     update_streak_maintenance(
         db,
         user_id=user_id
     )
 
+=======
+>>>>>>> 6d8865c (updation)
     submission = Submission(
         user_id=user_id,
         question_id=selected_question_id,

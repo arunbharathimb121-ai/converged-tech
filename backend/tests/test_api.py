@@ -407,5 +407,203 @@ def test_apply_by_id_or_name_and_student_applications():
     assert report["posts"][0]["caption"] == "My UI Design Portfolio"
     assert len(report["likes"]) == 1
     assert len(report["comments"]) == 1
+<<<<<<< HEAD
+=======
+    assert "solved_problems" in report
+    assert "highest_month_engaged" in report
+    assert "highest_month_count" in report
+
+
+def test_auth_register_and_login():
+    reg_data = {
+        "username": "auth_user_test",
+        "password": "mypassword123",
+        "email": "auth_test@example.com",
+        "name": "Auth Tester",
+        "role": "student"
+    }
+    # Register
+    res = client.post("/auth/register", json=reg_data)
+    assert res.status_code == 201
+    body = res.json()
+    assert "access_token" in body
+    assert body["user_id"] > 0
+    token = body["access_token"]
+
+    # Login with username
+    login_data = {"identifier": "auth_user_test", "password": "mypassword123"}
+    res = client.post("/auth/login", json=login_data)
+    assert res.status_code == 200
+    assert "access_token" in res.json()
+
+    # Login with email
+    login_email = {"identifier": "auth_test@example.com", "password": "mypassword123"}
+    res = client.post("/auth/login", json=login_email)
+    assert res.status_code == 200
+
+    # Login with wrong password
+    bad_login = {"identifier": "auth_user_test", "password": "wrongpassword"}
+    res = client.post("/auth/login", json=bad_login)
+    assert res.status_code == 401
+
+    # Login non-existent user
+    unknown_login = {"identifier": "nonexistent_user", "password": "mypassword123"}
+    res = client.post("/auth/login", json=unknown_login)
+    assert res.status_code == 401
+
+
+def test_auth_demo_logins():
+    # Demo student
+    res = client.post("/auth/demo", json={"role": "student"})
+    assert res.status_code == 200
+    body = res.json()
+    assert "access_token" in body
+    assert body["onboarding_required"] is False
+    assert body["user"]["role"] == "student"
+
+    # Demo recruiter
+    res = client.post("/auth/demo", json={"role": "recruiter"})
+    assert res.status_code == 200
+    body = res.json()
+    assert "access_token" in body
+    assert body["user"]["role"] == "recruiter"
+
+
+def test_auth_me_and_google_demo():
+    # 1. Login to get token
+    res = client.post("/auth/demo", json={"role": "student"})
+    assert res.status_code == 200
+    token = res.json()["access_token"]
+
+    # 2. Call /auth/me with valid Bearer token
+    res = client.get("/auth/me", headers={"Authorization": f"Bearer {token}"})
+    assert res.status_code == 200
+    me = res.json()
+    assert me["role"] == "student"
+
+    # 3. Call /auth/me with invalid token
+    res = client.get("/auth/me", headers={"Authorization": "Bearer invalid_token"})
+    assert res.status_code == 401
+
+    # 4. Test Google demo mode
+    res = client.post("/auth/google", json={"credential": "demo-googleuser@example.com"})
+    assert res.status_code == 200
+    g_body = res.json()
+    assert "access_token" in g_body
+    assert g_body["user_id"] > 0
+
+
+def test_mcqs_seed_and_quiz_endpoints():
+    # 1. Login as student
+    res = client.post("/auth/demo", json={"role": "student"})
+    assert res.status_code == 200
+    token = res.json()["access_token"]
+    headers = {"Authorization": f"Bearer {token}"}
+
+    # 2. Test seeding questions
+    res = client.post("/mcqs/seed")
+    assert res.status_code == 200
+    seed_res = res.json()
+    assert seed_res["total_in_db"] >= 30
+
+    # 3. Test list domains
+    res = client.get("/mcqs/domains")
+    assert res.status_code == 200
+    domains = res.json()
+    assert "Software Development" in domains["technical"]
+    assert "Digital Marketing" in domains["non_technical"]
+
+    # 4. Test get technical questions
+    res = client.get("/mcqs/questions?is_technical=true", headers=headers)
+    assert res.status_code == 200
+    tech_qs = res.json()
+    assert len(tech_qs) > 0
+    assert all(q["is_technical"] is True for q in tech_qs)
+    initial_count = len(tech_qs)
+
+    # 5. Test get non-technical questions
+    res = client.get("/mcqs/questions?is_technical=false", headers=headers)
+    assert res.status_code == 200
+    non_tech_qs = res.json()
+    assert len(non_tech_qs) > 0
+    assert all(q["is_technical"] is False for q in non_tech_qs)
+
+    # 6. Test submit an answer
+    first_q = tech_qs[0]
+    sub_data = {
+        "question_id": first_q["id"],
+        "selected_answer": first_q["options"][0]
+    }
+    res = client.post("/mcqs/submit", json=sub_data, headers=headers)
+    assert res.status_code == 200
+    sub_res = res.json()
+    assert "correct" in sub_res
+    assert "average_marks" in sub_res
+
+    # 7. Verify attended question is excluded from subsequent listing
+    res_after = client.get("/mcqs/questions?is_technical=true", headers=headers)
+    assert res_after.status_code == 200
+    tech_qs_after = res_after.json()
+    assert len(tech_qs_after) == initial_count - 1
+    assert not any(q["id"] == first_q["id"] for q in tech_qs_after)
+
+
+def test_problem_stats_and_peak_month():
+    from datetime import datetime
+    from app.models import Submission, Users
+
+    db = TestingSessionLocal()
+    try:
+        user = Users(
+            username="tech_coder",
+            password="pwd",
+            name="Coder",
+            phone="+999999",
+            role="student",
+            is_technical=True,
+            onboarding_completed=True
+        )
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+
+        # Create submissions in different months
+        sub1 = Submission(user_id=user.id, question_id=1, code="print(1)", lan="py", passed=1, created_at=datetime(2026, 8, 10))
+        sub2 = Submission(user_id=user.id, question_id=2, code="print(2)", lan="py", passed=1, created_at=datetime(2026, 9, 5))
+        sub3 = Submission(user_id=user.id, question_id=3, code="print(3)", lan="py", passed=1, created_at=datetime(2026, 9, 15))
+        sub4 = Submission(user_id=user.id, question_id=4, code="print(4)", lan="py", passed=0, created_at=datetime(2026, 9, 20))
+        db.add_all([sub1, sub2, sub3, sub4])
+        db.commit()
+
+        from app.crud.practice import get_user_problem_stats
+        stats = get_user_problem_stats(db, user.id)
+        assert stats["solved_problems"] == 3  # questions 1, 2, 3 passed
+        assert stats["total_problems"] >= 0
+        assert stats["highest_month_engaged"] == "September 2026"
+        assert stats["highest_month_count"] == 3  # 3 submissions in Sept 2026
+
+        # Check API endpoint
+        from app.router.auth import create_access_token
+        token = create_access_token(user.id)
+        res = client.get("/practices/stats", headers={"Authorization": f"Bearer {token}"})
+        assert res.status_code == 200
+        data = res.json()
+        assert data["solved_problems"] == 3
+        assert data["total_problems"] >= 0
+        assert data["highest_month_engaged"] == "September 2026"
+        assert data["highest_month_count"] == 3
+        assert "domain_quiz_percentages" in data
+
+        # Check MCQ domain-percentages endpoint
+        res_domain = client.get("/mcqs/domain-percentages", headers={"Authorization": f"Bearer {token}"})
+        assert res_domain.status_code == 200
+        domain_data = res_domain.json()
+        assert "domain_percentages" in domain_data
+        assert "domain_details" in domain_data
+    finally:
+        db.close()
+
+
+>>>>>>> 6d8865c (updation)
 
 

@@ -9,8 +9,13 @@ from typing import Optional
 router = APIRouter(prefix="/users", tags=["users"])
 
 @router.get("/", response_model=list[Users])
+<<<<<<< HEAD
 def getall(db: Session = Depends(get_db)):
     return get_all(db)
+=======
+def getall(role: Optional[str] = "student", db: Session = Depends(get_db)):
+    return get_all(db, role=role)
+>>>>>>> 6d8865c (updation)
 
 @router.get("/{user_id}", response_model=Users)
 def getone(user_id: int, db: Session = Depends(get_db)):
@@ -34,6 +39,10 @@ def addone(user: Users, db: Session = Depends(get_db)):
             bio=user.bio,
             profile_pic=user.profile_pic,
             email=user.email,
+<<<<<<< HEAD
+=======
+            role=user.role or "student",
+>>>>>>> 6d8865c (updation)
             id=user.id
         )
     except IntegrityError as e:

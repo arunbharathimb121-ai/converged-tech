@@ -1,9 +1,17 @@
 import os
 import re
+<<<<<<< HEAD
 from datetime import datetime, timedelta, timezone
 
 import jwt
 from fastapi import APIRouter, Depends, HTTPException
+=======
+from typing import Optional
+from datetime import datetime, timedelta, timezone
+
+import jwt
+from fastapi import APIRouter, Depends, HTTPException, status
+>>>>>>> 6d8865c (updation)
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from google.auth.transport import requests
 from google.oauth2 import id_token
@@ -11,17 +19,42 @@ from sqlalchemy.orm import Session
 
 from app.crud.user import complete_onboarding
 from app.database import get_db
+<<<<<<< HEAD
 from app.models import Users
 from app.schemas import AuthSession, AuthUser, GoogleSignIn, Onboarding
+=======
+from app.models import Users, Recruiters
+from app.schemas import (
+    AuthSession,
+    AuthUser,
+    GoogleSignIn,
+    Onboarding,
+    LoginRequest,
+    RegisterRequest,
+    DemoLoginRequest,
+)
+>>>>>>> 6d8865c (updation)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 security = HTTPBearer()
 ALGORITHM = "HS256"
 
+<<<<<<< HEAD
+=======
+DEFAULT_SETTINGS = {
+    "JWT_SECRET": "convotech-dev-secret-key-32-chars-long-min!!",
+}
+
+>>>>>>> 6d8865c (updation)
 
 def get_setting(name: str) -> str:
     value = os.getenv(name)
     if not value:
+<<<<<<< HEAD
+=======
+        if name in DEFAULT_SETTINGS:
+            return DEFAULT_SETTINGS[name]
+>>>>>>> 6d8865c (updation)
         raise HTTPException(status_code=500, detail=f"{name} is not configured")
     return value
 
@@ -34,6 +67,12 @@ def create_access_token(user_id: int) -> str:
     return jwt.encode(payload, get_setting("JWT_SECRET"), algorithm=ALGORITHM)
 
 
+<<<<<<< HEAD
+=======
+security_optional = HTTPBearer(auto_error=False)
+
+
+>>>>>>> 6d8865c (updation)
 def current_user(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db),
@@ -50,6 +89,23 @@ def current_user(
     return user
 
 
+<<<<<<< HEAD
+=======
+def current_user_optional(
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security_optional),
+    db: Session = Depends(get_db),
+) -> Users | None:
+    if not credentials:
+        return None
+    try:
+        payload = jwt.decode(credentials.credentials, get_setting("JWT_SECRET"), algorithms=[ALGORITHM])
+        user_id = int(payload["sub"])
+        return db.query(Users).filter(Users.id == user_id).first()
+    except Exception:
+        return None
+
+
+>>>>>>> 6d8865c (updation)
 def available_username(db: Session, email: str) -> str:
     base = re.sub(r"[^a-zA-Z0-9_]", "_", email.split("@", maxsplit=1)[0]) or "google_user"
     username = base
@@ -60,6 +116,125 @@ def available_username(db: Session, email: str) -> str:
     return username
 
 
+<<<<<<< HEAD
+=======
+@router.post("/login", response_model=AuthSession)
+def login(data: LoginRequest, db: Session = Depends(get_db)):
+    identifier = data.identifier.strip()
+    user = db.query(Users).filter(
+        (Users.username == identifier) | (Users.email == identifier)
+    ).first()
+    if not user or user.password != data.password:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid username/email or password",
+        )
+
+    return {
+        "access_token": create_access_token(user.id),
+        "user_id": user.id,
+        "onboarding_required": not user.onboarding_completed,
+        "user": user,
+    }
+
+
+@router.post("/register", response_model=AuthSession, status_code=status.HTTP_201_CREATED)
+def register(data: RegisterRequest, db: Session = Depends(get_db)):
+    username = data.username.strip()
+    if not username or not data.password:
+        raise HTTPException(status_code=400, detail="Username and password are required")
+
+    if db.query(Users).filter(Users.username == username).first():
+        raise HTTPException(status_code=400, detail="Username already exists")
+
+    if data.email:
+        existing_email = db.query(Users).filter(Users.email == data.email.strip()).first()
+        if existing_email:
+            raise HTTPException(status_code=400, detail="Email already registered")
+
+    user = Users(
+        username=username,
+        password=data.password,
+        email=data.email.strip() if data.email else None,
+        name=data.name.strip() if data.name else username,
+        phone=data.phone.strip() if data.phone else None,
+        role=data.role or "student",
+        onboarding_completed=False,
+    )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+
+    return {
+        "access_token": create_access_token(user.id),
+        "user_id": user.id,
+        "onboarding_required": True,
+        "user": user,
+    }
+
+
+@router.post("/demo", response_model=AuthSession)
+def demo_login(data: DemoLoginRequest = DemoLoginRequest(), db: Session = Depends(get_db)):
+    role = (data.role or "student").lower()
+    if role == "recruiter":
+        demo_sub = "demo_sub_recruiter"
+        demo_email = "demo_recruiter@convotech.local"
+        demo_username = "demo_recruiter"
+        demo_name = "Alex Vance (Recruiter)"
+    else:
+        role = "student"
+        demo_sub = "demo_sub_student"
+        demo_email = "demo_student@convotech.local"
+        demo_username = "demo_student"
+        demo_name = "Jordan Lee (Student)"
+
+    user = db.query(Users).filter(
+        (Users.google_sub == demo_sub) | (Users.username == demo_username)
+    ).first()
+
+    if not user:
+        user = Users(
+            google_sub=demo_sub,
+            email=demo_email,
+            username=demo_username,
+            name=demo_name,
+            password="demo-password",
+            role=role,
+            is_technical=True if role == "student" else None,
+            onboarding_completed=True,
+            interested_domains='["Full Stack", "Cloud Computing"]' if role == "student" else "[]",
+            average_marks=88.5 if role == "student" else 0.0,
+        )
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+    else:
+        user.role = role
+        user.onboarding_completed = True
+        db.commit()
+
+    if role == "recruiter":
+        recruiter = db.query(Recruiters).filter(Recruiters.user_id == user.id).first()
+        if not recruiter:
+            recruiter = Recruiters(
+                user_id=user.id,
+                rname=user.name,
+                company="ConvoTech Partners Inc.",
+                email=user.email,
+                password="demo-password",
+            )
+            db.add(recruiter)
+            db.commit()
+
+    return {
+        "access_token": create_access_token(user.id),
+        "user_id": user.id,
+        "onboarding_required": False,
+        "user": user,
+    }
+
+
+>>>>>>> 6d8865c (updation)
 @router.post("/google", response_model=AuthSession)
 def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
     if data.credential.startswith("demo-") or data.credential.startswith("test-"):
@@ -88,6 +263,7 @@ def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
             "access_token": create_access_token(user.id),
             "user_id": user.id,
             "onboarding_required": not user.onboarding_completed,
+<<<<<<< HEAD
         }
 
     try:
@@ -95,6 +271,24 @@ def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
             data.credential,
             requests.Request(),
             get_setting("GOOGLE_CLIENT_ID"),
+=======
+            "user": user,
+        }
+
+    try:
+        client_id = get_setting("GOOGLE_CLIENT_ID")
+    except HTTPException as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="GOOGLE_CLIENT_ID is not configured in backend environment. Please use Demo or Username login.",
+        ) from exc
+
+    try:
+        google_user = id_token.verify_oauth2_token(
+            data.credential,
+            requests.Request(),
+            client_id,
+>>>>>>> 6d8865c (updation)
         )
     except ValueError as exc:
         raise HTTPException(status_code=401, detail="Invalid Google credential") from exc
@@ -128,6 +322,10 @@ def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
         "access_token": create_access_token(user.id),
         "user_id": user.id,
         "onboarding_required": not user.onboarding_completed,
+<<<<<<< HEAD
+=======
+        "user": user,
+>>>>>>> 6d8865c (updation)
     }
 
 

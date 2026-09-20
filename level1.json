@@ -1,0 +1,863 @@
+{
+  "level_number": 1,
+  "level_title": "Fundamentals / Introduction",
+  "domains": [
+    {
+      "domain_id": "TECH-SD",
+      "domain_name": "Software Development",
+      "domain_type": "Tech",
+      "modules": [
+        {
+          "module_id": "TECH-SD-L1-M1",
+          "module_number": 1,
+          "title": "What is Software Development?",
+          "objective": "Understand the definition, purpose, lifecycle, and core scope of software development.",
+          "explanation": "Software development is the systematic engineering process of designing, programming, testing, deploying, and maintaining software applications and systems. It encompasses system software (operating systems), application software (web and mobile apps), and embedded systems.",
+          "key_points": [
+            "Transforms business requirements into executable machine instructions",
+            "Follows the Software Development Life Cycle (SDLC)",
+            "Emphasizes code readability, modularity, and maintainability"
+          ],
+          "examples": [
+            "Developing a full-stack mobile banking application",
+            "Writing an operating system device driver or file system"
+          ],
+          "important_terms": [
+            "SDLC",
+            "Source Code",
+            "Runtime",
+            "Compiler"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L1-M1-Q1",
+              "question": "Which of the following best defines software development?",
+              "options": {
+                "A": "The process of designing, coding, testing, and maintaining software systems",
+                "B": "Manufacturing physical CPU chips and silicon wafers",
+                "C": "Operating physical printer and scanner cables",
+                "D": "Replacing computer motherboards and power units"
+              },
+              "correct_answer": "A",
+              "explanation": "Software development covers the entire software engineering lifecycle from requirements to maintenance."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M1-Q2",
+              "question": "Which category of software includes operating systems such as Linux and Windows?",
+              "options": {
+                "A": "System Software",
+                "B": "Embedded microcode only",
+                "C": "Application software only",
+                "D": "Web client script"
+              },
+              "correct_answer": "A",
+              "explanation": "Operating systems manage hardware resources and are classified as system software."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M1-Q3",
+              "question": "What is the primary function of a compiler in software development?",
+              "options": {
+                "A": "Translates high-level source code into machine-executable instructions",
+                "B": "Monitors network bandwidth and server latency",
+                "C": "Formats SSD storage drives before runtime",
+                "D": "Generates marketing and analytics reports"
+              },
+              "correct_answer": "A",
+              "explanation": "Compilers translate human-readable programming languages into executable binary or bytecode."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M1-Q4",
+              "question": "Which SDLC phase focuses on identifying client expectations and system requirements?",
+              "options": {
+                "A": "Requirements Analysis",
+                "B": "Production Deployment",
+                "C": "Regression Testing",
+                "D": "Database Decommissioning"
+              },
+              "correct_answer": "A",
+              "explanation": "Requirements analysis defines what the software must accomplish prior to system design."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M1-Q5",
+              "question": "Why is post-deployment software maintenance critical?",
+              "options": {
+                "A": "To fix defects, optimize performance, and adapt to evolving needs",
+                "B": "To permanently delete historical source code",
+                "C": "To prevent authenticated users from logging in",
+                "D": "To replace digital software with manual paper workflows"
+              },
+              "correct_answer": "A",
+              "explanation": "Maintenance ensures long-term software stability, security updates, and feature enhancements."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L1-M2",
+          "module_number": 2,
+          "title": "Programming Languages & Paradigms",
+          "objective": "Differentiate compiled vs interpreted languages and object-oriented vs functional paradigms.",
+          "explanation": "Programming paradigms provide conceptual models for structuring code. Object-Oriented Programming (OOP) organizes software around data-carrying objects and methods, while Functional Programming (FP) prioritizes immutable state and pure mathematical functions.",
+          "key_points": [
+            "Compiled languages (C++, Rust) offer native hardware execution speed",
+            "Interpreted languages (Python, JS) enable fast prototyping and flexibility",
+            "Paradigms dictate how state, functions, and control flow are structured"
+          ],
+          "examples": [
+            "Using Java or C# for enterprise OOP systems",
+            "Using Haskell or Clojure for functional data pipelines"
+          ],
+          "important_terms": [
+            "Interpreted",
+            "Compiled",
+            "OOP",
+            "Functional Programming"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L1-M2-Q1",
+              "question": "Which language compiles directly into native machine instructions?",
+              "options": {
+                "A": "Python",
+                "B": "C++",
+                "C": "JavaScript",
+                "D": "PHP"
+              },
+              "correct_answer": "B",
+              "explanation": "C++ is compiled directly to architecture-specific native machine code."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M2-Q2",
+              "question": "What is a central principle of Functional Programming?",
+              "options": {
+                "A": "Immutable data and pure functions without side effects",
+                "B": "Extensive use of global mutable variables",
+                "C": "Direct hardware pointer manipulation",
+                "D": "Mandatory class inheritance trees"
+              },
+              "correct_answer": "A",
+              "explanation": "Functional programming focuses on pure functions and immutability."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M2-Q3",
+              "question": "How does an interpreted language execute instructions?",
+              "options": {
+                "A": "Line-by-line via an interpreter at runtime",
+                "B": "By baking instructions directly into ROM silicon",
+                "C": "Without consuming CPU or RAM resources",
+                "D": "Only through ahead-of-time binary flashing"
+              },
+              "correct_answer": "A",
+              "explanation": "Interpreters evaluate and run source instructions dynamically during execution."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M2-Q4",
+              "question": "Which of the following is one of the four foundational pillars of OOP?",
+              "options": {
+                "A": "Encapsulation",
+                "B": "Global state leakage",
+                "C": "Unconditional goto jumps",
+                "D": "Stateless script evaluation"
+              },
+              "correct_answer": "A",
+              "explanation": "Encapsulation, inheritance, polymorphism, and abstraction form the core pillars of OOP."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M2-Q5",
+              "question": "Which programming language runs natively in all standard web browsers?",
+              "options": {
+                "A": "C#",
+                "B": "JavaScript",
+                "C": "Ruby",
+                "D": "Kotlin"
+              },
+              "correct_answer": "B",
+              "explanation": "JavaScript is the native client-side scripting language executed by web browser engines."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L1-M3",
+          "module_number": 3,
+          "title": "Variables, Data Types & Memory",
+          "objective": "Understand primitive data types, memory allocation, and stack vs heap storage.",
+          "explanation": "Variables store references or values in memory. Primitives (integers, floats, booleans) hold direct values, whereas reference types point to objects on the heap. Stack memory handles deterministic local function frames, while heap memory accommodates dynamically allocated structures.",
+          "key_points": [
+            "Primitives include integers, floats, booleans, and characters",
+            "Static typing checks types at compile time; dynamic typing checks at runtime",
+            "Stack memory is fast and LIFO; heap memory manages dynamic objects"
+          ],
+          "examples": [
+            "int age = 25; (Stack-allocated primitive)",
+            "User profile = new User(); (Heap-allocated object)"
+          ],
+          "important_terms": [
+            "Stack Memory",
+            "Heap Memory",
+            "Primitive Type",
+            "Static Typing"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L1-M3-Q1",
+              "question": "Which data type is best suited for storing a true or false value?",
+              "options": {
+                "A": "Boolean",
+                "B": "Floating-point",
+                "C": "Integer",
+                "D": "Character"
+              },
+              "correct_answer": "A",
+              "explanation": "Booleans specifically represent binary true/false conditions."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M3-Q2",
+              "question": "In a statically typed language, when is type validation carried out?",
+              "options": {
+                "A": "During compile time",
+                "B": "Only when user clicks a button",
+                "C": "After the application crashes",
+                "D": "During database indexing"
+              },
+              "correct_answer": "A",
+              "explanation": "Statically typed languages verify type constraints during compilation."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M3-Q3",
+              "question": "Where are local function execution frames and variables typically allocated?",
+              "options": {
+                "A": "Call Stack",
+                "B": "Hard Disk Swap",
+                "C": "Cloud Object Store",
+                "D": "GPU Framebuffer"
+              },
+              "correct_answer": "A",
+              "explanation": "Local function variables reside in stack frames allocated on the call stack."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M3-Q4",
+              "question": "What error occurs when an arithmetic operation produces a value exceeding integer storage capacity?",
+              "options": {
+                "A": "Integer Overflow",
+                "B": "Stack Underflow",
+                "C": "Memory Fragmentation",
+                "D": "Deadlock"
+              },
+              "correct_answer": "A",
+              "explanation": "Integer overflow happens when a calculation exceeds the maximum boundary of the integer type."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M3-Q5",
+              "question": "Which of the following is considered a primitive type in Java or C++?",
+              "options": {
+                "A": "Integer",
+                "B": "DatabaseConnectionPool",
+                "C": "JSONParser",
+                "D": "HTTPClient"
+              },
+              "correct_answer": "A",
+              "explanation": "Integer (int) is a fundamental primitive type built directly into language specifications."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L1-M4",
+          "module_number": 4,
+          "title": "Control Flow & Decision Logic",
+          "objective": "Master conditional branching, boolean evaluation, and loop structures.",
+          "explanation": "Control flow structures dictate the execution path of a program. Conditionals (if/else, switch) branch based on boolean logic, while loops (for, while, do-while) repeat code blocks until terminating conditions are met.",
+          "key_points": [
+            "Conditionals evaluate expressions to true or false",
+            "Short-circuit evaluation optimizes boolean expressions",
+            "Break terminates loops; continue advances to the next iteration"
+          ],
+          "examples": [
+            "if (user.isAdmin) showAdminPanel();",
+            "for (int i = 0; i < items.length; i++) process(items[i]);"
+          ],
+          "important_terms": [
+            "Branching",
+            "Iteration",
+            "Short-Circuit Evaluation",
+            "Infinite Loop"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L1-M4-Q1",
+              "question": "What is the primary risk of a while loop whose condition never becomes false?",
+              "options": {
+                "A": "Infinite loop causing high CPU utilization or UI freezing",
+                "B": "Instant compile failure",
+                "C": "Automatic disk formatting",
+                "D": "Permanent OS reboot"
+              },
+              "correct_answer": "A",
+              "explanation": "A loop without a terminating condition loops infinitely and exhausts CPU resources."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M4-Q2",
+              "question": "What happens in short-circuit evaluation for a logical AND (&&) expression if the first operand is false?",
+              "options": {
+                "A": "The second operand is never evaluated",
+                "B": "Both operands are evaluated twice",
+                "C": "The program immediately throws an exception",
+                "D": "The result is automatically flipped to true"
+              },
+              "correct_answer": "A",
+              "explanation": "In boolean AND, a false first condition guarantees the entire expression is false, skipping subsequent checks."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M4-Q3",
+              "question": "Which control keyword immediately terminates the enclosing loop?",
+              "options": {
+                "A": "break",
+                "B": "continue",
+                "C": "pass",
+                "D": "yield"
+              },
+              "correct_answer": "A",
+              "explanation": "The 'break' statement exits the current loop body immediately."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M4-Q4",
+              "question": "How does a 'do-while' loop differ from a standard 'while' loop?",
+              "options": {
+                "A": "It executes the loop body at least once before checking the condition",
+                "B": "It cannot evaluate boolean expressions",
+                "C": "It only executes in reverse order",
+                "D": "It requires two CPUs to execute"
+              },
+              "correct_answer": "A",
+              "explanation": "A do-while loop evaluates its condition post-iteration, guaranteeing at least one execution."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M4-Q5",
+              "question": "Which control structure cleanly handles multi-way branching on discrete values?",
+              "options": {
+                "A": "Switch/Case statement",
+                "B": "Null coalescing operator",
+                "C": "Bitwise shift operator",
+                "D": "Type casting operator"
+              },
+              "correct_answer": "A",
+              "explanation": "Switch/case structures provide clear branching across discrete constant values."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L1-M5",
+          "module_number": 5,
+          "title": "Functions, Scope & Modular Code",
+          "objective": "Encapsulate reusable logic, manage function parameters, and control variable scope.",
+          "explanation": "Functions encapsulate discrete tasks into modular, callable units. They accept inputs via parameters, execute logic within a defined local scope, and return computed outputs while adhering to the DRY (Don't Repeat Yourself) principle.",
+          "key_points": [
+            "Encapsulates logic to promote reusability and testability",
+            "Lexical scope isolates local variables from global pollution",
+            "Pure functions produce deterministic output with no side effects"
+          ],
+          "examples": [
+            "def calculate_tax(amount, rate): return amount * rate",
+            "Pure utility functions for date formatting"
+          ],
+          "important_terms": [
+            "Function Signature",
+            "Lexical Scope",
+            "Pure Function",
+            "Recursion"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L1-M5-Q1",
+              "question": "What is the primary benefit of decomposing logic into functions?",
+              "options": {
+                "A": "Modularity, code reusability, and simplified testing",
+                "B": "Artificially increasing binary file size",
+                "C": "Creating memory leaks on purpose",
+                "D": "Disabling compiler optimization"
+              },
+              "correct_answer": "A",
+              "explanation": "Functions split complex codebases into modular, testable, and reusable components."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M5-Q2",
+              "question": "What does variable scope determine in a program?",
+              "options": {
+                "A": "Where identifiers and variables are accessible within the code",
+                "B": "The clock frequency of the processor",
+                "C": "The resolution of the computer monitor",
+                "D": "The network bandwidth allocation"
+              },
+              "correct_answer": "A",
+              "explanation": "Scope defines the region of a program where a binding or variable name is valid and accessible."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M5-Q3",
+              "question": "What defines a pure function?",
+              "options": {
+                "A": "Produces no side effects and always returns the same output for identical inputs",
+                "B": "Mutates global variables on every invocation",
+                "C": "Generates random return values",
+                "D": "Requires database network access"
+              },
+              "correct_answer": "A",
+              "explanation": "Pure functions exhibit referential transparency without causing external side effects."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M5-Q4",
+              "question": "What is a parameter in a function definition?",
+              "options": {
+                "A": "A variable declared in the signature to receive input values",
+                "B": "The physical memory address of the compiler",
+                "C": "The file extension of the program",
+                "D": "The operating system build number"
+              },
+              "correct_answer": "A",
+              "explanation": "Parameters specify the input placeholders defined within a function declaration."
+            },
+            {
+              "mcq_id": "TECH-SD-L1-M5-Q5",
+              "question": "What is recursion in programming?",
+              "options": {
+                "A": "A function that invokes itself until a base termination condition is met",
+                "B": "An endless operating system restart loop",
+                "C": "Executing two programs on two different machines",
+                "D": "Encrypting a password twice"
+              },
+              "correct_answer": "A",
+              "explanation": "Recursion is a programming technique where a function calls itself toward a base case."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain_id": "NONTECH-DM",
+      "domain_name": "Digital Marketing",
+      "domain_type": "Non-Tech",
+      "modules": [
+        {
+          "module_id": "NONTECH-DM-L1-M1",
+          "module_number": 1,
+          "title": "What is Digital Marketing?",
+          "objective": "Understand digital marketing channels, online consumer behavior, and inbound strategies.",
+          "explanation": "Digital marketing encompasses all marketing efforts that use electronic devices or the internet. Businesses leverage digital channels such as search engines, social media, email, and websites to connect with current and prospective customers.",
+          "key_points": [
+            "Connects brands with audiences across multi-device digital touchpoints",
+            "Offers real-time performance tracking and measurable ROI",
+            "Combines inbound content strategies with outbound paid promotion"
+          ],
+          "examples": [
+            "Running a targeted lead generation campaign on LinkedIn",
+            "Publishing informative blog posts to attract organic search traffic"
+          ],
+          "important_terms": [
+            "Inbound Marketing",
+            "Outbound Marketing",
+            "Conversion Funnel",
+            "ROI"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L1-M1-Q1",
+              "question": "Which of the following best defines digital marketing?",
+              "options": {
+                "A": "Promoting products or services through digital and online channels",
+                "B": "Only printing paper brochures for mail delivery",
+                "C": "Selling physical computer hardware in retail stores",
+                "D": "Writing internal database backup scripts"
+              },
+              "correct_answer": "A",
+              "explanation": "Digital marketing focuses on promoting brands via digital platforms, search, email, and social media."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M1-Q2",
+              "question": "What is a key advantage of digital marketing over traditional billboard advertising?",
+              "options": {
+                "A": "Precise real-time measurement of impressions, clicks, and conversions",
+                "B": "Guaranteed physical billboard permanence",
+                "C": "Complete lack of competitors online",
+                "D": "Inability to track customer responses"
+              },
+              "correct_answer": "A",
+              "explanation": "Digital marketing offers immediate telemetry, granular attribution, and performance analytics."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M1-Q3",
+              "question": "What is the core philosophy of Inbound Marketing?",
+              "options": {
+                "A": "Attracting customers through valuable content, SEO, and tailored experiences",
+                "B": "Purchasing mass cold calling lists",
+                "C": "Interrupting users with unskippable pop-ups",
+                "D": "Sending spam emails to randomized recipients"
+              },
+              "correct_answer": "A",
+              "explanation": "Inbound marketing attracts and nurtures qualified leads through helpful, relevant content."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M1-Q4",
+              "question": "What does ROI stand for in marketing performance evaluation?",
+              "options": {
+                "A": "Return on Investment",
+                "B": "Rate of Impressions",
+                "C": "Range of Interactions",
+                "D": "Regional Online Index"
+              },
+              "correct_answer": "A",
+              "explanation": "ROI measures the net financial return relative to the marketing capital invested."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M1-Q5",
+              "question": "Which digital marketing channel delivers owned direct communication with subscribed users?",
+              "options": {
+                "A": "Email Marketing",
+                "B": "Print magazine advertising",
+                "C": "Radio broadcasting",
+                "D": "Television commercials"
+              },
+              "correct_answer": "A",
+              "explanation": "Email marketing is an owned communication channel providing direct engagement with subscribers."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L1-M2",
+          "module_number": 2,
+          "title": "Digital vs Traditional Marketing",
+          "objective": "Compare reach, targeting capability, cost efficiency, and interaction speed.",
+          "explanation": "Traditional marketing relies on print, TV, radio, and direct mail. Digital marketing expands upon this by offering granular audience segmentation, interactive two-way engagement, and real-time optimization.",
+          "key_points": [
+            "Digital marketing allows hyper-targeted demographic and interest-based segmentation",
+            "Traditional marketing offers broad local mass reach but limited tracking",
+            "Digital campaigns can be adjusted in real time based on incoming telemetry"
+          ],
+          "examples": [
+            "Comparing a TV commercial with a targeted YouTube pre-roll ad campaign",
+            "Comparing a billboard with a geofenced mobile display advertisement"
+          ],
+          "important_terms": [
+            "Audience Segmentation",
+            "Cost Per Click (CPC)",
+            "Real-Time Optimization",
+            "Impression"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L1-M2-Q1",
+              "question": "How does audience targeting in digital advertising differ from traditional TV ads?",
+              "options": {
+                "A": "Digital enables targeting specific demographics, interests, and online behaviors",
+                "B": "Digital only broadcasts to an entire country simultaneously",
+                "C": "Traditional TV allows direct link clicks from viewers",
+                "D": "Traditional TV is always completely free of cost"
+              },
+              "correct_answer": "A",
+              "explanation": "Digital platforms allow fine-grained segmentation based on behavior, interests, and demographics."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M2-Q2",
+              "question": "What capability allows marketers to pause an underperforming digital ad mid-campaign?",
+              "options": {
+                "A": "Real-time campaign management and agility",
+                "B": "Print deadline constraints",
+                "C": "Broadcast frequency regulation",
+                "D": "Physical billboard printing"
+              },
+              "correct_answer": "A",
+              "explanation": "Digital campaigns can be modified, re-budgeted, or paused dynamically in real time."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M2-Q3",
+              "question": "What pricing model charges advertisers only when a user clicks their ad?",
+              "options": {
+                "A": "Cost Per Click (CPC)",
+                "B": "Cost Per Thousand Impressions (CPM)",
+                "C": "Flat monthly billboard fee",
+                "D": "Fixed annual retainer"
+              },
+              "correct_answer": "A",
+              "explanation": "CPC models bill advertisers solely when active user engagement occurs via a link click."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M2-Q4",
+              "question": "Which channel is considered a traditional marketing medium?",
+              "options": {
+                "A": "Radio Broadcast Commercial",
+                "B": "Google Search PPC Ad",
+                "C": "Meta Instagram Story Ad",
+                "D": "Automated Email Drip Sequence"
+              },
+              "correct_answer": "A",
+              "explanation": "Radio broadcasting is a classic traditional broadcast marketing medium."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M2-Q5",
+              "question": "Why is customer engagement generally higher in digital marketing compared to newspaper ads?",
+              "options": {
+                "A": "Users can immediately interact, click links, leave comments, and purchase",
+                "B": "Newspapers cannot contain text or pictures",
+                "C": "Digital marketing requires no internet access",
+                "D": "Newspapers update their content automatically every second"
+              },
+              "correct_answer": "A",
+              "explanation": "Digital channels enable immediate two-way interaction and frictionless purchasing journeys."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L1-M3",
+          "module_number": 3,
+          "title": "The Digital Customer Journey & Funnel",
+          "objective": "Understand the stages from awareness to consideration, conversion, retention, and advocacy.",
+          "explanation": "The digital marketing funnel maps a prospect's progression from discovering a brand to becoming a loyal advocate. It consists of Top of Funnel (TOFU - Awareness), Middle of Funnel (MOFU - Consideration), and Bottom of Funnel (BOFU - Decision & Retention).",
+          "key_points": [
+            "TOFU focuses on reach, brand discovery, and educational content",
+            "MOFU nurtures prospects through case studies, webinars, and reviews",
+            "BOFU drives final purchases through direct offers, free trials, and CTAs"
+          ],
+          "examples": [
+            "Reading an educational blog (Awareness)",
+            "Downloading a product comparison whitepaper (Consideration)",
+            "Booking a live product demo (Conversion)"
+          ],
+          "important_terms": [
+            "TOFU",
+            "MOFU",
+            "BOFU",
+            "Lead Nurturing",
+            "Call to Action (CTA)"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L1-M3-Q1",
+              "question": "What is the primary goal of Top of Funnel (TOFU) marketing?",
+              "options": {
+                "A": "Building brand awareness and educating a broad target audience",
+                "B": "Immediately closing complex annual enterprise contracts",
+                "C": "Sending invoice collection reminders",
+                "D": "Managing customer return shipping"
+              },
+              "correct_answer": "A",
+              "explanation": "TOFU strategies focus on generating brand awareness and capturing initial prospect interest."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M3-Q2",
+              "question": "Which content asset is most effective during the Middle of Funnel (MOFU) consideration stage?",
+              "options": {
+                "A": "In-depth product comparison guides and customer case studies",
+                "B": "Short generic brand logos with no context",
+                "C": "Order cancellation confirmation emails",
+                "D": "Warehouse shipping pallet manifests"
+              },
+              "correct_answer": "A",
+              "explanation": "Case studies and comparison guides help prospects evaluate solutions during consideration."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M3-Q3",
+              "question": "What does a Bottom of Funnel (BOFU) Call to Action (CTA) typically encourage?",
+              "options": {
+                "A": "Completing a purchase or booking a product demo",
+                "B": "Reading a high-level philosophy article",
+                "C": "Closing the browser tab permanently",
+                "D": "Reporting the website as spam"
+              },
+              "correct_answer": "A",
+              "explanation": "BOFU CTAs focus directly on conversion, purchases, trials, and contract signups."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M3-Q4",
+              "question": "What stage occurs after a customer makes their initial purchase?",
+              "options": {
+                "A": "Retention and Customer Advocacy",
+                "B": "Initial Brand Discovery",
+                "C": "Top of Funnel Prospecting",
+                "D": "Competitor Keyword Bidding"
+              },
+              "correct_answer": "A",
+              "explanation": "Post-purchase stages focus on customer retention, onboarding, and turning users into brand advocates."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M3-Q5",
+              "question": "Why is lead nurturing critical across the marketing funnel?",
+              "options": {
+                "A": "It builds trust and guides prospects progressively toward conversion",
+                "B": "It increases unsubscribe rates on purpose",
+                "C": "It removes contact forms from website pages",
+                "D": "It prevents prospects from comparing competitors"
+              },
+              "correct_answer": "A",
+              "explanation": "Nurturing provides relevant value at each stage to systematically convert leads into buyers."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L1-M4",
+          "module_number": 4,
+          "title": "Buyer Personas & Target Audience Research",
+          "objective": "Construct semi-fictional buyer personas based on demographics, psychographics, and pain points.",
+          "explanation": "A buyer persona is a research-backed profile depicting a target customer. Personas synthesize demographics (age, location, job title), psychographics (goals, values), and critical pain points to guide marketing messaging.",
+          "key_points": [
+            "Grounds marketing campaigns in actual customer data rather than assumptions",
+            "Identifies specific pain points and triggers that motivate purchases",
+            "Guides creative tone, messaging, and optimal advertising channel selection"
+          ],
+          "examples": [
+            "Persona: 'Enterprise IT Lead Dave' looking for automated SOC compliance",
+            "Persona: 'Startup Founder Sarah' seeking fast self-serve payroll software"
+          ],
+          "important_terms": [
+            "Buyer Persona",
+            "Demographics",
+            "Psychographics",
+            "Pain Points"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L1-M4-Q1",
+              "question": "What is a Buyer Persona in digital marketing strategy?",
+              "options": {
+                "A": "A research-based profile representing an ideal target customer",
+                "B": "An automated chatbot script on a support forum",
+                "C": "A randomly generated employee payroll ID",
+                "D": "A legal contract signed with advertising agencies"
+              },
+              "correct_answer": "A",
+              "explanation": "Buyer personas synthesize customer research into actionable target customer archetypes."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M4-Q2",
+              "question": "Which of the following attributes is classified under 'Demographics'?",
+              "options": {
+                "A": "Age, occupation, and geographic location",
+                "B": "Personal values and spiritual beliefs",
+                "C": "Emotional brand affinity",
+                "D": "Preferred artistic style"
+              },
+              "correct_answer": "A",
+              "explanation": "Demographics represent quantifiable statistical data such as age, location, and role."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M4-Q3",
+              "question": "What are customer 'Pain Points' in audience research?",
+              "options": {
+                "A": "Specific problems, frustrations, or unmet needs experienced by prospects",
+                "B": "Physical injuries sustained in office workplaces",
+                "C": "Technical errors in compiler software",
+                "D": "The cost of building computer monitors"
+              },
+              "correct_answer": "A",
+              "explanation": "Pain points represent the specific business or personal friction customers seek to solve."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M4-Q4",
+              "question": "Why are psychographics valuable alongside demographic data?",
+              "options": {
+                "A": "They explain the underlying motivations, values, and attitudes behind buying decisions",
+                "B": "They measure internet router download speeds",
+                "C": "They calculate sales tax automatically",
+                "D": "They replace the need for any product development"
+              },
+              "correct_answer": "A",
+              "explanation": "Psychographics reveal customer motivations, lifestyle values, and emotional drivers."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M4-Q5",
+              "question": "How does having clearly defined buyer personas improve ad campaign ROI?",
+              "options": {
+                "A": "Enables hyper-relevant messaging and reduces wasted ad spend on irrelevant audiences",
+                "B": "Forces all ad platforms to provide free clicks",
+                "C": "Disables competitor websites worldwide",
+                "D": "Eliminates the requirement for advertising budgets"
+              },
+              "correct_answer": "A",
+              "explanation": "Targeted personas ensure ad spend is concentrated on high-intent, qualified audiences."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L1-M5",
+          "module_number": 5,
+          "title": "The Modern Marketing Mix (4 Ps & 7 Ps)",
+          "objective": "Apply Product, Price, Place, Promotion, People, Process, and Physical Evidence.",
+          "explanation": "The marketing mix represents the foundational framework for executing marketing strategy. The traditional 4 Ps (Product, Price, Place, Promotion) expand to the 7 Ps in service and digital environments by incorporating People, Process, and Physical Evidence.",
+          "key_points": [
+            "Product: Delivering value that satisfies real customer demands",
+            "Price: Establishing monetization aligned with perceived value and market positioning",
+            "Place & Promotion: Distributing via optimal digital touchpoints with clear messaging",
+            "7 Ps additions: Ensuring high customer service standards, frictionless processes, and credibility"
+          ],
+          "examples": [
+            "SaaS pricing tier strategy (Freemium, Pro, Enterprise)",
+            "Optimizing the checkout and onboarding process to reduce churn"
+          ],
+          "important_terms": [
+            "Marketing Mix",
+            "4 Ps",
+            "7 Ps",
+            "Value Proposition"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L1-M5-Q1",
+              "question": "What are the traditional 4 Ps of the marketing mix?",
+              "options": {
+                "A": "Product, Price, Place, Promotion",
+                "B": "Platform, Protocol, Program, Pixel",
+                "C": "Profit, Payment, Payroll, Policy",
+                "D": "People, Process, Position, Power"
+              },
+              "correct_answer": "A",
+              "explanation": "The classic 4 Ps framework comprises Product, Price, Place, and Promotion."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M5-Q2",
+              "question": "In digital marketing, what does the 'Place' element primarily represent?",
+              "options": {
+                "A": "The digital channels and platforms where customers discover and purchase the product",
+                "B": "The physical brick warehouse location only",
+                "C": "The office desk where marketing executives sit",
+                "D": "The city where the web server was manufactured"
+              },
+              "correct_answer": "A",
+              "explanation": "'Place' encompasses digital distribution, e-commerce storefronts, and online platforms."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M5-Q3",
+              "question": "Which additional 'P' in the expanded 7 Ps framework refers to customer support and staff?",
+              "options": {
+                "A": "People",
+                "B": "Protocol",
+                "C": "Pagination",
+                "D": "Perception"
+              },
+              "correct_answer": "A",
+              "explanation": "'People' represents the human representatives who deliver and support customer experiences."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M5-Q4",
+              "question": "What does 'Physical Evidence' encompass in an online SaaS business?",
+              "options": {
+                "A": "Customer testimonials, security badges, trust seals, and polished UI design",
+                "B": "Heavy steel hardware boxes shipped to customers",
+                "C": "Printed paper contracts only",
+                "D": "Concrete office foundations"
+              },
+              "correct_answer": "A",
+              "explanation": "In digital contexts, physical evidence includes trust badges, case studies, and UI credibility cues."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L1-M5-Q5",
+              "question": "Why must all elements of the marketing mix remain closely aligned?",
+              "options": {
+                "A": "To ensure a coherent, credible, and competitive value proposition for customers",
+                "B": "To prevent the website server from crashing",
+                "C": "To allow the browser to run without JavaScript",
+                "D": "To eliminate the need for customer research"
+              },
+              "correct_answer": "A",
+              "explanation": "Alignment across the marketing mix delivers a unified, effective go-to-market execution."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

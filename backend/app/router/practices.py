@@ -1,7 +1,13 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.database import get_db
+<<<<<<< HEAD
 from app.schemas import AnswerSubmission
 from app.crud.practice import get_question, run_code
+=======
+from app.schemas import AnswerSubmission, ProblemStatsOut
+from app.crud.practice import get_question, run_code, get_user_problem_stats
+from app.crud.mcq import get_user_domain_quiz_percentages
+>>>>>>> 6d8865c (updation)
 from sqlalchemy.orm import Session
 
 from app.router.auth import current_user
@@ -10,6 +16,29 @@ from app.models import Users
 router = APIRouter(prefix="/practices", tags=["practices"])
 
 
+<<<<<<< HEAD
+=======
+@router.get("/stats", response_model=ProblemStatsOut)
+def get_stats(
+    user_id: int | None = None,
+    user: Users = Depends(current_user),
+    db: Session = Depends(get_db),
+):
+    target_user_id = user_id or user.id
+    stats = get_user_problem_stats(db, target_user_id)
+    quiz_stats = get_user_domain_quiz_percentages(db, target_user_id)
+    return {
+        "user_id": target_user_id,
+        "solved_problems": stats["solved_problems"],
+        "total_problems": stats["total_problems"],
+        "highest_month_engaged": stats["highest_month_engaged"],
+        "highest_month_count": stats["highest_month_count"],
+        "domain_quiz_percentages": quiz_stats["domain_percentages"],
+        "domain_quiz_details": quiz_stats["domain_details"],
+    }
+
+
+>>>>>>> 6d8865c (updation)
 @router.get("/question")
 def get_question_endpoint(question_id: int):
     try:

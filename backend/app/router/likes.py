@@ -4,6 +4,12 @@ from app.database import get_db
 from app.crud.like import get_all, get_like, create_like, delete_like
 from app.schemas import Likes
 
+<<<<<<< HEAD
+=======
+from app.router.auth import current_user_optional
+from app.models import Users, Likes as LikesModel
+
+>>>>>>> 6d8865c (updation)
 router = APIRouter(prefix="/likes", tags=["likes"])
 
 @router.get("/", response_model=list[Likes])
@@ -18,10 +24,30 @@ def getone(like_id: int, db: Session = Depends(get_db)):
     return data
 
 @router.post("/", response_model=Likes, status_code=status.HTTP_201_CREATED)
+<<<<<<< HEAD
 def addone(like: Likes, db: Session = Depends(get_db)):
     return create_like(
         db=db,
         user_id=like.user_id,
+=======
+def addone(
+    like: Likes,
+    user: Users | None = Depends(current_user_optional),
+    db: Session = Depends(get_db)
+):
+    target_user_id = user.id if user else like.user_id
+    existing = db.query(LikesModel).filter(
+        LikesModel.user_id == target_user_id,
+        LikesModel.post_id == like.post_id
+    ).first()
+    if existing:
+        delete_like(db, existing.id)
+        raise HTTPException(status_code=status.HTTP_200_OK, detail="Unliked post")
+
+    return create_like(
+        db=db,
+        user_id=target_user_id,
+>>>>>>> 6d8865c (updation)
         post_id=like.post_id,
         id=like.id
     )

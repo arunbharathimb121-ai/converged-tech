@@ -5,8 +5,16 @@ from app.models import Recruiters, Users
 from datetime import date, datetime
 from typing import Optional
 
+<<<<<<< HEAD
 def get_all(db: Session):
     return db.query(Users).all()
+=======
+def get_all(db: Session, role: Optional[str] = "student"):
+    query = db.query(Users)
+    if role and role.lower() != "all":
+        query = query.filter(Users.role == role)
+    return query.all()
+>>>>>>> 6d8865c (updation)
 
 def get_user(db: Session, id: int):
     return db.query(Users).filter(Users.id == id).first()
@@ -23,6 +31,10 @@ def create_user(
     bio: Optional[str] = None,
     profile_pic: Optional[str] = None,
     email: Optional[str] = None,
+<<<<<<< HEAD
+=======
+    role: Optional[str] = "student",
+>>>>>>> 6d8865c (updation)
     id: Optional[int] = None
 ):
     kwargs = {
@@ -35,7 +47,12 @@ def create_user(
         "org": org,
         "bio": bio,
         "profile_pic": profile_pic,
+<<<<<<< HEAD
         "email": email
+=======
+        "email": email,
+        "role": role or "student"
+>>>>>>> 6d8865c (updation)
     }
     if id is not None:
         kwargs["id"] = id

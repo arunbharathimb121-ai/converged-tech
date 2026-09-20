@@ -1,0 +1,3252 @@
+[
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of What is Software Development??",
+    "options": [
+      "To effectively apply what is software development? principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply what is software development? principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in What is Software Development??",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of What is Software Development?, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating What is Software Development??",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering What is Software Development? provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Programming Languages & Paradigms?",
+    "options": [
+      "To effectively apply programming languages & paradigms principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply programming languages & paradigms principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Programming Languages & Paradigms?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Programming Languages & Paradigms, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Programming Languages & Paradigms?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Programming Languages & Paradigms provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Variables, Primitive Types & Memory?",
+    "options": [
+      "To effectively apply variables, primitive types & memory principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply variables, primitive types & memory principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Variables, Primitive Types & Memory?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Variables, Primitive Types & Memory, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Variables, Primitive Types & Memory?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Variables, Primitive Types & Memory provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Control Flow & Branching Logic?",
+    "options": [
+      "To effectively apply control flow & branching logic principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply control flow & branching logic principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Control Flow & Branching Logic?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Control Flow & Branching Logic, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Control Flow & Branching Logic?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Control Flow & Branching Logic provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Functions, Scope & Modular Code?",
+    "options": [
+      "To effectively apply functions, scope & modular code principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply functions, scope & modular code principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Functions, Scope & Modular Code?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Functions, Scope & Modular Code, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Functions, Scope & Modular Code?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Functions, Scope & Modular Code provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Arrays & Dynamic Lists?",
+    "options": [
+      "To effectively apply arrays & dynamic lists principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply arrays & dynamic lists principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Arrays & Dynamic Lists?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Arrays & Dynamic Lists, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Arrays & Dynamic Lists?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Arrays & Dynamic Lists provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Strings & Text Manipulation?",
+    "options": [
+      "To effectively apply strings & text manipulation principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply strings & text manipulation principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Strings & Text Manipulation?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Strings & Text Manipulation, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Strings & Text Manipulation?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Strings & Text Manipulation provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Hash Tables & Dictionaries?",
+    "options": [
+      "To effectively apply hash tables & dictionaries principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply hash tables & dictionaries principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Hash Tables & Dictionaries?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Hash Tables & Dictionaries, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Hash Tables & Dictionaries?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Hash Tables & Dictionaries provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Stacks & Queues?",
+    "options": [
+      "To effectively apply stacks & queues principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply stacks & queues principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Stacks & Queues?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Stacks & Queues, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Stacks & Queues?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Stacks & Queues provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Linear & Binary Search?",
+    "options": [
+      "To effectively apply linear & binary search principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply linear & binary search principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Linear & Binary Search?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Linear & Binary Search, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Linear & Binary Search?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Linear & Binary Search provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Classes, Objects & State?",
+    "options": [
+      "To effectively apply classes, objects & state principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply classes, objects & state principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Classes, Objects & State?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Classes, Objects & State, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Classes, Objects & State?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Classes, Objects & State provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Encapsulation & Access Modifiers?",
+    "options": [
+      "To effectively apply encapsulation & access modifiers principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply encapsulation & access modifiers principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Encapsulation & Access Modifiers?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Encapsulation & Access Modifiers, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Encapsulation & Access Modifiers?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Encapsulation & Access Modifiers provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Inheritance & Code Reuse?",
+    "options": [
+      "To effectively apply inheritance & code reuse principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply inheritance & code reuse principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Inheritance & Code Reuse?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Inheritance & Code Reuse, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Inheritance & Code Reuse?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Inheritance & Code Reuse provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Polymorphism & Interfaces?",
+    "options": [
+      "To effectively apply polymorphism & interfaces principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply polymorphism & interfaces principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Polymorphism & Interfaces?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Polymorphism & Interfaces, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Polymorphism & Interfaces?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Polymorphism & Interfaces provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "What is the primary objective of Memory Management & Garbage Collection?",
+    "options": [
+      "To effectively apply memory management & garbage collection principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply memory management & garbage collection principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Memory Management & Garbage Collection?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "In the context of Memory Management & Garbage Collection, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Memory Management & Garbage Collection?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "easy",
+    "is_technical": true,
+    "question": "How does mastering Memory Management & Garbage Collection provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of File I/O & Streams?",
+    "options": [
+      "To effectively apply file i/o & streams principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply file i/o & streams principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in File I/O & Streams?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of File I/O & Streams, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating File I/O & Streams?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering File I/O & Streams provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Data Serialization (JSON & XML)?",
+    "options": [
+      "To effectively apply data serialization (json & xml) principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply data serialization (json & xml) principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Data Serialization (JSON & XML)?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Data Serialization (JSON & XML), what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Data Serialization (JSON & XML)?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Data Serialization (JSON & XML) provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Unit Testing & Test-Driven Development?",
+    "options": [
+      "To effectively apply unit testing & test-driven development principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply unit testing & test-driven development principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Unit Testing & Test-Driven Development?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Unit Testing & Test-Driven Development, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Unit Testing & Test-Driven Development?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Unit Testing & Test-Driven Development provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Debugging & Profiling?",
+    "options": [
+      "To effectively apply debugging & profiling principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply debugging & profiling principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Debugging & Profiling?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Debugging & Profiling, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Debugging & Profiling?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Debugging & Profiling provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Version Control with Git?",
+    "options": [
+      "To effectively apply version control with git principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply version control with git principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Version Control with Git?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Version Control with Git, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Version Control with Git?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Version Control with Git provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Creational & Structural Design Patterns?",
+    "options": [
+      "To effectively apply creational & structural design patterns principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply creational & structural design patterns principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Creational & Structural Design Patterns?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Creational & Structural Design Patterns, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Creational & Structural Design Patterns?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Creational & Structural Design Patterns provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Concurrency, Threads & Mutexes?",
+    "options": [
+      "To effectively apply concurrency, threads & mutexes principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply concurrency, threads & mutexes principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Concurrency, Threads & Mutexes?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Concurrency, Threads & Mutexes, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Concurrency, Threads & Mutexes?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Concurrency, Threads & Mutexes provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Asynchronous Programming & Event Loops?",
+    "options": [
+      "To effectively apply asynchronous programming & event loops principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply asynchronous programming & event loops principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Asynchronous Programming & Event Loops?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Asynchronous Programming & Event Loops, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Asynchronous Programming & Event Loops?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Asynchronous Programming & Event Loops provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Relational Databases & SQL Queries?",
+    "options": [
+      "To effectively apply relational databases & sql queries principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply relational databases & sql queries principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Relational Databases & SQL Queries?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Relational Databases & SQL Queries, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Relational Databases & SQL Queries?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Relational Databases & SQL Queries provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Object-Relational Mapping (ORM)?",
+    "options": [
+      "To effectively apply object-relational mapping (orm) principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply object-relational mapping (orm) principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Object-Relational Mapping (ORM)?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Object-Relational Mapping (ORM), what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Object-Relational Mapping (ORM)?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Object-Relational Mapping (ORM) provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of RESTful API Architecture?",
+    "options": [
+      "To effectively apply restful api architecture principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply restful api architecture principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in RESTful API Architecture?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of RESTful API Architecture, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating RESTful API Architecture?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering RESTful API Architecture provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Authentication & Authorization (JWT)?",
+    "options": [
+      "To effectively apply authentication & authorization (jwt) principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply authentication & authorization (jwt) principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Authentication & Authorization (JWT)?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Authentication & Authorization (JWT), what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Authentication & Authorization (JWT)?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Authentication & Authorization (JWT) provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of In-Memory Caching with Redis?",
+    "options": [
+      "To effectively apply in-memory caching with redis principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply in-memory caching with redis principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in In-Memory Caching with Redis?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of In-Memory Caching with Redis, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating In-Memory Caching with Redis?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering In-Memory Caching with Redis provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Containerization with Docker?",
+    "options": [
+      "To effectively apply containerization with docker principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply containerization with docker principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Containerization with Docker?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Containerization with Docker, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Containerization with Docker?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Containerization with Docker provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of CI/CD Automation Pipelines?",
+    "options": [
+      "To effectively apply ci/cd automation pipelines principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply ci/cd automation pipelines principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in CI/CD Automation Pipelines?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of CI/CD Automation Pipelines, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating CI/CD Automation Pipelines?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering CI/CD Automation Pipelines provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of System Design & Scalability Principles?",
+    "options": [
+      "To effectively apply system design & scalability principles principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply system design & scalability principles principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in System Design & Scalability Principles?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of System Design & Scalability Principles, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating System Design & Scalability Principles?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering System Design & Scalability Principles provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Load Balancing & Reverse Proxies?",
+    "options": [
+      "To effectively apply load balancing & reverse proxies principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply load balancing & reverse proxies principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Load Balancing & Reverse Proxies?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Load Balancing & Reverse Proxies, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Load Balancing & Reverse Proxies?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Load Balancing & Reverse Proxies provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Microservices vs Monolithic Architecture?",
+    "options": [
+      "To effectively apply microservices vs monolithic architecture principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply microservices vs monolithic architecture principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Microservices vs Monolithic Architecture?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Microservices vs Monolithic Architecture, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Microservices vs Monolithic Architecture?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Microservices vs Monolithic Architecture provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Message Queues & Event-Driven Architecture?",
+    "options": [
+      "To effectively apply message queues & event-driven architecture principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply message queues & event-driven architecture principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Message Queues & Event-Driven Architecture?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Message Queues & Event-Driven Architecture, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Message Queues & Event-Driven Architecture?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Message Queues & Event-Driven Architecture provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "What is the primary objective of Database Transactions & ACID Properties?",
+    "options": [
+      "To effectively apply database transactions & acid properties principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply database transactions & acid properties principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Database Transactions & ACID Properties?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "In the context of Database Transactions & ACID Properties, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Database Transactions & ACID Properties?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "medium",
+    "is_technical": true,
+    "question": "How does mastering Database Transactions & ACID Properties provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of CAP Theorem & Distributed Consensus?",
+    "options": [
+      "To effectively apply cap theorem & distributed consensus principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply cap theorem & distributed consensus principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in CAP Theorem & Distributed Consensus?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of CAP Theorem & Distributed Consensus, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating CAP Theorem & Distributed Consensus?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering CAP Theorem & Distributed Consensus provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Database Sharding & Replication?",
+    "options": [
+      "To effectively apply database sharding & replication principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply database sharding & replication principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Database Sharding & Replication?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Database Sharding & Replication, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Database Sharding & Replication?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Database Sharding & Replication provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Application Security & OWASP Top 10?",
+    "options": [
+      "To effectively apply application security & owasp top 10 principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply application security & owasp top 10 principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Application Security & OWASP Top 10?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Application Security & OWASP Top 10, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Application Security & OWASP Top 10?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Application Security & OWASP Top 10 provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Resilience & Fault Tolerance?",
+    "options": [
+      "To effectively apply resilience & fault tolerance principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply resilience & fault tolerance principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Resilience & Fault Tolerance?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Resilience & Fault Tolerance, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Resilience & Fault Tolerance?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Resilience & Fault Tolerance provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of High-Performance Code Optimization?",
+    "options": [
+      "To effectively apply high-performance code optimization principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply high-performance code optimization principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in High-Performance Code Optimization?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of High-Performance Code Optimization, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating High-Performance Code Optimization?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering High-Performance Code Optimization provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Cloud Infrastructure (AWS / GCP)?",
+    "options": [
+      "To effectively apply cloud infrastructure (aws / gcp) principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply cloud infrastructure (aws / gcp) principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Cloud Infrastructure (AWS / GCP)?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Cloud Infrastructure (AWS / GCP), what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Cloud Infrastructure (AWS / GCP)?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Cloud Infrastructure (AWS / GCP) provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Infrastructure as Code (Terraform)?",
+    "options": [
+      "To effectively apply infrastructure as code (terraform) principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply infrastructure as code (terraform) principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Infrastructure as Code (Terraform)?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Infrastructure as Code (Terraform), what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Infrastructure as Code (Terraform)?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Infrastructure as Code (Terraform) provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Observability: Metrics, Logs & Traces?",
+    "options": [
+      "To effectively apply observability: metrics, logs & traces principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply observability: metrics, logs & traces principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Observability: Metrics, Logs & Traces?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Observability: Metrics, Logs & Traces, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Observability: Metrics, Logs & Traces?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Observability: Metrics, Logs & Traces provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Clean Code, Refactoring & Code Reviews?",
+    "options": [
+      "To effectively apply clean code, refactoring & code reviews principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply clean code, refactoring & code reviews principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Clean Code, Refactoring & Code Reviews?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Clean Code, Refactoring & Code Reviews, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Clean Code, Refactoring & Code Reviews?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Clean Code, Refactoring & Code Reviews provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Agile, Scrum & SRE Practices?",
+    "options": [
+      "To effectively apply agile, scrum & sre practices principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply agile, scrum & sre practices principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Agile, Scrum & SRE Practices?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Agile, Scrum & SRE Practices, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Agile, Scrum & SRE Practices?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Agile, Scrum & SRE Practices provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Large-Scale Real-Time Streaming?",
+    "options": [
+      "To effectively apply large-scale real-time streaming principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply large-scale real-time streaming principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Large-Scale Real-Time Streaming?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Large-Scale Real-Time Streaming, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Large-Scale Real-Time Streaming?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Large-Scale Real-Time Streaming provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Domain-Driven Design (DDD)?",
+    "options": [
+      "To effectively apply domain-driven design (ddd) principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply domain-driven design (ddd) principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Domain-Driven Design (DDD)?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Domain-Driven Design (DDD), what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Domain-Driven Design (DDD)?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Domain-Driven Design (DDD) provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Zero-Trust Security Architecture?",
+    "options": [
+      "To effectively apply zero-trust security architecture principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply zero-trust security architecture principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Zero-Trust Security Architecture?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Zero-Trust Security Architecture, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Zero-Trust Security Architecture?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Zero-Trust Security Architecture provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Multi-Region Disaster Recovery?",
+    "options": [
+      "To effectively apply multi-region disaster recovery principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply multi-region disaster recovery principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Multi-Region Disaster Recovery?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Multi-Region Disaster Recovery, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Multi-Region Disaster Recovery?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Multi-Region Disaster Recovery provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "What is the primary objective of Technical Leadership & Engineering Governance?",
+    "options": [
+      "To effectively apply technical leadership & engineering governance principles to achieve optimal operational outcomes",
+      "To artificially increase infrastructure costs without measurable benefits",
+      "To eliminate the need for any documentation or team collaboration",
+      "To bypass all security and compliance requirements"
+    ],
+    "correct_answer": "To effectively apply technical leadership & engineering governance principles to achieve optimal operational outcomes"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which of the following is considered a core best practice in Technical Leadership & Engineering Governance?",
+    "options": [
+      "Ignoring user feedback and relying solely on random assumptions",
+      "Regularly measuring performance and iteratively optimizing based on data",
+      "Deploying untested changes directly into production systems",
+      "Hardcoding credentials and configuration variables in public repositories"
+    ],
+    "correct_answer": "Regularly measuring performance and iteratively optimizing based on data"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "In the context of Technical Leadership & Engineering Governance, what is a major risk of poor implementation?",
+    "options": [
+      "Instant hardware upgrade of the host machines",
+      "Automatic reduction of network latency to zero",
+      "Reduced efficiency, increased failure rates, and suboptimal performance",
+      "Immediate compliance with all international standards"
+    ],
+    "correct_answer": "Reduced efficiency, increased failure rates, and suboptimal performance"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "Which metric or indicator is most relevant when evaluating Technical Leadership & Engineering Governance?",
+    "options": [
+      "The physical weight of the developer's computer",
+      "The number of colors used in the corporate logo",
+      "The room temperature of the marketing office",
+      "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+    ],
+    "correct_answer": "Measurable outcome quality, efficiency, and reliability against target benchmarks"
+  },
+  {
+    "domain": "Software Development",
+    "level": "hard",
+    "is_technical": true,
+    "question": "How does mastering Technical Leadership & Engineering Governance provide value to an organization?",
+    "options": [
+      "It drives sustainable growth, reduces errors, and strengthens competitive capability",
+      "It replaces all employee salaries with automated scripts",
+      "It deletes historical log files permanently every hour",
+      "It restricts all customer interactions completely"
+    ],
+    "correct_answer": "It drives sustainable growth, reduces errors, and strengthens competitive capability"
+  }
+]

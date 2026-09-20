@@ -1,0 +1,860 @@
+{
+  "level_number": 2,
+  "level_title": "Basic Concepts",
+  "domains": [
+    {
+      "domain_id": "TECH-SD",
+      "domain_name": "Software Development",
+      "domain_type": "Tech",
+      "modules": [
+        {
+          "module_id": "TECH-SD-L2-M1",
+          "module_number": 1,
+          "title": "Arrays & Dynamic Lists",
+          "objective": "Master contiguous memory allocation, index-based access, and dynamic array resizing.",
+          "explanation": "An array is a data structure storing elements in contiguous memory locations. Index lookup is constant time O(1). Dynamic arrays resize automatically when capacity is exceeded by allocating a new contiguous block and copying existing elements.",
+          "key_points": [
+            "O(1) direct random access by index",
+            "O(N) insertion/deletion when shifting elements",
+            "Geometric growth strategy achieves amortized O(1) appending"
+          ],
+          "examples": [
+            "int[] scores = new int[10];",
+            "ArrayList<String> or Python list.append('item')"
+          ],
+          "important_terms": [
+            "Contiguous Memory",
+            "Index Offset",
+            "Amortized Time",
+            "Capacity vs Length"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L2-M1-Q1",
+              "question": "What is the time complexity of reading an element by index in a contiguous array?",
+              "options": {
+                "A": "O(1)",
+                "B": "O(N)",
+                "C": "O(log N)",
+                "D": "O(N^2)"
+              },
+              "correct_answer": "A",
+              "explanation": "Array indexing uses direct pointer arithmetic `base + (index * element_size)` in O(1) time."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M1-Q2",
+              "question": "What happens when a dynamic array exceeds its internal buffer capacity on append?",
+              "options": {
+                "A": "It allocates a larger block (typically 1.5x or 2x) and copies elements over",
+                "B": "It drops the oldest element permanently",
+                "C": "It crashes the operating system kernel immediately",
+                "D": "It switches into an unsorted text file"
+              },
+              "correct_answer": "A",
+              "explanation": "Dynamic arrays double capacity and copy items over, maintaining amortized O(1) inserts."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M1-Q3",
+              "question": "What is the worst-case time complexity of inserting an element at index 0 of an array of size N?",
+              "options": {
+                "A": "O(N)",
+                "B": "O(1)",
+                "C": "O(log N)",
+                "D": "O(N log N)"
+              },
+              "correct_answer": "A",
+              "explanation": "Inserting at index 0 requires shifting all N existing elements one position to the right."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M1-Q4",
+              "question": "Why do arrays demonstrate superior CPU cache performance compared to linked nodes?",
+              "options": {
+                "A": "Contiguous memory layout provides strong spatial locality for CPU cache lines",
+                "B": "Arrays compress data automatically using gzip in hardware",
+                "C": "Arrays execute directly on L1 cache without RAM",
+                "D": "Arrays do not store any data types"
+              },
+              "correct_answer": "A",
+              "explanation": "Spatial locality ensures neighboring contiguous array elements are loaded together into CPU cache lines."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M1-Q5",
+              "question": "Which operation is disallowed on a static fixed-size array without re-instantiation?",
+              "options": {
+                "A": "Changing its allocated maximum capacity in-place",
+                "B": "Overwriting a value at an existing valid index",
+                "C": "Reading an element at index 0",
+                "D": "Iterating from end to beginning"
+              },
+              "correct_answer": "A",
+              "explanation": "Fixed-size arrays have an immutable allocated length established at creation."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L2-M2",
+          "module_number": 2,
+          "title": "Strings & Text Manipulation",
+          "objective": "Understand character encoding, string immutability, and string builder patterns.",
+          "explanation": "Strings represent sequences of characters encoded using standards such as ASCII or UTF-8. In languages like Java, Python, and C#, strings are immutable. Constructing strings via concatenation in loops creates excessive intermediate objects, making mutable builders or list joins essential.",
+          "key_points": [
+            "UTF-8 represents global multilingual Unicode characters efficiently",
+            "String immutability provides thread safety but requires care during concatenation",
+            "StringBuilder / StringBuffer achieves linear O(N) string construction"
+          ],
+          "examples": [
+            "StringBuilder sb = new StringBuilder(); sb.append('text');",
+            "','.join(['apple', 'banana', 'orange'])"
+          ],
+          "important_terms": [
+            "Immutability",
+            "UTF-8",
+            "Unicode",
+            "StringBuilder"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L2-M2-Q1",
+              "question": "Why is naive string concatenation in a loop inefficient in languages with immutable strings?",
+              "options": {
+                "A": "It repeatedly allocates new memory and copies characters, resulting in O(N^2) complexity",
+                "B": "It forces the computer CPU clock to halve its frequency",
+                "C": "It cannot handle alphabetical characters",
+                "D": "It converts text strings into audio files"
+              },
+              "correct_answer": "A",
+              "explanation": "Immutability forces a full copy of the accumulated string on every concatenation iteration."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M2-Q2",
+              "question": "What is the global standard character encoding capable of handling virtually all languages?",
+              "options": {
+                "A": "UTF-8",
+                "B": "ASCII-7",
+                "C": "EBCDIC",
+                "D": "Morse Code"
+              },
+              "correct_answer": "A",
+              "explanation": "UTF-8 is the standard variable-width encoding for Unicode, covering all global writing systems."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M2-Q3",
+              "question": "What is the primary benefit of using a StringBuilder class?",
+              "options": {
+                "A": "Provides mutable character buffering for efficient linear O(N) text construction",
+                "B": "Encrypts text for military-grade security",
+                "C": "Translates English text into machine code directly",
+                "D": "Deletes whitespace from the hard drive"
+              },
+              "correct_answer": "A",
+              "explanation": "StringBuilder modifies an internal buffer in-place without triggering intermediate memory copies."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M2-Q4",
+              "question": "What advantage does string immutability provide in multithreaded systems?",
+              "options": {
+                "A": "Thread-safe concurrent reads without synchronization locks",
+                "B": "Zero memory usage in RAM",
+                "C": "Instant transmission over fiber cables",
+                "D": "Automatic spell checking"
+              },
+              "correct_answer": "A",
+              "explanation": "Because immutable data cannot change after creation, multiple threads can read it concurrently without locks."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M2-Q5",
+              "question": "What is the time complexity of retrieving the length of a string that caches its length in a header field?",
+              "options": {
+                "A": "O(1)",
+                "B": "O(N)",
+                "C": "O(N^2)",
+                "D": "O(log N)"
+              },
+              "correct_answer": "A",
+              "explanation": "When length is pre-stored in object metadata, reading it is a constant O(1) operation."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L2-M3",
+          "module_number": 3,
+          "title": "Hash Tables & Dictionaries",
+          "objective": "Understand hash functions, key-value mapping, and collision resolution.",
+          "explanation": "A hash table implements an associative array pairing keys to values. A hash function converts keys into bucket indices, enabling average O(1) lookups. Collisions are handled via separate chaining (linked lists per bucket) or open addressing (probing).",
+          "key_points": [
+            "Provides average O(1) lookup, insertion, and deletion",
+            "Hash collisions occur when different keys hash to the same bucket index",
+            "Load factor dictates when table resizing and rehashing must occur"
+          ],
+          "examples": [
+            "Map<String, User> userCache = new HashMap<>();",
+            "Counting word occurrences: counts[word] = counts.get(word, 0) + 1"
+          ],
+          "important_terms": [
+            "Hash Function",
+            "Collision",
+            "Separate Chaining",
+            "Load Factor"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L2-M3-Q1",
+              "question": "What is the average time complexity of looking up a key in a balanced hash table?",
+              "options": {
+                "A": "O(1)",
+                "B": "O(N)",
+                "C": "O(log N)",
+                "D": "O(N^2)"
+              },
+              "correct_answer": "A",
+              "explanation": "Hash tables compute direct bucket indices in constant average O(1) time."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M3-Q2",
+              "question": "What is a hash collision?",
+              "options": {
+                "A": "When two distinct keys produce the exact same bucket index from the hash function",
+                "B": "When a computer motherboard loses power",
+                "C": "When a database deletes all user records",
+                "D": "When an integer variable converts into a boolean"
+              },
+              "correct_answer": "A",
+              "explanation": "Collisions occur when hash function outputs map two different keys to the same bucket."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M3-Q3",
+              "question": "Which collision resolution technique stores colliding entries in a linked list at each bucket?",
+              "options": {
+                "A": "Separate Chaining",
+                "B": "Linear Probing",
+                "C": "Binary Heap Insertion",
+                "D": "QuickSort Partitioning"
+              },
+              "correct_answer": "A",
+              "explanation": "Separate chaining resolves collisions by storing all matching bucket entries in a linked chain."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M3-Q4",
+              "question": "Why must keys in a hash map have an immutable or stable hash code?",
+              "options": {
+                "A": "If a key's hash changes after insertion, the value cannot be located in its original bucket",
+                "B": "To prevent cooling fans from stopping",
+                "C": "To allow floating point division",
+                "D": "To change the variable name dynamically"
+              },
+              "correct_answer": "A",
+              "explanation": "Modifying a key's hash code after insertion misplaces it relative to its bucket lookup."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M3-Q5",
+              "question": "What does the 'Load Factor' of a hash table represent?",
+              "options": {
+                "A": "The ratio of stored elements to total available bucket slots (N / Capacity)",
+                "B": "The electrical voltage drawn by the CPU",
+                "C": "The weight of the server in kilograms",
+                "D": "The percentage of CPU cache utilized"
+              },
+              "correct_answer": "A",
+              "explanation": "Load factor measures table fullness and triggers automatic resizing when thresholds are met."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L2-M4",
+          "module_number": 4,
+          "title": "Stacks, Queues & Linear Structures",
+          "objective": "Understand LIFO vs FIFO semantics and their algorithmic applications.",
+          "explanation": "Stacks operate on Last-In, First-Out (LIFO) semantics via push/pop operations. Queues operate on First-In, First-Out (FIFO) semantics via enqueue/dequeue operations. Both are foundational in parsing, scheduling, and graph traversals.",
+          "key_points": [
+            "Stack: LIFO ordering (used in undo history, parenthesis matching, call stacks)",
+            "Queue: FIFO ordering (used in job schedulers, breadth-first search, buffer queues)",
+            "Deque: Double-ended queue supporting O(1) operations at both boundaries"
+          ],
+          "examples": [
+            "Browser back button history (Stack)",
+            "Printer spooler processing incoming print jobs (Queue)"
+          ],
+          "important_terms": [
+            "LIFO",
+            "FIFO",
+            "Call Stack",
+            "Deque"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L2-M4-Q1",
+              "question": "Which principle describes the operation of a Stack data structure?",
+              "options": {
+                "A": "Last-In, First-Out (LIFO)",
+                "B": "First-In, First-Out (FIFO)",
+                "C": "Random Index Access",
+                "D": "Alphabetical Priority Sorting"
+              },
+              "correct_answer": "A",
+              "explanation": "Stacks process the most recently pushed element first (LIFO)."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M4-Q2",
+              "question": "Which data structure is optimal for processing tasks in the order they were submitted?",
+              "options": {
+                "A": "Queue (FIFO)",
+                "B": "Stack (LIFO)",
+                "C": "Binary Search Tree",
+                "D": "Hash Table"
+              },
+              "correct_answer": "A",
+              "explanation": "Queues maintain chronological first-come, first-served (FIFO) ordering."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M4-Q3",
+              "question": "What runtime mechanism uses a stack to manage active function execution frames?",
+              "options": {
+                "A": "Call Stack",
+                "B": "Garbage Collection Heap",
+                "C": "DNS Resolver Cache",
+                "D": "Query Optimization Planner"
+              },
+              "correct_answer": "A",
+              "explanation": "The call stack tracks active function calls and allocates local execution frames."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M4-Q4",
+              "question": "What is the time complexity of push and pop operations on an efficient stack?",
+              "options": {
+                "A": "O(1)",
+                "B": "O(N)",
+                "C": "O(log N)",
+                "D": "O(N log N)"
+              },
+              "correct_answer": "A",
+              "explanation": "Operating at the top of a stack takes constant O(1) time."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M4-Q5",
+              "question": "Which data structure supports insertion and removal at both front and rear in O(1) time?",
+              "options": {
+                "A": "Deque (Double-Ended Queue)",
+                "B": "Singly Linked List with head pointer only",
+                "C": "Binary Max Heap",
+                "D": "Trie Structure"
+              },
+              "correct_answer": "A",
+              "explanation": "Deques support O(1) push and pop operations at both the front and rear ends."
+            }
+          ]
+        },
+        {
+          "module_id": "TECH-SD-L2-M5",
+          "module_number": 5,
+          "title": "Searching Algorithms & Complexity",
+          "objective": "Compare linear search and binary search algorithms and understand Big-O performance.",
+          "explanation": "Linear search checks elements sequentially with O(N) complexity and operates on unsorted data. Binary search operates on sorted arrays by repeatedly halving the search space, achieving logarithmic O(log N) efficiency.",
+          "key_points": [
+            "Linear search requires no sorting but runs in O(N) time",
+            "Binary search requires sorted collections and runs in O(log N) time",
+            "Big-O notation quantifies worst-case asymptotic time and space scaling"
+          ],
+          "examples": [
+            "Finding a name in an unsorted array of strings (Linear Search)",
+            "Looking up a word in a dictionary or sorted index (Binary Search)"
+          ],
+          "important_terms": [
+            "Linear Search",
+            "Binary Search",
+            "Divide and Conquer",
+            "O(log N)"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "TECH-SD-L2-M5-Q1",
+              "question": "What prerequisite must be satisfied before executing Binary Search on an array?",
+              "options": {
+                "A": "The array elements must be sorted in order",
+                "B": "The array must contain only positive integers",
+                "C": "The array length must be a power of two",
+                "D": "The array must be stored on an NVMe SSD"
+              },
+              "correct_answer": "A",
+              "explanation": "Binary search relies on sorted ordering to eliminate half of the remaining items each step."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M5-Q2",
+              "question": "What is the worst-case time complexity of Binary Search on a sorted array of N elements?",
+              "options": {
+                "A": "O(log N)",
+                "B": "O(1)",
+                "C": "O(N)",
+                "D": "O(N^2)"
+              },
+              "correct_answer": "A",
+              "explanation": "Binary search halves the search window at each comparison, achieving O(log N) time."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M5-Q3",
+              "question": "At most, how many comparisons does Binary Search need for an array of 1,024 sorted items?",
+              "options": {
+                "A": "10 comparisons (log2(1024) = 10)",
+                "B": "512 comparisons",
+                "C": "1,024 comparisons",
+                "D": "1 comparison"
+              },
+              "correct_answer": "A",
+              "explanation": "Because log2(1024) = 10, binary search finds any element or detects absence in 10 steps."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M5-Q4",
+              "question": "When is Linear Search preferable over Binary Search?",
+              "options": {
+                "A": "When the collection is small and unsorted, avoiding the overhead of sorting",
+                "B": "When searching through billions of sorted database records",
+                "C": "When searching encrypted cryptographic keys",
+                "D": "When running on distributed GPU clusters"
+              },
+              "correct_answer": "A",
+              "explanation": "For small, one-off searches, linear scan avoids the O(N log N) upfront cost of sorting."
+            },
+            {
+              "mcq_id": "TECH-SD-L2-M5-Q5",
+              "question": "What is the worst-case time complexity of Linear Search on an array of N items?",
+              "options": {
+                "A": "O(N)",
+                "B": "O(log N)",
+                "C": "O(1)",
+                "D": "O(N^2)"
+              },
+              "correct_answer": "A",
+              "explanation": "In the worst case, linear search inspects all N elements sequentially."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain_id": "NONTECH-DM",
+      "domain_name": "Digital Marketing",
+      "domain_type": "Non-Tech",
+      "modules": [
+        {
+          "module_id": "NONTECH-DM-L2-M1",
+          "module_number": 1,
+          "title": "High-Converting Landing Pages",
+          "objective": "Structure landing pages with clear value propositions, trust signals, and focused CTAs.",
+          "explanation": "A landing page is a standalone web page created specifically for a marketing or advertising campaign. Unlike standard multi-page websites, high-converting landing pages minimize distractions, provide a single clear Call to Action (CTA), and reinforce trust with social proof.",
+          "key_points": [
+            "Maintains 1:1 attention ratio with a single primary CTA",
+            "Hero section must communicate value within 5 seconds",
+            "Incorporates trust badges, customer testimonials, and fast mobile loading"
+          ],
+          "examples": [
+            "A SaaS product signup page driven by Google Search Ads",
+            "An event registration page for a virtual cybersecurity webinar"
+          ],
+          "important_terms": [
+            "Attention Ratio",
+            "Social Proof",
+            "Above the Fold",
+            "Call to Action (CTA)"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L2-M1-Q1",
+              "question": "What is the primary design objective of a dedicated campaign landing page?",
+              "options": {
+                "A": "To guide visitors toward a single specific conversion action without distractions",
+                "B": "To display every unrelated product in the corporate catalog",
+                "C": "To hide all contact information from users",
+                "D": "To show maximum external outbound links"
+              },
+              "correct_answer": "A",
+              "explanation": "Landing pages focus visitor attention on a single measurable conversion goal."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M1-Q2",
+              "question": "What does 'Above the Fold' mean in landing page design?",
+              "options": {
+                "A": "The top portion of a web page visible before the visitor scrolls down",
+                "B": "The paper fold line of a printed newspaper",
+                "C": "The footer links at the bottom of the page",
+                "D": "The backend database connection configuration"
+              },
+              "correct_answer": "A",
+              "explanation": "'Above the fold' refers to the immediately visible viewport content before scrolling."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M1-Q3",
+              "question": "Which element acts as strong 'Social Proof' on a landing page?",
+              "options": {
+                "A": "Authentic customer reviews, client logos, and case study metrics",
+                "B": "Unverified generic stock photos",
+                "C": "A blank white banner with no text",
+                "D": "A legal terms disclaimers page"
+              },
+              "correct_answer": "A",
+              "explanation": "Testimonials and client logos provide social proof that builds trust and boosts conversion."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M1-Q4",
+              "question": "How does slow page load speed affect landing page conversion rates?",
+              "options": {
+                "A": "Significantly increases bounce rates and reduces conversions",
+                "B": "Automatically triples conversion rates",
+                "C": "Has zero impact on mobile visitors",
+                "D": "Reduces advertising costs to zero"
+              },
+              "correct_answer": "A",
+              "explanation": "Slow page load times cause visitors to abandon the page before interacting."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M1-Q5",
+              "question": "What does an 'Attention Ratio of 1:1' signify on an optimized landing page?",
+              "options": {
+                "A": "One campaign goal paired with exactly one clickable primary CTA",
+                "B": "One visitor per day only",
+                "C": "One image per 10,000 words",
+                "D": "One server per visitor"
+              },
+              "correct_answer": "A",
+              "explanation": "A 1:1 attention ratio eliminates competing navigation links, focusing visitors on the CTA."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L2-M2",
+          "module_number": 2,
+          "title": "Content Marketing Foundations",
+          "objective": "Develop an editorial strategy, content calendar, and authoritative brand assets.",
+          "explanation": "Content marketing focuses on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience. Content formats include technical blog posts, eBooks, whitepapers, podcasts, and infographics.",
+          "key_points": [
+            "Focuses on delivering genuine educational or entertaining value rather than overt pitching",
+            "Editorial calendars structure publication consistency and theme alignment",
+            "Drives sustainable organic search engine rankings and establishes domain authority"
+          ],
+          "examples": [
+            "Publishing weekly in-depth engineering tutorials to attract developer talent",
+            "Creating an industry benchmark report downloaded in exchange for business emails"
+          ],
+          "important_terms": [
+            "Editorial Calendar",
+            "Lead Magnet",
+            "Content Pillar",
+            "Domain Authority"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L2-M2-Q1",
+              "question": "What is the primary philosophy of Content Marketing?",
+              "options": {
+                "A": "Providing consistent, high-value content that solves customer problems",
+                "B": "Spamming social media feeds with aggressive sales discounts",
+                "C": "Hiding all educational material behind paywalls",
+                "D": "Copying competitor text word-for-word"
+              },
+              "correct_answer": "A",
+              "explanation": "Content marketing builds audience trust by providing educational, informative value."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M2-Q2",
+              "question": "What is a 'Lead Magnet' in content marketing?",
+              "options": {
+                "A": "A valuable free resource offered in exchange for a prospect's contact information",
+                "B": "A physical magnet given to office employees",
+                "C": "A tracking cookie installed without permission",
+                "D": "A database backup script"
+              },
+              "correct_answer": "A",
+              "explanation": "Lead magnets (eBooks, templates) encourage prospects to opt in with their email address."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M2-Q3",
+              "question": "What is the purpose of an Editorial Calendar?",
+              "options": {
+                "A": "To plan, schedule, and organize content creation and publication timelines",
+                "B": "To track corporate tax deadlines",
+                "C": "To record employee vacation days only",
+                "D": "To monitor internet router uptime"
+              },
+              "correct_answer": "A",
+              "explanation": "Editorial calendars ensure consistent, strategic content creation aligned with business goals."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M2-Q4",
+              "question": "What is 'Evergreen Content'?",
+              "options": {
+                "A": "Content that remains relevant, valuable, and traffic-driving over long periods",
+                "B": "Content published exclusively about forestry",
+                "C": "News articles that expire within 2 hours",
+                "D": "Temporary social media stories that delete after 24 hours"
+              },
+              "correct_answer": "A",
+              "explanation": "Evergreen content stays useful and continues attracting organic traffic for years."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M2-Q5",
+              "question": "What is a 'Pillar Page' in a topic cluster content strategy?",
+              "options": {
+                "A": "A comprehensive foundational guide covering a broad topic that links to subtopic cluster articles",
+                "B": "A single page with no external or internal links",
+                "C": "The checkout payment confirmation page",
+                "D": "A 404 error page"
+              },
+              "correct_answer": "A",
+              "explanation": "Pillar pages provide deep coverage of core topics and link to detailed supporting cluster posts."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L2-M3",
+          "module_number": 3,
+          "title": "Email Marketing Fundamentals",
+          "objective": "Build permission-based email lists, optimize open rates, and ensure deliverability compliance.",
+          "explanation": "Email marketing is an owned channel allowing direct subscriber communication. Key metrics include Open Rate, Click-Through Rate (CTR), and Bounce Rate. Compliance regulations (CAN-SPAM, GDPR) require clear consent and simple unsubscribe mechanisms.",
+          "key_points": [
+            "Permission-based list building prevents spam flags and maintains sender reputation",
+            "Subject line and preview text directly govern email open rates",
+            "Requires compliance with opt-in and unsubscribe regulations"
+          ],
+          "examples": [
+            "Sending a weekly curated industry newsletter to 50,000 subscribers",
+            "Triggering an automated welcome onboarding email upon user registration"
+          ],
+          "important_terms": [
+            "Open Rate",
+            "CTR",
+            "Sender Reputation",
+            "CAN-SPAM Compliance"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L2-M3-Q1",
+              "question": "What metric measures the percentage of delivered emails opened by recipients?",
+              "options": {
+                "A": "Open Rate",
+                "B": "Click-Through Rate",
+                "C": "Bounce Rate",
+                "D": "Spam Complaint Index"
+              },
+              "correct_answer": "A",
+              "explanation": "Open rate tracks the ratio of opened emails to total successfully delivered emails."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M3-Q2",
+              "question": "What is a mandatory requirement for commercial emails under the CAN-SPAM Act?",
+              "options": {
+                "A": "A clear, working unsubscribe link and valid sender physical address",
+                "B": "Mandatory attachment of video files",
+                "C": "A requirement to send at least 5 emails per day",
+                "D": "Hiding the sender's identity in the header"
+              },
+              "correct_answer": "A",
+              "explanation": "CAN-SPAM mandates honest headers, valid physical addresses, and functional unsubscribe links."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M3-Q3",
+              "question": "What is a 'Hard Bounce' in email delivery?",
+              "options": {
+                "A": "A permanent delivery failure caused by an invalid or non-existent email address",
+                "B": "A temporary failure because the recipient inbox is temporarily full",
+                "C": "An email opened on a mobile device",
+                "D": "A user clicking an email link twice"
+              },
+              "correct_answer": "A",
+              "explanation": "Hard bounces indicate permanent delivery failures (such as deleted or typoed domain addresses)."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M3-Q4",
+              "question": "What element of an email has the largest impact on whether a recipient opens the message?",
+              "options": {
+                "A": "Subject line and preheader text",
+                "B": "Font color used in the legal disclaimer footer",
+                "C": "The file size of the email server software",
+                "D": "The number of attachments included"
+              },
+              "correct_answer": "A",
+              "explanation": "The subject line and preheader text are the primary triggers that entice users to open emails."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M3-Q5",
+              "question": "Why is buying pre-scraped third-party email lists considered bad practice?",
+              "options": {
+                "A": "It damages domain sender reputation, causes spam blacklisting, and violates privacy laws",
+                "B": "It automatically triples organic search rankings",
+                "C": "It guarantees 100% conversion rates",
+                "D": "It makes emails load faster on mobile"
+              },
+              "correct_answer": "A",
+              "explanation": "Purchased lists lead to spam complaints, damaging sender reputation and deliverability."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L2-M4",
+          "module_number": 4,
+          "title": "Social Media Platforms & Channels",
+          "objective": "Match marketing objectives to appropriate social platforms (LinkedIn, Instagram, TikTok, X, YouTube).",
+          "explanation": "Each social media platform caters to distinct demographics and content formats. B2B brands prioritize professional networking and thought leadership on LinkedIn, while B2C brands leverage short-form video on TikTok and visual storytelling on Instagram.",
+          "key_points": [
+            "LinkedIn: B2B lead generation, corporate branding, and professional networking",
+            "Instagram & TikTok: Visual storytelling, short-form video, and lifestyle e-commerce",
+            "YouTube: Long-form educational search and video demonstration"
+          ],
+          "examples": [
+            "Publishing B2B case studies and executive insights on LinkedIn",
+            "Running influencer product unboxing campaigns on Instagram Reels"
+          ],
+          "important_terms": [
+            "Organic Reach",
+            "B2B vs B2C Social",
+            "Engagement Rate",
+            "Algorithm Feed"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L2-M4-Q1",
+              "question": "Which social platform is most effective for B2B relationship building and professional thought leadership?",
+              "options": {
+                "A": "LinkedIn",
+                "B": "Snapchat",
+                "C": "Twitch",
+                "D": "Pinterest"
+              },
+              "correct_answer": "A",
+              "explanation": "LinkedIn is the dominant global B2B networking platform for professionals and enterprises."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M4-Q2",
+              "question": "How is 'Engagement Rate' typically calculated on social posts?",
+              "options": {
+                "A": "Total interactions (likes, comments, shares, saves) divided by impressions or followers",
+                "B": "The number of hours the account has existed",
+                "C": "The price of the smartphone used to publish the post",
+                "D": "The number of words in the post title"
+              },
+              "correct_answer": "A",
+              "explanation": "Engagement rate measures active interactions relative to total impressions or followers."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M4-Q3",
+              "question": "What content format has experienced the highest engagement growth across consumer social platforms?",
+              "options": {
+                "A": "Short-form vertical video (Reels, TikToks, Shorts)",
+                "B": "Plain text status updates with no links",
+                "C": "Downloadable compressed ZIP archives",
+                "D": "Fax broadcast images"
+              },
+              "correct_answer": "A",
+              "explanation": "Short-form vertical video format drives the highest consumer algorithmic engagement."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M4-Q4",
+              "question": "What is the primary difference between Organic Social Reach and Paid Social Advertising?",
+              "options": {
+                "A": "Organic reach relies on algorithmic distribution without ad spend; Paid reach guarantees targeted impressions via ad budget",
+                "B": "Paid ads can only be seen by family members",
+                "C": "Organic posts are never visible to followers",
+                "D": "Paid ads do not allow images"
+              },
+              "correct_answer": "A",
+              "explanation": "Organic relies on feed algorithms, whereas paid social guarantees distribution based on ad spend."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M4-Q5",
+              "question": "Why is community management and responding to user comments important for brands on social media?",
+              "options": {
+                "A": "Builds customer loyalty, humanizes the brand, and improves algorithmic distribution",
+                "B": "Deletes competitor accounts automatically",
+                "C": "Disables all user notifications permanently",
+                "D": "Replaces customer support ticketing systems completely"
+              },
+              "correct_answer": "A",
+              "explanation": "Active community engagement signals high quality to platform algorithms and builds customer trust."
+            }
+          ]
+        },
+        {
+          "module_id": "NONTECH-DM-L2-M5",
+          "module_number": 5,
+          "title": "Search Engines, Crawling & Indexing",
+          "objective": "Understand how search bots crawl, render, index, and rank web pages.",
+          "explanation": "Search engines use automated web crawlers (such as Googlebot) to discover pages via links. Crawled pages are parsed and stored in a vast database index. When users search, ranking algorithms evaluate hundreds of signals (relevance, speed, backlinks) to deliver results.",
+          "key_points": [
+            "Crawling: Automated discovery of web pages following hyperlinks",
+            "Indexing: Parsing, processing, and storing content in the search engine database",
+            "Ranking: Ordering indexed results by relevance, intent matching, and authority"
+          ],
+          "examples": [
+            "Submitting an XML sitemap in Google Search Console to facilitate crawling",
+            "Using robots.txt to prevent crawlers from indexing sensitive admin pages"
+          ],
+          "important_terms": [
+            "Crawler / Spider",
+            "Index",
+            "SERP",
+            "Robots.txt"
+          ],
+          "mcqs": [
+            {
+              "mcq_id": "NONTECH-DM-L2-M5-Q1",
+              "question": "What is the role of a search engine web crawler (such as Googlebot)?",
+              "options": {
+                "A": "To discover, traverse links, and fetch web pages across the internet",
+                "B": "To delete old websites from domain registries",
+                "C": "To charge user credit cards for search queries",
+                "D": "To install software updates on local laptops"
+              },
+              "correct_answer": "A",
+              "explanation": "Web crawlers systematically scan web pages and follow links to discover content."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M5-Q2",
+              "question": "What is the 'Search Engine Index'?",
+              "options": {
+                "A": "A massive database storing parsed information about discovered web pages",
+                "B": "A printed book listing every URL on the internet",
+                "C": "A hardware cable connecting servers",
+                "D": "A browser bookmark folder"
+              },
+              "correct_answer": "A",
+              "explanation": "The index is the central search engine repository of parsed and analyzed web pages."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M5-Q3",
+              "question": "What does SERP stand for in search engine marketing?",
+              "options": {
+                "A": "Search Engine Results Page",
+                "B": "System Enterprise Routing Protocol",
+                "C": "Standard Email Rate Performance",
+                "D": "Social Engagement Ranking Parameter"
+              },
+              "correct_answer": "A",
+              "explanation": "SERP refers to the page displayed by a search engine in response to a user query."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M5-Q4",
+              "question": "What is the purpose of a robots.txt file on a web server?",
+              "options": {
+                "A": "To give instructions to search crawlers regarding which pages they may or may not access",
+                "B": "To speed up the physical CPU cooling fans",
+                "C": "To style web page headers with CSS colors",
+                "D": "To store encrypted user passwords"
+              },
+              "correct_answer": "A",
+              "explanation": "Robots.txt guides search engine spiders on crawl boundaries and disallowed directories."
+            },
+            {
+              "mcq_id": "NONTECH-DM-L2-M5-Q5",
+              "question": "Why is an XML Sitemap important for search engine indexing?",
+              "options": {
+                "A": "Provides search engines with an organized list of important URLs to crawl and index",
+                "B": "Generates banner ads automatically on social networks",
+                "C": "Blocks all mobile visitors from accessing the site",
+                "D": "Changes the website domain name every month"
+              },
+              "correct_answer": "A",
+              "explanation": "XML sitemaps provide structured maps of website URLs to facilitate complete crawler coverage."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
