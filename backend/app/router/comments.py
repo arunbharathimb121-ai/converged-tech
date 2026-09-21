@@ -4,12 +4,9 @@ from app.database import get_db
 from app.crud.comment import get_all, get_comment, create_comment, delete_comment
 from app.schemas import Comments
 
-<<<<<<< HEAD
-=======
 from app.router.auth import current_user_optional
 from app.models import Users
 
->>>>>>> 6d8865c (updation)
 router = APIRouter(prefix="/comments", tags=["comments"])
 
 @router.get("/", response_model=list[Comments])
@@ -24,12 +21,6 @@ def getone(comment_id: int, db: Session = Depends(get_db)):
     return data
 
 @router.post("/", response_model=Comments, status_code=status.HTTP_201_CREATED)
-<<<<<<< HEAD
-def addone(comment: Comments, db: Session = Depends(get_db)):
-    return create_comment(
-        db=db,
-        user_id=comment.user_id,
-=======
 def addone(
     comment: Comments,
     user: Users | None = Depends(current_user_optional),
@@ -39,7 +30,6 @@ def addone(
     return create_comment(
         db=db,
         user_id=target_user_id,
->>>>>>> 6d8865c (updation)
         post_id=comment.post_id,
         comment=comment.comment,
         id=comment.id,
@@ -52,4 +42,3 @@ def removeone(comment_id: int, db: Session = Depends(get_db)):
     if not deleted:
         raise HTTPException(status_code=404, detail="Comment not found!")
     return {"detail": "Comment deleted successfully"}
-

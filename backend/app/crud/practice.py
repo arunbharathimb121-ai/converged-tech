@@ -4,12 +4,8 @@ from pathlib import Path
 from typing import Optional
 from sqlalchemy.orm import Session
 
-<<<<<<< HEAD
-from app.crud.streak import update_streak_maintenance
-=======
 from collections import defaultdict
 from sqlalchemy import func
->>>>>>> 6d8865c (updation)
 from app.models import Submission, Users
 from app.sandbox import execute
 
@@ -19,8 +15,6 @@ TESTS_DIR = BASE_DIR / "tests"
 selected_question_id: Optional[int] = None
 
 
-<<<<<<< HEAD
-=======
 def get_user_problem_stats(db: Session, user_id: int) -> dict:
     """
     Calculates:
@@ -62,7 +56,6 @@ def get_user_problem_stats(db: Session, user_id: int) -> dict:
     }
 
 
->>>>>>> 6d8865c (updation)
 def get_question(question_id: int):
     global selected_question_id
 
@@ -123,22 +116,14 @@ def run_code(
             else f"{v}\n"
             for v in case["input"].values()
         )
-<<<<<<< HEAD
-
-=======
         print(input_data)
->>>>>>> 6d8865c (updation)
         last_result = execute(
             data=code,
             input_str=input_data,
             lang=lang
         )
-<<<<<<< HEAD
-
-=======
         print(last_result)
         print(case["expected"])
->>>>>>> 6d8865c (updation)
         if (
             last_result["output"].strip().lower()
             != str(case["expected"]).strip().lower()
@@ -164,14 +149,6 @@ def run_code(
 
         passed_count += 1
 
-<<<<<<< HEAD
-    update_streak_maintenance(
-        db,
-        user_id=user_id
-    )
-
-=======
->>>>>>> 6d8865c (updation)
     submission = Submission(
         user_id=user_id,
         question_id=selected_question_id,

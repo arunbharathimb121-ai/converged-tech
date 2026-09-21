@@ -1,23 +1,10 @@
 import os
-<<<<<<< HEAD
-=======
 import logging
 from pathlib import Path
->>>>>>> 6d8865c (updation)
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from dotenv import load_dotenv
 
-<<<<<<< HEAD
-load_dotenv()
-
-db_url = os.getenv("DATABASE_URL", "sqlite:///./convotech.db")
-
-engine = create_engine(
-    db_url,
-    connect_args={"check_same_thread": False} if db_url.startswith("sqlite") else {}
-)
-=======
 logger = logging.getLogger("convotech.database")
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
@@ -50,7 +37,6 @@ except Exception as e:
     db_url = fallback_url
     engine = build_engine(fallback_url)
 
->>>>>>> 6d8865c (updation)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 Base = declarative_base()
 

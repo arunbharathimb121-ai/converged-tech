@@ -1,17 +1,10 @@
 import os
 import re
-<<<<<<< HEAD
-from datetime import datetime, timedelta, timezone
-
-import jwt
-from fastapi import APIRouter, Depends, HTTPException
-=======
 from typing import Optional
 from datetime import datetime, timedelta, timezone
 
 import jwt
 from fastapi import APIRouter, Depends, HTTPException, status
->>>>>>> 6d8865c (updation)
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from google.auth.transport import requests
 from google.oauth2 import id_token
@@ -19,10 +12,6 @@ from sqlalchemy.orm import Session
 
 from app.crud.user import complete_onboarding
 from app.database import get_db
-<<<<<<< HEAD
-from app.models import Users
-from app.schemas import AuthSession, AuthUser, GoogleSignIn, Onboarding
-=======
 from app.models import Users, Recruiters
 from app.schemas import (
     AuthSession,
@@ -33,28 +22,21 @@ from app.schemas import (
     RegisterRequest,
     DemoLoginRequest,
 )
->>>>>>> 6d8865c (updation)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 security = HTTPBearer()
 ALGORITHM = "HS256"
 
-<<<<<<< HEAD
-=======
 DEFAULT_SETTINGS = {
     "JWT_SECRET": "convotech-dev-secret-key-32-chars-long-min!!",
 }
 
->>>>>>> 6d8865c (updation)
 
 def get_setting(name: str) -> str:
     value = os.getenv(name)
     if not value:
-<<<<<<< HEAD
-=======
         if name in DEFAULT_SETTINGS:
             return DEFAULT_SETTINGS[name]
->>>>>>> 6d8865c (updation)
         raise HTTPException(status_code=500, detail=f"{name} is not configured")
     return value
 
@@ -67,12 +49,9 @@ def create_access_token(user_id: int) -> str:
     return jwt.encode(payload, get_setting("JWT_SECRET"), algorithm=ALGORITHM)
 
 
-<<<<<<< HEAD
-=======
 security_optional = HTTPBearer(auto_error=False)
 
 
->>>>>>> 6d8865c (updation)
 def current_user(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db),
@@ -89,8 +68,6 @@ def current_user(
     return user
 
 
-<<<<<<< HEAD
-=======
 def current_user_optional(
     credentials: Optional[HTTPAuthorizationCredentials] = Depends(security_optional),
     db: Session = Depends(get_db),
@@ -105,7 +82,6 @@ def current_user_optional(
         return None
 
 
->>>>>>> 6d8865c (updation)
 def available_username(db: Session, email: str) -> str:
     base = re.sub(r"[^a-zA-Z0-9_]", "_", email.split("@", maxsplit=1)[0]) or "google_user"
     username = base
@@ -116,8 +92,6 @@ def available_username(db: Session, email: str) -> str:
     return username
 
 
-<<<<<<< HEAD
-=======
 @router.post("/login", response_model=AuthSession)
 def login(data: LoginRequest, db: Session = Depends(get_db)):
     identifier = data.identifier.strip()
@@ -234,7 +208,6 @@ def demo_login(data: DemoLoginRequest = DemoLoginRequest(), db: Session = Depend
     }
 
 
->>>>>>> 6d8865c (updation)
 @router.post("/google", response_model=AuthSession)
 def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
     if data.credential.startswith("demo-") or data.credential.startswith("test-"):
@@ -263,15 +236,6 @@ def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
             "access_token": create_access_token(user.id),
             "user_id": user.id,
             "onboarding_required": not user.onboarding_completed,
-<<<<<<< HEAD
-        }
-
-    try:
-        google_user = id_token.verify_oauth2_token(
-            data.credential,
-            requests.Request(),
-            get_setting("GOOGLE_CLIENT_ID"),
-=======
             "user": user,
         }
 
@@ -288,7 +252,6 @@ def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
             data.credential,
             requests.Request(),
             client_id,
->>>>>>> 6d8865c (updation)
         )
     except ValueError as exc:
         raise HTTPException(status_code=401, detail="Invalid Google credential") from exc
@@ -322,10 +285,7 @@ def google_sign_in(data: GoogleSignIn, db: Session = Depends(get_db)):
         "access_token": create_access_token(user.id),
         "user_id": user.id,
         "onboarding_required": not user.onboarding_completed,
-<<<<<<< HEAD
-=======
         "user": user,
->>>>>>> 6d8865c (updation)
     }
 
 

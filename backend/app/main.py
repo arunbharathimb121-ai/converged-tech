@@ -4,8 +4,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-<<<<<<< HEAD
-=======
 from app.database import base, engine
 from app import models
 
@@ -17,7 +15,6 @@ try:
         seed_quiz_questions(db)
 except Exception as exc:
     print(f"[WARN] Startup DB init / seed: {exc}")
->>>>>>> 6d8865c (updation)
 
 from app.router import (
     auth,
@@ -29,10 +26,6 @@ from app.router import (
     posts,
     recruiters,
     practices,
-<<<<<<< HEAD
-    streaks,
-=======
->>>>>>> 6d8865c (updation)
     users,
 )
 
@@ -66,10 +59,6 @@ app.include_router(messages.router)
 app.include_router(recruiters.router)
 app.include_router(mcqs.router)
 app.include_router(practices.router)
-<<<<<<< HEAD
-app.include_router(streaks.router)
-=======
->>>>>>> 6d8865c (updation)
 
 
 def get_env_value(key: str) -> str:

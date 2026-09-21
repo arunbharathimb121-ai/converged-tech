@@ -1,13 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.database import get_db
-<<<<<<< HEAD
-from app.schemas import AnswerSubmission
-from app.crud.practice import get_question, run_code
-=======
 from app.schemas import AnswerSubmission, ProblemStatsOut
 from app.crud.practice import get_question, run_code, get_user_problem_stats
 from app.crud.mcq import get_user_domain_quiz_percentages
->>>>>>> 6d8865c (updation)
 from sqlalchemy.orm import Session
 
 from app.router.auth import current_user
@@ -16,8 +11,6 @@ from app.models import Users
 router = APIRouter(prefix="/practices", tags=["practices"])
 
 
-<<<<<<< HEAD
-=======
 @router.get("/stats", response_model=ProblemStatsOut)
 def get_stats(
     user_id: int | None = None,
@@ -38,7 +31,6 @@ def get_stats(
     }
 
 
->>>>>>> 6d8865c (updation)
 @router.get("/question")
 def get_question_endpoint(question_id: int):
     try:
@@ -74,4 +66,3 @@ def submit_code(
         raise HTTPException(status_code=400, detail=result)
 
     return result
-    

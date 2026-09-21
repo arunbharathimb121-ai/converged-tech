@@ -1,14 +1,9 @@
 from sqlalchemy.orm import Session
 import json
 
-<<<<<<< HEAD
-from app.crud.streak import streak_report
-from app.models import Recruiters, JobApplications, Users, Posts
-=======
 from app.crud.practice import get_user_problem_stats
 from app.crud.mcq import get_user_domain_quiz_percentages
 from app.models import Recruiters, JobApplications, Users, Posts, Likes, Comments
->>>>>>> 6d8865c (updation)
 from datetime import datetime
 from typing import Optional
 
@@ -144,13 +139,6 @@ def enrich_application(db: Session, application: JobApplications):
             except Exception:
                 application.interested_domains = []
             
-<<<<<<< HEAD
-            streak_info = streak_report(db, user.id)
-            if streak_info:
-                application.current_streak = streak_info['current_streak']
-                application.longest_streak = streak_info['longest_streak']
-            if not application.resume_url and user.resume_url:
-=======
             stats = get_user_problem_stats(db, user.id)
             quiz_stats = get_user_domain_quiz_percentages(db, user.id)
             application.solved_problems = stats["solved_problems"]
@@ -159,24 +147,17 @@ def enrich_application(db: Session, application: JobApplications):
             application.domain_quiz_details = quiz_stats["domain_details"]
             application.domain_quiz_percentages = quiz_stats["domain_percentages"]
             if not application.resume_url and getattr(user, "resume_url", None):
->>>>>>> 6d8865c (updation)
                 application.resume_url = user.resume_url
     return application
 
 def get_student_applications_report(db: Session, applicant_id: int):
-<<<<<<< HEAD
-    user = db.query(Users).filter(Users.id == applicant_id).first()
-=======
     user = db.query(Users).filter(Users.id == applicant_id, Users.role == "student").first()
->>>>>>> 6d8865c (updation)
     if not user:
         return None
 
     raw_applications = get_applications_by_applicant(db, applicant_id)
     applications = [enrich_application(db, app) for app in raw_applications]
     posts = get_applicant_posts(db, applicant_id)
-<<<<<<< HEAD
-=======
     likes = db.query(Likes).filter(Likes.user_id == applicant_id).all()
     comments = db.query(Comments).filter(Comments.user_id == applicant_id).all()
 
@@ -187,19 +168,12 @@ def get_student_applications_report(db: Session, applicant_id: int):
 
     stats = get_user_problem_stats(db, applicant_id)
     quiz_stats = get_user_domain_quiz_percentages(db, applicant_id)
->>>>>>> 6d8865c (updation)
 
     return {
         "applicant_id": applicant_id,
         "user": user,
         "applications": applications,
         "posts": posts,
-<<<<<<< HEAD
-        "streak": streak_report(db, applicant_id),
-        "average_marks": user.average_marks,
-        "interested_domains": json.loads(user.interested_domains),
-        "is_technical": user.is_technical,
-=======
         "likes": likes,
         "comments": comments,
         "solved_problems": stats["solved_problems"],
@@ -211,5 +185,4 @@ def get_student_applications_report(db: Session, applicant_id: int):
         "is_technical": user.is_technical,
         "domain_quiz_percentages": quiz_stats["domain_percentages"],
         "domain_quiz_details": quiz_stats["domain_details"],
->>>>>>> 6d8865c (updation)
     }

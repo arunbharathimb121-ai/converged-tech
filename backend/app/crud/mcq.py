@@ -1,23 +1,12 @@
 import json
-<<<<<<< HEAD
-=======
 import logging
 from pathlib import Path
->>>>>>> 6d8865c (updation)
 
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.models import McqAttempt, McqQuestion, Users
 
-<<<<<<< HEAD
-
-def get_student(db: Session, user_id: int) -> Users:
-    user = db.query(Users).filter(Users.id == user_id).first()
-    if not user or not user.onboarding_completed or user.role != "student":
-        raise ValueError("Student onboarding is required.")
-    return user
-=======
 logger = logging.getLogger("convotech.mcq")
 QUIZZES_DIR = Path(__file__).resolve().parents[1] / "quizzes"
 
@@ -61,17 +50,12 @@ def get_available_domains(db: Session) -> dict:
         "technical": [d[0] for d in tech_domains],
         "non_technical": [d[0] for d in non_tech_domains],
     }
->>>>>>> 6d8865c (updation)
 
 
 def create_question(db: Session, data) -> McqQuestion:
     question = McqQuestion(
         domain=data.domain,
-<<<<<<< HEAD
-        level=data.level,
-=======
         level=data.level.lower(),
->>>>>>> 6d8865c (updation)
         is_technical=data.is_technical,
         question=data.question,
         options=json.dumps(data.options),
@@ -83,16 +67,6 @@ def create_question(db: Session, data) -> McqQuestion:
     return question
 
 
-<<<<<<< HEAD
-def list_questions(db: Session, user_id: int, level: str | None = None):
-    user = get_student(db, user_id)
-    domains = json.loads(user.interested_domains)
-    query = db.query(McqQuestion).filter(McqQuestion.is_technical == user.is_technical)
-    if domains:
-        query = query.filter(McqQuestion.domain.in_(domains))
-    if level:
-        query = query.filter(McqQuestion.level == level)
-=======
 def list_questions(
     db: Session,
     user_id: int | None = None,
@@ -144,21 +118,10 @@ def list_questions(
     if domains_filter:
         query = query.filter(McqQuestion.domain.in_(domains_filter))
 
->>>>>>> 6d8865c (updation)
     return query.all()
 
 
 def submit_answer(db: Session, user_id: int, question_id: int, selected_answer: str):
-<<<<<<< HEAD
-    user = get_student(db, user_id)
-    question = db.query(McqQuestion).filter(McqQuestion.id == question_id).first()
-    if not question:
-        raise FileNotFoundError("MCQ question not found.")
-    if question.is_technical != user.is_technical:
-        raise ValueError("This question is not available for your track.")
-
-    correct = selected_answer == question.correct_answer
-=======
     user = db.query(Users).filter(Users.id == user_id).first()
     if not user:
         raise ValueError("User not found.")
@@ -167,7 +130,6 @@ def submit_answer(db: Session, user_id: int, question_id: int, selected_answer: 
         raise FileNotFoundError("MCQ question not found.")
 
     correct = selected_answer.strip() == question.correct_answer.strip()
->>>>>>> 6d8865c (updation)
     attempt = McqAttempt(
         user_id=user_id,
         question_id=question_id,
@@ -177,13 +139,6 @@ def submit_answer(db: Session, user_id: int, question_id: int, selected_answer: 
     )
     db.add(attempt)
     db.flush()
-<<<<<<< HEAD
-    user.average_marks = db.query(func.avg(McqAttempt.score)).filter(
-        McqAttempt.user_id == user_id
-    ).scalar() or 0
-    db.commit()
-    return correct, user.average_marks
-=======
     avg = db.query(func.avg(McqAttempt.score)).filter(
         McqAttempt.user_id == user_id
     ).scalar()
@@ -248,4 +203,3 @@ def get_user_domain_quiz_percentages(db: Session, user_id: int) -> dict:
         "domain_percentages": percentages,
         "domain_details": details,
     }
->>>>>>> 6d8865c (updation)

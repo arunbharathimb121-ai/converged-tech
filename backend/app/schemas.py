@@ -64,6 +64,7 @@ class Message(BaseModel):
     receiver_id: int
     message: str
     created_at: Optional[datetime] = None
+
 class RecruiterCreate(BaseModel):
     email: str
     company: Optional[str] = None
@@ -92,13 +93,6 @@ class GoogleSignIn(BaseModel):
     credential: str
 
 
-<<<<<<< HEAD
-class AuthSession(BaseModel):
-    access_token: str
-    token_type: str = "bearer"
-    user_id: int
-    onboarding_required: bool
-=======
 class LoginRequest(BaseModel):
     identifier: str  # username or email
     password: str
@@ -115,7 +109,6 @@ class RegisterRequest(BaseModel):
 
 class DemoLoginRequest(BaseModel):
     role: str = "student"
->>>>>>> 6d8865c (updation)
 
 
 class AuthUser(BaseModel):
@@ -132,8 +125,6 @@ class AuthUser(BaseModel):
     average_marks: float
 
 
-<<<<<<< HEAD
-=======
 class AuthSession(BaseModel):
     access_token: str
     token_type: str = "bearer"
@@ -142,7 +133,6 @@ class AuthSession(BaseModel):
     user: Optional[AuthUser] = None
 
 
->>>>>>> 6d8865c (updation)
 class McqQuestionCreate(BaseModel):
     domain: str
     level: str
@@ -187,8 +177,6 @@ class ApplicationUpdate(BaseModel):
     notes: Optional[str] = None
     resume_url: Optional[str] = None
 
-<<<<<<< HEAD
-=======
 class DomainQuizDetail(BaseModel):
     domain: str
     total_questions: int = 0
@@ -196,7 +184,6 @@ class DomainQuizDetail(BaseModel):
     correct_questions: int = 0
     percentage: float = 0.0
 
->>>>>>> 6d8865c (updation)
 class ApplicationOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
     id: int
@@ -213,21 +200,6 @@ class ApplicationOut(BaseModel):
     is_technical: Optional[bool] = None
     interested_domains: list[str] = []
     average_marks: float = 0
-<<<<<<< HEAD
-    current_streak: int = 0
-    longest_streak: int = 0
-
-class StreakMaintenance(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
-    user_id: int
-    user: Optional[str] = None
-    current_streak: int
-    longest_streak: int
-    at_risk: bool
-    solved: int = 0
-    last_login_date: Optional[date] = None
-
-=======
     solved_problems: int = 0
     total_problems: int = 0
     highest_month_engaged: Optional[str] = None
@@ -243,7 +215,6 @@ class ProblemStatsOut(BaseModel):
     highest_month_count: int = 0
     domain_quiz_percentages: dict[str, float] = {}
     domain_quiz_details: list[DomainQuizDetail] = []
->>>>>>> 6d8865c (updation)
 
 class StudentApplicationsReport(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -251,12 +222,6 @@ class StudentApplicationsReport(BaseModel):
     user: Optional[Users] = None
     applications: list[ApplicationOut]
     posts: list[Posts]
-<<<<<<< HEAD
-    streak: Optional[StreakMaintenance] = None
-    average_marks: float = 0
-    interested_domains: list[str] = []
-    is_technical: Optional[bool] = None
-=======
     likes: list[Likes] = []
     comments: list[Comments] = []
     solved_problems: int = 0
@@ -268,7 +233,6 @@ class StudentApplicationsReport(BaseModel):
     is_technical: Optional[bool] = None
     domain_quiz_percentages: dict[str, float] = {}
     domain_quiz_details: list[DomainQuizDetail] = []
->>>>>>> 6d8865c (updation)
 
 class AnswerSubmission(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -280,8 +244,4 @@ class AnswerSubmission(BaseModel):
 class SubmitResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
     passed: bool
-<<<<<<< HEAD
-    streak_maintained: StreakMaintenance
-=======
     solved_problems: Optional[int] = 0
->>>>>>> 6d8865c (updation)

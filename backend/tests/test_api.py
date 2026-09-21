@@ -407,8 +407,6 @@ def test_apply_by_id_or_name_and_student_applications():
     assert report["posts"][0]["caption"] == "My UI Design Portfolio"
     assert len(report["likes"]) == 1
     assert len(report["comments"]) == 1
-<<<<<<< HEAD
-=======
     assert "solved_problems" in report
     assert "highest_month_engaged" in report
     assert "highest_month_count" in report
@@ -603,7 +601,5 @@ def test_problem_stats_and_peak_month():
     finally:
         db.close()
 
-
->>>>>>> 6d8865c (updation)
 
 
