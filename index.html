@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     :root {
       --bg: #0b0f19;
@@ -551,15 +552,6 @@
     </header>
 
     <section class="auth-banner" id="authBanner">
-<<<<<<< HEAD
-      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
-        <div>
-          <div style="font-size:1rem; font-weight:700; color:var(--text);">Welcome to ConvoTech</div>
-          <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">Sign in with Google to access your student or recruiter dashboard.</div>
-        </div>
-        <div id="googleBtnContainer" style="display:inline-block;"></div>
-        <button type="button" id="googleSignInBtn" class="btn btn-secondary btn-sm">Sign in with Google</button>
-=======
       <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
         <div>
           <div style="font-size:1rem; font-weight:700; color:var(--text);">Welcome to ConvoTech</div>
@@ -572,7 +564,6 @@
           <div id="googleBtnContainer" style="display:inline-block;"></div>
           <button type="button" id="googleSignInBtn" class="btn btn-secondary btn-sm">Sign in with Google</button>
         </div>
->>>>>>> 6d8865c (updation)
       </div>
       <div id="googleStatus" style="font-size: 0.83rem; color: var(--muted); margin-top:6px;">Status: Ready</div>
     </section>
@@ -673,11 +664,7 @@
               <button type="button" class="btn" id="reportUserBtn">Fetch Report</button>
             </div>
           </div>
-<<<<<<< HEAD
-          <div id="reportBox" style="margin-top:16px;"><div style="color:var(--muted); font-size:0.88rem; padding:12px;">Enter a student ID above to view their detailed career stats, quiz accuracy, streak data, and applications.</div></div>
-=======
           <div id="reportBox" style="margin-top:16px;"><div style="color:var(--muted); font-size:0.88rem; padding:12px;">Enter a student ID above to view their detailed career stats, quiz accuracy, solved problems count, and applications.</div></div>
->>>>>>> 6d8865c (updation)
         </section>
       </div>
     </div>
@@ -686,25 +673,6 @@
     <div id="tab-practice" class="tab-content">
       <div class="grid-2">
         <section class="panel">
-<<<<<<< HEAD
-          <div class="panel-header">
-            <h2>MCQ Assessment Quiz</h2>
-          </div>
-          <div class="form-grid" style="margin-bottom: 14px;">
-            <div class="form-group full">
-              <label>Difficulty Level</label>
-              <select class="input-field" id="mcqLevel">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-              </select>
-            </div>
-          </div>
-          <button type="button" class="btn btn-secondary" id="loadMcqBtn" style="width:100%; margin-bottom:16px;">Load Questions</button>
-          
-          <div id="mcqContainer" style="display:flex; flex-direction:column; gap:14px;">
-            <div style="color:var(--muted); font-size:0.88rem;">Select a difficulty level and click Load Questions to start your quiz. Questions will be tailored to your profile.</div>
-=======
           <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center;">
             <h2>MCQ Assessment Quiz</h2>
             <button type="button" id="seedMcqBtn" class="btn btn-secondary btn-sm" style="font-size:0.75rem; padding:4px 10px;" title="Reload questions from JSON">Sync Quizzes 🔄</button>
@@ -721,7 +689,6 @@
 
           <div id="mcqContainer" style="display:flex; flex-direction:column; gap:14px;">
             <div style="color:var(--muted); font-size:0.88rem;">Loading your personalised quiz questions…</div>
->>>>>>> 6d8865c (updation)
           </div>
         </section>
 
@@ -774,22 +741,10 @@
             <h2>Publish Community Post</h2>
           </div>
           <form id="postForm">
-<<<<<<< HEAD
-            <div class="form-grid">
-              <div class="form-group">
-                <label>User ID</label>
-                <input class="input-field" type="number" id="postUserId" required placeholder="User ID" />
-              </div>
-              <div class="form-group">
-                <label>Username</label>
-                <input class="input-field" type="text" id="postUsername" required placeholder="Username" />
-              </div>
-=======
             <div id="postAuthBanner" style="margin-bottom:14px; padding:10px 14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:10px; font-size:0.88rem; color:var(--muted);">
               Posting as: <strong style="color:var(--primary);" id="postAuthUsername">Signed-in User</strong>
             </div>
             <div class="form-grid">
->>>>>>> 6d8865c (updation)
               <div class="form-group full">
                 <label>Caption</label>
                 <textarea class="input-field" id="postCaption" rows="3" required placeholder="Share an update, project, or idea..."></textarea>
@@ -804,11 +759,7 @@
               </div>
             </div>
             <div class="btn-row">
-<<<<<<< HEAD
-              <button type="submit" class="btn">Publish Post</button>
-=======
               <button type="submit" class="btn">Publish Post 🚀</button>
->>>>>>> 6d8865c (updation)
             </div>
           </form>
         </section>
@@ -888,8 +839,6 @@
       </div>
     </div>
 
-<<<<<<< HEAD
-=======
     <!-- ── AUTH MODAL (LOGIN & REGISTER) ── -->
     <div class="modal-overlay" id="authModal">
       <div class="modal-box" style="position:relative; max-width:440px;">
@@ -951,7 +900,6 @@
       </div>
     </div>
 
->>>>>>> 6d8865c (updation)
     <!-- ── ROLE PICKER MODAL ── -->
     <div class="modal-overlay" id="roleModal">
       <div class="modal-box">
@@ -1159,11 +1107,25 @@
     }
 
     function redirectToGoogleAccountChooser() {
+      if (window.google && google.accounts && google.accounts.id && googleClientId) {
+        google.accounts.id.prompt((notification) => {
+          if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+            performGoogleOAuthRedirect();
+          }
+        });
+      } else {
+        performGoogleOAuthRedirect();
+      }
+    }
+
+    function performGoogleOAuthRedirect() {
       if (!googleClientId) {
-        alert('Loading Google Client ID... Please try again in a moment.');
+        alert('Google Client ID is not configured in backend environment.\n\nYou can use Quick Demo Login or Sign In / Register to access the app.');
         return;
       }
-      const redirectUri = window.location.origin + window.location.pathname;
+      const origin = window.location.origin;
+      const pathname = window.location.pathname;
+      const redirectUri = origin + (pathname.endsWith('/') ? pathname : pathname);
       const nonce = Math.random().toString(36).substring(2);
       const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
         `client_id=${encodeURIComponent(googleClientId)}` +
@@ -1187,8 +1149,6 @@
       }
     }
 
-<<<<<<< HEAD
-=======
     async function setupSession(res) {
       currentUserToken = res.access_token;
       currentUserId = res.user_id;
@@ -1220,7 +1180,6 @@
       }
     }
 
->>>>>>> 6d8865c (updation)
     async function handleGoogleSignInResponse(response) {
       if (!response || !response.credential) {
         return alert('Google sign in failed.');
@@ -1232,38 +1191,6 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ credential: response.credential })
         });
-<<<<<<< HEAD
-        
-        currentUserToken = res.access_token;
-        currentUserId = res.user_id;
-        localStorage.setItem('access_token', res.access_token);
-        localStorage.setItem('user_id', res.user_id);
-
-        if (res.onboarding_required) {
-          // Show role picker first, then onboarding form
-          googleStatus.innerHTML = `✅ Authenticated — <strong style="color:var(--warning)">Please complete your profile.</strong>`;
-          _pendingRole = null;
-          document.getElementById('roleConfirmBtn').style.opacity = '0.4';
-          document.getElementById('roleConfirmBtn').style.pointerEvents = 'none';
-          document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
-          openModal('roleModal');
-        } else {
-          // Already onboarded — fetch /auth/me to know their role
-          try {
-            const me = await apiFetch('/auth/me');
-            _sessionUserMeta = me;
-            googleStatus.innerHTML = `✅ Signed in as ${me.name || 'User'}`;
-            applyRoleUI(me.role || 'student');
-          } catch (_) {
-            googleStatus.innerHTML = `✅ Signed in (User ID: ${res.user_id})`;
-            applyRoleUI('student');
-          }
-          await loadAll();
-        }
-      } catch (err) {
-        googleStatus.textContent = `Auth Error: ${err.message}`;
-        alert(`Google Auth Failed: ${err.message}`);
-=======
         await setupSession(res);
       } catch (err) {
         googleStatus.textContent = `Auth Error: ${err.message}`;
@@ -1357,7 +1284,6 @@
         } else {
           alert(`Registration failed: ${err.message}`);
         }
->>>>>>> 6d8865c (updation)
       }
     }
 
@@ -1436,10 +1362,7 @@
         googleStatus.innerHTML = `🎉 Welcome, ${result.name}! Your ${result.role} profile is all set.`;
         _sessionUserMeta = result;
         applyRoleUI(result.role);
-<<<<<<< HEAD
-=======
         await loadProfileQuiz();
->>>>>>> 6d8865c (updation)
         await loadAll();
       } catch (err) {
         errDiv.textContent = `Setup failed: ${err.message}`; errDiv.style.display = 'block';
@@ -1466,16 +1389,6 @@
       const badge = document.getElementById('userBadge');
       badge.classList.add('visible');
       const meta = _sessionUserMeta || {};
-<<<<<<< HEAD
-      document.getElementById('userBadgeName').textContent = meta.name || 'User';
-      document.getElementById('userRolePill').textContent = role === 'student' ? '🎓 Student' : role === 'recruiter' ? '💼 Recruiter' : '🛠 Admin';
-      if (meta.profile_pic) {
-        const img = document.getElementById('userAvatarImg');
-        img.src = meta.profile_pic; img.style.display = '';
-      }
-      // Hide sign-in banner
-      document.getElementById('authBanner').style.display = 'none';
-=======
       document.getElementById('userBadgeName').textContent = meta.name || meta.username || 'User';
       document.getElementById('userRolePill').textContent = role === 'student' ? '🎓 Student' : role === 'recruiter' ? '💼 Recruiter' : '🛠 Admin';
       const img = document.getElementById('userAvatarImg');
@@ -1504,7 +1417,6 @@
           if (reportBtn) reportBtn.click();
         }
       }
->>>>>>> 6d8865c (updation)
     }
 
     function signOut() {
@@ -1532,11 +1444,7 @@
     async function loadUsers() {
       const list = document.getElementById('userList');
       try {
-<<<<<<< HEAD
-        const users = await apiFetch('/users/');
-=======
         const users = await apiFetch('/users/?role=student');
->>>>>>> 6d8865c (updation)
         document.getElementById('userCount').textContent = users.length;
         if (!users.length) {
           list.innerHTML = '<div class="item-card muted">No students registered yet.</div>';
@@ -1570,26 +1478,6 @@
           return;
         }
 
-<<<<<<< HEAD
-        const likeCounts = {}, commentCounts = {};
-        likes.forEach(l => { likeCounts[l.post_id] = (likeCounts[l.post_id] || 0) + 1; });
-        comments.forEach(c => { commentCounts[c.post_id] = (commentCounts[c.post_id] || 0) + 1; });
-
-        list.innerHTML = posts.slice().reverse().map(p => `
-          <div class="post-card">
-            <div class="post-author">
-              <span>@${p.username || 'user'} (Student ID: ${p.user_id})</span>
-              <span>Post #${p.id}</span>
-            </div>
-            <div class="post-caption">${p.caption}</div>
-            ${p.image ? `<img src="${p.image}" class="post-img" alt="Post attachment" onerror="this.style.display='none'">` : ''}
-            <div class="post-actions">
-              <button type="button" class="btn btn-secondary btn-sm" onclick="likePost(${p.id})">👍 Like (${likeCounts[p.id] || 0})</button>
-              <button type="button" class="btn btn-secondary btn-sm" onclick="commentPost(${p.id})">💬 Comment (${commentCounts[p.id] || 0})</button>
-            </div>
-          </div>
-        `).join('');
-=======
         const activeUserId = _sessionUserMeta ? _sessionUserMeta.id : null;
         const activeRole = _sessionUserMeta ? _sessionUserMeta.role : null;
 
@@ -1645,7 +1533,6 @@
             </div>
           `;
         }).join('');
->>>>>>> 6d8865c (updation)
       } catch (e) {
         list.innerHTML = `<div class="item-card muted">Failed to load feed: ${e.message}</div>`;
       }
@@ -1704,14 +1591,6 @@
             <div class="item-subtitle" style="font-weight:600; color:var(--text); margin-top:4px;">
               Applicant: ${app.applicant_name || 'Student'} (@${app.applicant_username || 'user'}) · ${app.applicant_email || ''}
             </div>
-<<<<<<< HEAD
-            <div class="item-subtitle" style="margin-top:6px; background:var(--bg-alt); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
-              <div><strong>Track:</strong> ${app.is_technical === true ? '⚡ Technical' : app.is_technical === false ? '📊 Non-Technical' : 'General'}</div>
-              <div><strong>Interested Domains:</strong> ${Array.isArray(app.interested_domains) && app.interested_domains.length ? app.interested_domains.join(', ') : 'None'}</div>
-              <div><strong>MCQ Accuracy:</strong> ${app.average_marks ? app.average_marks.toFixed(1) : 0}%</div>
-              ${app.is_technical ? `<div><strong>Code Streak:</strong> 🔥 ${app.current_streak || 0} Days (Longest: ${app.longest_streak || 0})</div>` : ''}
-              ${app.resume_url ? `<div><strong>Resume:</strong> <a href="${app.resume_url}" target="_blank" style="color:var(--primary);">View Resume</a></div>` : ''}
-=======
             <div class="item-subtitle" style="margin-top:6px; background:var(--bg-alt); padding:10px 14px; border-radius:8px; border:1px solid var(--border); display:flex; flex-direction:column; gap:6px;">
               <div><strong>Track:</strong> ${app.is_technical === true ? '⚡ Technical' : app.is_technical === false ? '📊 Non-Technical' : 'General'}</div>
               <div><strong>problems solved:</strong> <span style="color:var(--success); font-weight:700;">${app.solved_problems || 0}/${app.total_problems || 0}</span> (Peak Month: ${app.highest_month_engaged || 'None'})</div>
@@ -1726,7 +1605,6 @@
                 </div>
               </div>
               ${app.resume_url ? `<div style="margin-top:6px;"><a href="${app.resume_url}" target="_blank" style="color:var(--primary); font-weight:600;">📄 View Resume</a></div>` : ''}
->>>>>>> 6d8865c (updation)
             </div>
             <div style="display:flex; gap:6px; margin-top:10px;">
               <button class="btn btn-secondary btn-sm" onclick="updateAppStatus(${recruiterId}, ${app.id}, 'interview_scheduled')">Schedule Interview</button>
@@ -1769,10 +1647,7 @@
       try {
         const data = await apiFetch(`/recruiters/applicants/${userId}/applications`);
         const u = data.user || {};
-<<<<<<< HEAD
         const streak = data.streak || {};
-=======
->>>>>>> 6d8865c (updation)
         const domains = Array.isArray(data.interested_domains) && data.interested_domains.length ? data.interested_domains.join(', ') : 'None';
         const apps = data.applications || [];
         const posts = data.posts || [];
@@ -1793,36 +1668,6 @@
               </div>
             </div>
 
-<<<<<<< HEAD
-            <!-- Stats Grid -->
-            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border-top:1px solid var(--border);">
-              <div style="background:var(--bg-alt); padding:14px; text-align:center;">
-                <div style="font-size:1.4rem; font-weight:800; color:var(--primary);">${(data.average_marks || 0).toFixed(1)}%</div>
-                <div style="font-size:0.72rem; color:var(--muted); margin-top:2px;">MCQ Accuracy</div>
-              </div>
-              <div style="background:var(--bg-alt); padding:14px; text-align:center;">
-                <div style="font-size:1.4rem; font-weight:800; color:var(--warning);">🔥 ${streak.current_streak || 0}</div>
-                <div style="font-size:0.72rem; color:var(--muted); margin-top:2px;">Current Streak</div>
-              </div>
-              <div style="background:var(--bg-alt); padding:14px; text-align:center;">
-                <div style="font-size:1.4rem; font-weight:800; color:var(--success);">${streak.longest_streak || 0}</div>
-                <div style="font-size:0.72rem; color:var(--muted); margin-top:2px;">Longest Streak</div>
-              </div>
-              <div style="background:var(--bg-alt); padding:14px; text-align:center;">
-                <div style="font-size:1.4rem; font-weight:800; color:var(--secondary);">${streak.solved || 0}</div>
-                <div style="font-size:0.72rem; color:var(--muted); margin-top:2px;">Problems Solved</div>
-              </div>
-            </div>
-
-            <!-- Domains & Resume -->
-            <div style="background:var(--bg-alt); padding:14px 16px; border-top:1px solid var(--border);">
-              <div style="font-size:0.78rem; color:var(--muted); margin-bottom:6px;">INTERESTED DOMAINS</div>
-              <div style="display:flex; flex-wrap:wrap; gap:6px;">
-                ${(data.interested_domains || []).map(d => `<span style="background:var(--primary)22; color:var(--primary); padding:3px 10px; border-radius:20px; font-size:0.8rem; font-weight:600;">${d}</span>`).join('') || '<span style="color:var(--muted); font-size:0.85rem;">None specified</span>'}
-              </div>
-              ${u.resume_url ? `<div style="margin-top:10px;"><a href="${u.resume_url}" target="_blank" style="color:var(--primary); font-size:0.85rem; font-weight:600;">📄 View Resume →</a></div>` : ''}
-              ${streak.at_risk ? `<div style="margin-top:10px; background:var(--warning)22; color:var(--warning); padding:8px 12px; border-radius:8px; font-size:0.82rem; font-weight:600;">⚠️ Streak at risk — hasn't submitted today</div>` : ''}
-=======
             <!-- Vertical Stats & Domain Breakdown -->
             <div style="background:var(--bg-alt); padding:16px; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:12px;">
               <div style="font-size:0.95rem; font-weight:700; color:var(--text);">
@@ -1846,7 +1691,6 @@
               </div>
 
               ${u.resume_url ? `<div style="margin-top:4px;"><a href="${u.resume_url}" target="_blank" style="color:var(--primary); font-size:0.85rem; font-weight:600;">📄 View Resume →</a></div>` : ''}
->>>>>>> 6d8865c (updation)
             </div>
 
             <!-- Applications -->
@@ -1879,14 +1723,9 @@
 
     document.getElementById('postForm').addEventListener('submit', async (e) => {
       e.preventDefault();
-<<<<<<< HEAD
-      const userId = document.getElementById('postUserId').value;
-      const username = document.getElementById('postUsername').value;
-=======
       const meta = _sessionUserMeta || {};
       const userId = meta.id || Number(currentUserId) || 1;
       const username = meta.username || meta.name || 'user';
->>>>>>> 6d8865c (updation)
       const caption = document.getElementById('postCaption').value;
       const imageUrl = document.getElementById('postImageUrl').value;
       const fileInput = document.getElementById('postFile');
@@ -1962,16 +1801,6 @@
       } catch (err) { alert(err.message); }
     }
 
-<<<<<<< HEAD
-    document.getElementById('loadMcqBtn').addEventListener('click', async () => {
-      const level = document.getElementById('mcqLevel').value;
-      const container = document.getElementById('mcqContainer');
-
-      try {
-        const questions = await apiFetch(`/mcqs/questions?level=${level}`);
-        if (!questions.length) {
-          container.innerHTML = '<div style="color:var(--muted);">No MCQ questions found for this criteria. Complete onboarding first so questions can be matched to your profile.</div>';
-=======
     function getProfileDomains() {
       const rawDomains = _sessionUserMeta && _sessionUserMeta.interested_domains;
       if (Array.isArray(rawDomains)) return rawDomains;
@@ -2052,35 +1881,10 @@
               <div style="font-size:0.84rem; color:var(--muted); margin-top:4px;">You have attended all available questions in this domain. Check back later or choose another domain.</div>
             </div>
           `;
->>>>>>> 6d8865c (updation)
           return;
         }
 
         container.innerHTML = questions.map((q, idx) => `
-<<<<<<< HEAD
-          <div class="item-card">
-            <div class="item-title" style="margin-bottom:8px;">Q${idx + 1}. ${q.question}</div>
-            <div style="display:flex; flex-direction:column; gap:6px;">
-              ${q.options.map(opt => `
-                <label style="font-size:0.88rem; cursor:pointer;">
-                  <input type="radio" name="mcq_${q.id}" value="${opt}"> ${opt}
-                </label>
-              `).join('')}
-            </div>
-            <button type="button" class="btn btn-sm" style="margin-top:10px;" onclick="submitMcq(${q.id})">Submit Answer</button>
-          </div>
-        `).join('');
-      } catch (err) { container.innerHTML = `<div style="color:var(--danger);">${err.message}</div>`; }
-    });
-
-    async function submitMcq(questionId) {
-      const selected = document.querySelector(`input[name="mcq_${questionId}"]:checked`);
-      if (!selected) return alert('Select an option first');
-
-      try {
-        const payload = { question_id: questionId, selected_answer: selected.value };
-
-=======
           <div class="item-card" id="mcq_card_${q.id}" style="padding:16px;">
             <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:12px;">
               <span class="item-title" style="font-size:0.95rem; font-weight:600;">Q${idx + 1}. ${q.question}</span>
@@ -2121,15 +1925,11 @@
 
       try {
         const payload = { question_id: questionId, selected_answer: selected.value };
->>>>>>> 6d8865c (updation)
         const res = await apiFetch('/mcqs/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-<<<<<<< HEAD
-        alert(res.correct ? `✅ Correct! Average Score: ${res.average_marks.toFixed(1)}%` : `❌ Incorrect! Average Score: ${res.average_marks.toFixed(1)}%`);
-=======
 
         // Disable options so user cannot re-select
         document.querySelectorAll(`input[name="mcq_${questionId}"]`).forEach(inp => inp.disabled = true);
@@ -2150,7 +1950,6 @@
         if (_sessionUserMeta) {
           _sessionUserMeta.average_marks = res.average_marks;
         }
->>>>>>> 6d8865c (updation)
       } catch (err) { alert(err.message); }
     }
 
@@ -2183,14 +1982,9 @@
     });
 
     async function likePost(postId) {
-<<<<<<< HEAD
-      const userId = Number(prompt('Enter your Student/User ID:'));
-      if (!userId) return;
-=======
       const meta = _sessionUserMeta || {};
       const userId = meta.id || Number(currentUserId);
       if (!userId) return alert('Please sign in to like community posts.');
->>>>>>> 6d8865c (updation)
       try {
         await apiFetch('/likes/', {
           method: 'POST',
@@ -2202,33 +1996,21 @@
     }
 
     async function commentPost(postId) {
-<<<<<<< HEAD
-      const userId = Number(prompt('Enter your Student/User ID:'));
-      const comment = prompt('Write comment:');
-      if (!userId || !comment) return;
-=======
       const meta = _sessionUserMeta || {};
       const userId = meta.id || Number(currentUserId);
       if (!userId) return alert('Please sign in to comment on community posts.');
       const comment = prompt('Write a comment:');
       if (!comment || !comment.trim()) return;
->>>>>>> 6d8865c (updation)
       try {
         await apiFetch('/comments/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-          body: JSON.stringify({ user_id: userId, post_id: postId, comment })
-=======
           body: JSON.stringify({ user_id: userId, post_id: postId, comment: comment.trim() })
->>>>>>> 6d8865c (updation)
         });
         await loadPosts();
       } catch (e) { alert(e.message); }
     }
 
-<<<<<<< HEAD
-=======
     async function deletePost(postId) {
       if (!confirm('Are you sure you want to delete your post?')) return;
       try {
@@ -2237,7 +2019,6 @@
       } catch (e) { alert(e.message); }
     }
 
->>>>>>> 6d8865c (updation)
     document.getElementById('runApiBtn').addEventListener('click', async () => {
       const method = document.getElementById('apiMethod').value;
       const endpoint = document.getElementById('apiEndpoint').value;
@@ -2257,8 +2038,6 @@
       } catch (e) { output.textContent = `Error: ${e.message}`; }
     });
 
-<<<<<<< HEAD
-=======
     document.getElementById('demoStudentBtn').addEventListener('click', () => {
       handleDemoLogin('student');
     });
@@ -2271,7 +2050,6 @@
       openModal('authModal');
     });
 
->>>>>>> 6d8865c (updation)
     document.getElementById('googleSignInBtn').addEventListener('click', () => {
       redirectToGoogleAccountChooser();
     });
@@ -2291,10 +2069,7 @@
           const me = await apiFetch('/auth/me');
           _sessionUserMeta = me;
           applyRoleUI(me.role || 'student');
-<<<<<<< HEAD
-=======
           await loadProfileQuiz();
->>>>>>> 6d8865c (updation)
         } catch (_) {
           // Token expired or invalid — clear it
           localStorage.removeItem('access_token');
@@ -2310,7 +2085,4 @@
   </script>
 </body>
 </html>
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d8865c (updation)
