@@ -20,3 +20,5 @@ env/
 # Test artifacts
 .pytest_cache/
 .coverage
+
+backend/app/tests/
