@@ -1,4 +1,5 @@
 import json
+import ast
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -8,6 +9,7 @@ from collections import defaultdict
 from sqlalchemy import func
 from app.models import Submission, Users
 from app.sandbox import execute
+from app.crud.streak import update_streak_maintenance
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 QUESTIONS_DIR = BASE_DIR / "codes"
@@ -103,13 +105,18 @@ def run_code(
     passed_count = 0
 
     for case in tests:
+        input_lines = []
+        for v in case["input"].values():
+            if isinstance(v, bool):
+                input_lines.append(str(v).lower())
+            elif isinstance(v, (dict, list)) and (isinstance(v, dict) or (v and isinstance(v[0], (list, dict)))):
+                input_lines.append(json.dumps(v))
+            elif isinstance(v, list):
+                input_lines.append(" ".join(map(str, v)))
+            else:
+                input_lines.append(str(v))
+        input_data = "\n".join(input_lines) + "\n"
 
-        input_data = "".join(
-            f"{' '.join(map(str, v))}\n"
-            if isinstance(v, list)
-            else f"{v}\n"
-            for v in case["input"].values()
-        )
         print(input_data)
         last_result = execute(
             data=code,
@@ -118,10 +125,32 @@ def run_code(
         )
         print(last_result)
         print(case["expected"])
-        if (
-            last_result["output"].strip().lower()
-            != str(case["expected"]).strip().lower()
-        ):
+
+        actual_raw = (last_result["output"] or "").strip()
+        expected = case["expected"]
+
+        try:
+            actual_parsed = json.loads(actual_raw)
+        except Exception:
+            try:
+                actual_parsed = ast.literal_eval(actual_raw)
+            except Exception:
+                actual_parsed = actual_raw
+
+        is_correct = (
+            actual_parsed == expected
+            or actual_raw.lower() == str(expected).strip().lower()
+            or (isinstance(expected, bool) and (
+                (expected and actual_raw.lower() in ("true", "1", "yes")) or
+                (not expected and actual_raw.lower() in ("false", "0", "no"))
+            ))
+            or (isinstance(expected, list) and (
+                actual_raw.strip("[]()").replace(",", " ").split() == [str(x).lower() for x in expected]
+            ))
+            or (isinstance(expected, str) and actual_raw.strip('"\'').lower() == expected.strip('"\'').lower())
+        )
+
+        if not is_correct:
 
             submission = Submission(
                 user_id=user_id,
